@@ -25,7 +25,10 @@ export function Skills() {
               </h3>
               <div className="mt-3 flex flex-wrap gap-2">
                 {group.items.map((item, itemIndex) => (
-                  <Badge key={itemIndex}>
+                  <Badge
+                    key={itemIndex}
+                    tone={group.upcoming ? 'muted' : 'default'}
+                  >
                     {typeof item === 'string' ? item : pick(item)}
                   </Badge>
                 ))}

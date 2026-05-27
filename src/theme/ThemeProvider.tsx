@@ -4,8 +4,9 @@ import { ThemeContext, type Theme } from './ThemeContext'
 const STORAGE_KEY = 'theme'
 
 // Read the theme set by the inline <head> script (before paint).
+// Defaults to light when nothing is set.
 function initialTheme(): Theme {
-  return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'
+  return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {

@@ -4,6 +4,7 @@ export type LocalizedString = { ru: string; en: string }
 /** Section ids — used for anchors, smooth scroll and scroll-spy. */
 export const SECTION_IDS = [
   'hero',
+  'focus',
   'experience',
   'projects',
   'education',
@@ -25,6 +26,16 @@ export const NAV_SECTION_IDS = [
 ] as const
 
 export type NavSectionId = (typeof NAV_SECTION_IDS)[number]
+
+export type FocusHighlight = {
+  title: LocalizedString
+  body: LocalizedString
+}
+
+export type FocusData = {
+  lead: LocalizedString
+  highlights: FocusHighlight[]
+}
 
 export type HeroData = {
   name: LocalizedString
@@ -72,6 +83,8 @@ export type SkillCategory = {
   category: LocalizedString
   /** Plain tech names stay as strings; translatable terms use LocalizedString. */
   items: (string | LocalizedString)[]
+  /** Aspirational / learning skills — rendered muted, never claimed as known. */
+  upcoming?: boolean
 }
 
 export type LanguageItem = {

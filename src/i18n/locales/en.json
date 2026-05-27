@@ -15,6 +15,9 @@
     "viewProjects": "View projects",
     "getInTouch": "Get in touch"
   },
+  "focus": {
+    "title": "Now"
+  },
   "projects": {
     "featured": "Featured",
     "live": "Live",

@@ -31,7 +31,7 @@ export function Projects() {
                   {pick(project.title)}
                 </h3>
                 {project.featured && (
-                  <Badge accent>{t('projects.featured')}</Badge>
+                  <Badge tone="accent">{t('projects.featured')}</Badge>
                 )}
               </div>
 

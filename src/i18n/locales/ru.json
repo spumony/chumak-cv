@@ -15,6 +15,9 @@
     "viewProjects": "Смотреть проекты",
     "getInTouch": "Связаться"
   },
+  "focus": {
+    "title": "Сейчас"
+  },
   "projects": {
     "featured": "Ключевой",
     "live": "Демо",

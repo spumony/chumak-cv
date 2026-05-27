@@ -28,7 +28,9 @@ export function Languages() {
                   {pick(language.level)}
                 </p>
               </div>
-              {language.levelCode && <Badge accent>{language.levelCode}</Badge>}
+              {language.levelCode && (
+                <Badge tone="accent">{language.levelCode}</Badge>
+              )}
             </div>
           </FadeIn>
         ))}

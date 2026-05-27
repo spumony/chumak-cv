@@ -24,20 +24,17 @@
     <title>Alexandr Chumak — Senior Frontend Developer</title>
     <script>
       // Set the theme before paint to avoid a flash of the wrong theme.
+      // Stored choice wins; otherwise default to light.
       ;(function () {
         try {
           var t = localStorage.getItem('theme')
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia('(prefers-color-scheme: light)').matches
-              ? 'light'
-              : 'dark'
-          }
+          if (t !== 'light' && t !== 'dark') t = 'light'
           document.documentElement.dataset.theme = t
           var m = document.querySelector('meta[name="theme-color"]')
           if (m)
             m.setAttribute('content', t === 'light' ? '#ffffff' : '#0a0a0a')
         } catch (e) {
-          document.documentElement.dataset.theme = 'dark'
+          document.documentElement.dataset.theme = 'light'
         }
       })()
     </script>

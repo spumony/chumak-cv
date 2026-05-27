@@ -1,6 +1,7 @@
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
+import { Focus } from './sections/Focus'
 import { Experience } from './sections/Experience'
 import { Projects } from './sections/Projects'
 import { Education } from './sections/Education'
@@ -27,6 +28,7 @@ function App() {
 
       <main id="main">
         <Hero />
+        <Focus />
         <Experience />
         <Projects />
         <Education />
