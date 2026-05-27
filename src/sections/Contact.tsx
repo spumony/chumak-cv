@@ -1,5 +1,5 @@
 import { Globe, Mail, Send } from 'lucide-react'
-import type { ComponentType } from 'react'
+import { Fragment, type ComponentType } from 'react'
 import { CopyEmailButton } from '../components/CopyEmailButton'
 import { FadeIn } from '../components/ui/FadeIn'
 import { GithubIcon, LinkedinIcon } from '../components/ui/icons'
@@ -40,18 +40,24 @@ export function Contact() {
             const Icon = ICONS[link.kind]
             const external = link.href.startsWith('http')
             return (
-              <a
-                key={link.href}
-                href={link.href}
-                className={index === 0 ? primaryLink : secondaryLink}
-                {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
-              >
-                <Icon className="h-4 w-4" />
-                {link.label}
-              </a>
+              <Fragment key={link.href}>
+                <a
+                  href={link.href}
+                  className={index === 0 ? primaryLink : secondaryLink}
+                  {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                >
+                  <Icon className="h-4 w-4" />
+                  {link.label}
+                </a>
+                {link.kind === 'email' && (
+                  <CopyEmailButton
+                    email={contact.email}
+                    className={secondaryLink}
+                  />
+                )}
+              </Fragment>
             )
           })}
-          <CopyEmailButton email={contact.email} className={secondaryLink} />
         </div>
       </FadeIn>
     </section>

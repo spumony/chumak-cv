@@ -25,7 +25,7 @@ export function Experience() {
             <a
               href={RESUME_URL}
               download
-              className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
+              className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
             >
               <Download aria-hidden className="h-4 w-4" />
               {t('experience.downloadCv')}

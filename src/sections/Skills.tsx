@@ -27,7 +27,7 @@ export function Skills() {
                 {group.items.map((item, itemIndex) => (
                   <Badge
                     key={itemIndex}
-                    tone={group.upcoming ? 'muted' : 'default'}
+                    tone={group.upcoming ? 'muted' : 'accent'}
                   >
                     {typeof item === 'string' ? item : pick(item)}
                   </Badge>
