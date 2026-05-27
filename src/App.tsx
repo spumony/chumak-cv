@@ -1,12 +1,14 @@
 import { Header } from './components/Header'
-import { SECTION_IDS } from './types'
+import { Hero } from './sections/Hero'
+import { NAV_SECTION_IDS } from './types'
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        {SECTION_IDS.map((id) => (
+        <Hero />
+        {NAV_SECTION_IDS.map((id) => (
           <section
             key={id}
             id={id}
