@@ -1,6 +1,14 @@
 import { Header } from './components/Header'
 import { Hero } from './sections/Hero'
-import { NAV_SECTION_IDS } from './types'
+import { Experience } from './sections/Experience'
+
+const PLACEHOLDER_IDS = [
+  'projects',
+  'education',
+  'skills',
+  'certifications',
+  'contact',
+] as const
 
 function App() {
   return (
@@ -8,7 +16,8 @@ function App() {
       <Header />
       <main>
         <Hero />
-        {NAV_SECTION_IDS.map((id) => (
+        <Experience />
+        {PLACEHOLDER_IDS.map((id) => (
           <section
             key={id}
             id={id}
