@@ -1,4 +1,4 @@
-import { Calendar, MapPin } from 'lucide-react'
+import { Calendar, Download, MapPin } from 'lucide-react'
 import { Badge } from '../components/ui/Badge'
 import { Card } from '../components/ui/Card'
 import { FadeIn } from '../components/ui/FadeIn'
@@ -6,6 +6,9 @@ import { SectionTitle } from '../components/ui/SectionTitle'
 import { StatusDot } from '../components/ui/StatusDot'
 import { experience } from '../data/experience'
 import { useT } from '../i18n/useT'
+
+// Drop an ATS-friendly PDF at this path in /public to show the download button.
+const RESUME_URL = '/Alexandr_Chumak_CV.pdf'
 
 export function Experience() {
   const { t, pick } = useT()
@@ -16,7 +19,19 @@ export function Experience() {
       className="mx-auto max-w-3xl px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-28"
     >
       <FadeIn>
-        <SectionTitle>{t('nav.experience')}</SectionTitle>
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <SectionTitle>{t('nav.experience')}</SectionTitle>
+          {RESUME_URL && (
+            <a
+              href={RESUME_URL}
+              download
+              className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
+            >
+              <Download aria-hidden className="h-4 w-4" />
+              {t('experience.downloadCv')}
+            </a>
+          )}
+        </div>
       </FadeIn>
 
       <div className="mt-8 flex flex-col gap-8 sm:mt-12 sm:gap-10">

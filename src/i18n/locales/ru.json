@@ -25,7 +25,8 @@
     "openToWork": "Открыт к работе"
   },
   "experience": {
-    "current": "Сейчас"
+    "current": "Сейчас",
+    "downloadCv": "Скачать CV"
   },
   "focus": {
     "title": "Сейчас",

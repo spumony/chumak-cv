@@ -25,7 +25,8 @@
     "openToWork": "Open to work"
   },
   "experience": {
-    "current": "Now"
+    "current": "Now",
+    "downloadCv": "Download CV"
   },
   "focus": {
     "title": "Now",
