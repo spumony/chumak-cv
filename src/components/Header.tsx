@@ -11,7 +11,7 @@ import { MobileMenu } from './MobileMenu'
 
 export function Header() {
   const { t, pick } = useT()
-  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
   const activeId = useScrollSpy(SECTION_IDS)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -31,7 +31,7 @@ export function Header() {
 
           <nav
             aria-label={t('a11y.primaryNav')}
-            className="hidden shrink-0 items-center gap-5 md:flex lg:gap-6"
+            className="hidden shrink-0 items-center gap-5 lg:flex lg:gap-6"
           >
             {NAV_SECTION_IDS.map((id) => {
               const active = activeId === id
@@ -59,7 +59,7 @@ export function Header() {
             onClick={() => setMenuOpen(true)}
             aria-label={t('a11y.openMenu')}
             aria-expanded={menuOpen}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-text-secondary hover:text-text-primary md:hidden"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-text-secondary hover:text-text-primary lg:hidden"
           >
             <Menu aria-hidden className="h-6 w-6" />
           </button>

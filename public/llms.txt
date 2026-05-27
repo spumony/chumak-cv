@@ -1,0 +1,10 @@
+# Alexandr Chumak
+
+> Senior Frontend Engineer (React, TypeScript, Next.js) moving into AI Product Engineering. Open to senior frontend / AI product roles across the EU, and to long-term freelance.
+
+Lead frontend developer on a restaurant CRM platform (Multisoft, Romania), and building a from-scratch full-stack learning project (Next.js, PostgreSQL, Drizzle, Inngest) to move into AI engineering. Frontend core: React, TypeScript, Next.js, Tailwind CSS. Learning: Vercel AI SDK, OpenAI/Anthropic SDKs, embeddings + pgvector, RAG, evals, agents/MCP.
+
+## Links
+
+- [LinkedIn](https://www.linkedin.com/in/spumony): professional profile and updates
+- [Email](mailto:ciumac.dev@gmail.com): direct contact
