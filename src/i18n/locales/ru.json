@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "TODO: Имя — Роль",
+    "description": "TODO: Краткое профессиональное описание для SEO и превью ссылок."
+  },
+  "nav": {
+    "experience": "Опыт",
+    "projects": "Проекты",
+    "education": "Образование",
+    "skills": "Навыки",
+    "certifications": "Сертификаты",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "viewProjects": "Смотреть проекты",
+    "getInTouch": "Связаться"
+  },
+  "actions": {
+    "visit": "Открыть",
+    "source": "Исходники",
+    "verify": "Проверить"
+  },
+  "a11y": {
+    "skipToContent": "Перейти к содержимому",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "languageGroup": "Выбор языка",
+    "primaryNav": "Основная навигация"
+  },
+  "footer": {
+    "builtWith": "Сделано на React, TypeScript и Tailwind CSS.",
+    "rights": "Все права защищены."
+  }
+}

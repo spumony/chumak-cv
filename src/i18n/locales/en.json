@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "TODO: Name — Role",
+    "description": "TODO: Short professional summary used for SEO and link previews."
+  },
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch"
+  },
+  "actions": {
+    "visit": "Visit",
+    "source": "Source",
+    "verify": "Verify"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageGroup": "Select language",
+    "primaryNav": "Primary navigation"
+  },
+  "footer": {
+    "builtWith": "Built with React, TypeScript and Tailwind CSS.",
+    "rights": "All rights reserved."
+  }
+}

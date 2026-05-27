@@ -1,33 +1,29 @@
+import { LanguageToggle } from './components/LanguageToggle'
+import { useT } from './i18n/useT'
+
 function App() {
+  const { t, lang } = useT()
+
   return (
     <main className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center gap-6 px-5 py-16 sm:px-6 md:px-8">
+      <LanguageToggle className="self-start" />
       <h1 className="text-balance text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl md:text-7xl">
-        Дизайн-токены готовы
+        {t('meta.title')}
       </h1>
       <p className="text-base text-text-secondary sm:text-lg">
-        Inter покрывает латиницу и кириллицу — typography is consistent across
-        RU and EN. Это базовый текст вторичного цвета.
+        {t('meta.description')}
       </p>
-      <p className="text-base text-text-muted">
-        Приглушённый текст (text-muted) для подписей и метаданных.
+      <nav className="flex flex-wrap gap-3 font-mono text-sm">
+        <span className="text-text-muted">{t('nav.experience')}</span>
+        <span className="text-text-muted">{t('nav.projects')}</span>
+        <span className="text-text-muted">{t('nav.education')}</span>
+        <span className="text-text-muted">{t('nav.skills')}</span>
+        <span className="text-text-muted">{t('nav.certifications')}</span>
+        <span className="text-text-muted">{t('nav.contact')}</span>
+      </nav>
+      <p className="font-mono text-sm text-accent">
+        active language: {lang}
       </p>
-      <div className="flex flex-wrap gap-2">
-        <span className="rounded-md border border-border bg-bg-elevated px-3 py-1 font-mono text-sm whitespace-nowrap text-text-secondary">
-          TypeScript
-        </span>
-        <span className="rounded-md border border-border bg-bg-elevated px-3 py-1 font-mono text-sm whitespace-nowrap text-text-secondary">
-          React 19
-        </span>
-        <span className="rounded-md border border-accent px-3 py-1 font-mono text-sm whitespace-nowrap text-accent">
-          accent
-        </span>
-      </div>
-      <a
-        href="#"
-        className="font-mono text-accent transition-colors hover:text-accent-hover"
-      >
-        ссылка с hover →
-      </a>
     </main>
   )
 }
