@@ -28,6 +28,7 @@
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
     "languageGroup": "Выбор языка",
+    "toggleTheme": "Сменить тему",
     "primaryNav": "Основная навигация"
   },
   "footer": {

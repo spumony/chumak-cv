@@ -6,6 +6,7 @@ import { useT } from '../i18n/useT'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { useScrollSpy } from '../hooks/useScrollSpy'
 import { LanguageToggle } from './LanguageToggle'
+import { ThemeToggle } from './ThemeToggle'
 import { MobileMenu } from './MobileMenu'
 
 export function Header() {
@@ -49,6 +50,7 @@ export function Header() {
                 </a>
               )
             })}
+            <ThemeToggle />
             <LanguageToggle />
           </nav>
 

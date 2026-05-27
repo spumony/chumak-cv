@@ -1,7 +1,7 @@
 # chumak-cv
 
 Minimal, bilingual (RU/EN) personal CV / portfolio — a static single-page
-site with smooth scroll navigation, a dark theme and subtle scroll
+site with smooth scroll navigation, light/dark themes and subtle scroll
 animations. Mobile-first.
 
 ## Tech stack
@@ -34,15 +34,15 @@ All content lives in two places. No component changes are needed.
 Each file is a typed array/object. Every translatable string is an object
 `{ ru: '…', en: '…' }`.
 
-| File | Section |
-| --- | --- |
-| `hero.ts` | Name, role, pitch, location, optional `avatar` |
-| `experience.ts` | Work history (role, company, period, bullets, tech) |
-| `projects.ts` | Project cards (title, description, tech, optional `links`) |
-| `education.ts` | Degrees |
-| `skills.ts` | Skill categories and items |
-| `languages.ts` | Spoken languages and levels |
-| `contact.ts` | Email + social links |
+| File            | Section                                                    |
+| --------------- | ---------------------------------------------------------- |
+| `hero.ts`       | Name, role, pitch, location, optional `avatar`             |
+| `experience.ts` | Work history (role, company, period, bullets, tech)        |
+| `projects.ts`   | Project cards (title, description, tech, optional `links`) |
+| `education.ts`  | Degrees                                                    |
+| `skills.ts`     | Skill categories and items                                 |
+| `languages.ts`  | Spoken languages and levels                                |
+| `contact.ts`    | Email + social links                                       |
 
 Notes:
 
@@ -55,11 +55,18 @@ Notes:
 `en.json` and `ru.json` hold navigation labels, button text, the SEO
 title/description and accessibility labels. Keys are type-checked.
 
-## Design tokens
+## Design tokens & theming
 
-Colors and fonts are defined once via Tailwind v4 `@theme` in
+Fonts and color utilities are defined via Tailwind v4 `@theme` in
 `src/index.css` and exposed as utilities (`bg-bg`, `text-text-primary`,
-`text-accent`, `border-border`, `font-mono`, …). Change them in one place.
+`text-accent`, `border-border`, `font-mono`, …).
+
+Colors use `@theme inline` pointing at raw CSS variables, so the whole site
+re-themes at runtime by flipping `data-theme` on `<html>`. Edit the
+`[data-theme='dark']` / `[data-theme='light']` blocks to tune each palette.
+The theme toggle lives in the header (and mobile menu); the choice persists
+to `localStorage` and defaults to the OS `prefers-color-scheme`. An inline
+script in `index.html` applies it before paint to avoid a flash.
 
 ## Deploy to Vercel
 

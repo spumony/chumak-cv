@@ -28,6 +28,7 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "languageGroup": "Select language",
+    "toggleTheme": "Toggle theme",
     "primaryNav": "Primary navigation"
   },
   "footer": {

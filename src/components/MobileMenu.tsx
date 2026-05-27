@@ -4,6 +4,7 @@ import { X } from 'lucide-react'
 import { NAV_SECTION_IDS } from '../types'
 import { useT } from '../i18n/useT'
 import { LanguageToggle } from './LanguageToggle'
+import { ThemeToggle } from './ThemeToggle'
 
 type MobileMenuProps = {
   open: boolean
@@ -133,7 +134,10 @@ export function MobileMenu({ open, onClose, activeId }: MobileMenuProps) {
                   </a>
                 )
               })}
-              <LanguageToggle className="mt-6 self-start" />
+              <div className="mt-6 flex items-center gap-3">
+                <LanguageToggle />
+                <ThemeToggle />
+              </div>
             </nav>
           </motion.div>
         </motion.div>
