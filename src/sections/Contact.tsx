@@ -1,5 +1,6 @@
 import { Globe, Mail, Send } from 'lucide-react'
 import type { ComponentType } from 'react'
+import { CopyEmailButton } from '../components/CopyEmailButton'
 import { FadeIn } from '../components/ui/FadeIn'
 import { GithubIcon, LinkedinIcon } from '../components/ui/icons'
 import { SectionTitle } from '../components/ui/SectionTitle'
@@ -50,6 +51,7 @@ export function Contact() {
               </a>
             )
           })}
+          <CopyEmailButton email={contact.email} className={secondaryLink} />
         </div>
       </FadeIn>
     </section>

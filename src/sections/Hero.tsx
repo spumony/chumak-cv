@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, MapPin } from 'lucide-react'
+import { ArrowRight, Globe, Mail, MapPin } from 'lucide-react'
 import { FadeIn } from '../components/ui/FadeIn'
 import { StatusDot } from '../components/ui/StatusDot'
 import { hero } from '../data/hero'
@@ -47,12 +47,20 @@ export function Hero() {
           {pick(hero.pitch)}
         </p>
 
-        {hero.location && (
-          <p className="flex items-center gap-1.5 text-sm text-text-muted">
-            <MapPin aria-hidden className="h-4 w-4" />
-            {pick(hero.location)}
-          </p>
-        )}
+        <div className="flex flex-col gap-1.5 text-sm text-text-muted">
+          {hero.location && (
+            <p className="flex items-center gap-1.5">
+              <MapPin aria-hidden className="h-4 w-4 shrink-0" />
+              {pick(hero.location)}
+            </p>
+          )}
+          {hero.availability && (
+            <p className="flex items-start gap-1.5">
+              <Globe aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
+              <span className="text-balance">{pick(hero.availability)}</span>
+            </p>
+          )}
+        </div>
 
         <div className="mt-2 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a href="#contact" className={primaryCta}>

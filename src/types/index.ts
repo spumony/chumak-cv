@@ -9,6 +9,7 @@ export const SECTION_IDS = [
   'education',
   'skills',
   'languages',
+  'freelance',
   'contact',
 ] as const
 
@@ -20,6 +21,7 @@ export const NAV_SECTION_IDS = [
   'education',
   'skills',
   'languages',
+  'freelance',
   'contact',
 ] as const
 
@@ -29,6 +31,11 @@ export type FocusProject = {
   title: string
   description: LocalizedString
   technologies: string[]
+  /** Optional public links — shown only when set. */
+  links?: {
+    live?: string
+    repo?: string
+  }
 }
 
 export type FocusData = {
@@ -45,6 +52,8 @@ export type HeroData = {
   /** 2–3 line elevator pitch. */
   pitch: LocalizedString
   location?: LocalizedString
+  /** One-line availability signal (roles, remote, contracts). */
+  availability?: LocalizedString
   /** Path/URL to the avatar image. Omit to hide the avatar. */
   avatar?: string
 }
@@ -103,4 +112,23 @@ export type ContactLink = {
 export type ContactData = {
   email: string
   links: ContactLink[]
+}
+
+export type FreelanceOffer = {
+  title: LocalizedString
+  description: LocalizedString
+}
+
+export type FreelanceFaq = {
+  q: LocalizedString
+  a: LocalizedString
+}
+
+export type FreelanceData = {
+  intro: LocalizedString
+  offers: FreelanceOffer[]
+  process: LocalizedString[]
+  faq: FreelanceFaq[]
+  /** Optional booking link (Cal.com/Calendly). Omit to show only email. */
+  bookingUrl?: string
 }

@@ -27,8 +27,10 @@ export function useDocumentMeta() {
     setMeta('property', 'og:description', description)
     setMeta('property', 'og:type', 'website')
     setMeta('property', 'og:locale', lang === 'ru' ? 'ru_RU' : 'en_US')
-    setMeta('name', 'twitter:card', 'summary')
+    setMeta('property', 'og:image', '/og.png')
+    setMeta('name', 'twitter:card', 'summary_large_image')
     setMeta('name', 'twitter:title', title)
     setMeta('name', 'twitter:description', description)
+    setMeta('name', 'twitter:image', '/og.png')
   }, [t, lang])
 }

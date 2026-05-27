@@ -1,12 +1,16 @@
-import { ArrowRight, Bug, Sparkles, Zap } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Bug, Sparkles, Zap } from 'lucide-react'
 import type { ComponentType } from 'react'
 import { Badge } from '../components/ui/Badge'
 import { Card } from '../components/ui/Card'
 import { FadeIn } from '../components/ui/FadeIn'
+import { GithubIcon } from '../components/ui/icons'
 import { SectionTitle } from '../components/ui/SectionTitle'
 import { StatusDot } from '../components/ui/StatusDot'
 import { focus } from '../data/focus'
 import { useT } from '../i18n/useT'
+
+const projectLink =
+  'inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-accent'
 
 const HIGHLIGHT_ICONS: ComponentType<{ className?: string }>[] = [
   Zap,
@@ -57,6 +61,32 @@ export function Focus() {
                   <Badge key={tech}>{tech}</Badge>
                 ))}
               </div>
+              {(focus.project.links?.live || focus.project.links?.repo) && (
+                <div className="mt-auto flex flex-wrap gap-5 pt-5">
+                  {focus.project.links.live && (
+                    <a
+                      href={focus.project.links.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={projectLink}
+                    >
+                      {t('focus.live')}
+                      <ArrowUpRight aria-hidden className="h-4 w-4" />
+                    </a>
+                  )}
+                  {focus.project.links.repo && (
+                    <a
+                      href={focus.project.links.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={projectLink}
+                    >
+                      {t('focus.repo')}
+                      <GithubIcon className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
+              )}
             </Card>
           </FadeIn>
 

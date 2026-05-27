@@ -1,14 +1,23 @@
 {
   "meta": {
-    "title": "Alexandr Chumak — Senior Frontend Developer",
-    "description": "Senior Frontend Developer (React, React Native) with 5+ years building scalable, performant web apps and design systems. Open to remote roles across Europe."
+    "title": "Alexandr Chumak — Senior Frontend Engineer → AI Product Engineer",
+    "description": "Senior Frontend Engineer (5y · React, TypeScript, Next.js) moving into AI product engineering. Open to senior FE / AI product roles across the EU, and freelance."
   },
   "nav": {
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
     "languages": "Languages",
+    "freelance": "Freelance",
     "contact": "Contact"
+  },
+  "freelance": {
+    "title": "Work with me",
+    "offersTitle": "What I help with",
+    "processTitle": "How I work",
+    "faqTitle": "FAQ",
+    "emailCta": "Email me about your project",
+    "bookCta": "Book a 20-min intro call"
   },
   "hero": {
     "viewWork": "View experience",
@@ -21,10 +30,14 @@
   "focus": {
     "title": "Now",
     "inProgress": "In progress",
-    "building": "Building now"
+    "building": "Building now",
+    "live": "Live demo",
+    "repo": "Source"
   },
   "contact": {
-    "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email."
+    "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email.",
+    "copyEmail": "Copy email",
+    "copied": "Copied"
   },
   "a11y": {
     "skipToContent": "Skip to content",

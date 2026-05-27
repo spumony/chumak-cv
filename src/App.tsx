@@ -6,6 +6,7 @@ import { Experience } from './sections/Experience'
 import { Education } from './sections/Education'
 import { Skills } from './sections/Skills'
 import { Languages } from './sections/Languages'
+import { Freelance } from './sections/Freelance'
 import { Contact } from './sections/Contact'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
 import { useT } from './i18n/useT'
@@ -32,6 +33,7 @@ function App() {
         <Education />
         <Skills />
         <Languages />
+        <Freelance />
         <Contact />
       </main>
 

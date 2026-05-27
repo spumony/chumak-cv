@@ -1,14 +1,23 @@
 {
   "meta": {
-    "title": "Александр Чумак — Senior Frontend-разработчик",
-    "description": "Senior Frontend-разработчик (React, React Native), 5+ лет: масштабируемые производительные веб-приложения и дизайн-системы."
+    "title": "Александр Чумак — Senior Frontend-инженер → AI Product Engineer",
+    "description": "Senior Frontend-инженер (5 лет · React, TypeScript, Next.js), перехожу в AI product engineering. Открыт к ролям в EU и фриланс-проектам."
   },
   "nav": {
     "experience": "Опыт",
     "education": "Образование",
     "skills": "Навыки",
     "languages": "Языки",
+    "freelance": "Фриланс",
     "contact": "Контакты"
+  },
+  "freelance": {
+    "title": "Работа со мной",
+    "offersTitle": "С чем помогаю",
+    "processTitle": "Как работаю",
+    "faqTitle": "Частые вопросы",
+    "emailCta": "Написать о проекте",
+    "bookCta": "Созвон на 20 минут"
   },
   "hero": {
     "viewWork": "Смотреть опыт",
@@ -21,10 +30,14 @@
   "focus": {
     "title": "Сейчас",
     "inProgress": "В процессе",
-    "building": "Делаю сейчас"
+    "building": "Делаю сейчас",
+    "live": "Демо",
+    "repo": "Код"
   },
   "contact": {
-    "lead": "Открыт к senior-позициям во фронтенде и фриланс-проектам. Быстрее всего — на почту."
+    "lead": "Открыт к senior-позициям во фронтенде и фриланс-проектам. Быстрее всего — на почту.",
+    "copyEmail": "Скопировать email",
+    "copied": "Скопировано"
   },
   "a11y": {
     "skipToContent": "Перейти к содержимому",
