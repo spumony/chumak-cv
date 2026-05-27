@@ -5,14 +5,13 @@
   },
   "nav": {
     "experience": "Experience",
-    "projects": "Projects",
     "education": "Education",
     "skills": "Skills",
     "languages": "Languages",
     "contact": "Contact"
   },
   "hero": {
-    "viewProjects": "View projects",
+    "viewWork": "View experience",
     "getInTouch": "Get in touch",
     "openToWork": "Open to work"
   },
@@ -23,11 +22,6 @@
     "title": "Now",
     "inProgress": "In progress",
     "building": "Building now"
-  },
-  "projects": {
-    "featured": "Featured",
-    "live": "Live",
-    "source": "Source"
   },
   "contact": {
     "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email."

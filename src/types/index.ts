@@ -6,7 +6,6 @@ export const SECTION_IDS = [
   'hero',
   'focus',
   'experience',
-  'projects',
   'education',
   'skills',
   'languages',
@@ -18,7 +17,6 @@ export type SectionId = (typeof SECTION_IDS)[number]
 /** Sections that appear in the navigation (everything except the hero). */
 export const NAV_SECTION_IDS = [
   'experience',
-  'projects',
   'education',
   'skills',
   'languages',
@@ -63,18 +61,6 @@ export type ExperienceItem = {
   /** Marks the current role — shows a live "Now" badge. */
   current?: boolean
   logo?: string
-}
-
-export type Project = {
-  title: LocalizedString
-  description: LocalizedString
-  technologies: string[]
-  links?: {
-    live?: string
-    source?: string
-  }
-  /** Visually emphasize this project. */
-  featured?: boolean
 }
 
 export type EducationItem = {

@@ -5,14 +5,13 @@
   },
   "nav": {
     "experience": "Опыт",
-    "projects": "Проекты",
     "education": "Образование",
     "skills": "Навыки",
     "languages": "Языки",
     "contact": "Контакты"
   },
   "hero": {
-    "viewProjects": "Смотреть проекты",
+    "viewWork": "Смотреть опыт",
     "getInTouch": "Связаться",
     "openToWork": "Открыт к работе"
   },
@@ -23,11 +22,6 @@
     "title": "Сейчас",
     "inProgress": "В процессе",
     "building": "Делаю сейчас"
-  },
-  "projects": {
-    "featured": "Ключевой",
-    "live": "Демо",
-    "source": "Код"
   },
   "contact": {
     "lead": "Открыт к senior-позициям во фронтенде и фриланс-проектам. Быстрее всего — на почту."

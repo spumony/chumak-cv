@@ -55,13 +55,13 @@ export function Hero() {
         )}
 
         <div className="mt-2 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <a href="#projects" className={primaryCta}>
-            {t('hero.viewProjects')}
-            <ArrowRight aria-hidden className="h-4 w-4" />
-          </a>
-          <a href="#contact" className={secondaryCta}>
+          <a href="#contact" className={primaryCta}>
             {t('hero.getInTouch')}
             <Mail aria-hidden className="h-4 w-4" />
+          </a>
+          <a href="#experience" className={secondaryCta}>
+            {t('hero.viewWork')}
+            <ArrowRight aria-hidden className="h-4 w-4" />
           </a>
         </div>
       </FadeIn>

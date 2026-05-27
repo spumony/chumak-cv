@@ -2,13 +2,13 @@ import type { SkillCategory } from '../types'
 
 export const skills: SkillCategory[] = [
   {
-    category: { ru: 'Уверенно · 5 лет', en: 'Core · 5 years' },
+    category: { ru: 'Frontend · 5 лет', en: 'Frontend · 5 years' },
     items: [
       'React',
       'TypeScript',
       'Next.js (App Router)',
-      'JavaScript',
       'Tailwind CSS',
+      'TanStack Query',
       {
         ru: 'Продуктовый / UI-дизайн (Figma)',
         en: 'Product / UI design (Figma)',
@@ -16,25 +16,29 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    category: { ru: 'На практике · последний месяц', en: 'Hands-on · recent' },
+    category: { ru: 'Fullstack · на практике', en: 'Fullstack · hands-on' },
     items: [
+      'Node.js',
       'PostgreSQL',
       'Drizzle ORM',
-      'Next.js 16 (Server Components)',
+      'Server Components / Actions',
+      'Zod',
       { ru: 'Session-аутентификация (bcrypt)', en: 'Session auth (bcrypt)' },
       { ru: 'Дизайн REST API', en: 'REST API design' },
-      { ru: 'Фоновые задачи (Inngest)', en: 'Background jobs (Inngest)' },
+      'Inngest',
     ],
   },
   {
-    category: { ru: 'Изучаю дальше', en: 'Learning next' },
+    category: { ru: 'AI-инжиниринг · изучаю', en: 'AI engineering · learning' },
     upcoming: true,
     items: [
-      'Embeddings',
+      'Vercel AI SDK',
+      'OpenAI / Anthropic SDK',
+      'Embeddings + pgvector',
       'RAG',
       'Evals',
       'Observability',
-      { ru: 'LLM-агенты', en: 'LLM agents' },
+      { ru: 'LLM-агенты / MCP', en: 'LLM agents / MCP' },
     ],
   },
 ]
