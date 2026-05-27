@@ -13,7 +13,7 @@ export const languages: LanguageItem[] = [
   },
   {
     name: { ru: 'Румынский', en: 'Romanian' },
-    level: { ru: 'Выше среднего', en: 'Upper-Intermediate' },
-    levelCode: 'B2',
+    level: { ru: 'Продвинутый', en: 'Advanced' },
+    levelCode: 'C1',
   },
 ]

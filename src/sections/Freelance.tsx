@@ -58,6 +58,24 @@ export function Freelance() {
               </li>
             ))}
           </ol>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href={`mailto:${contact.email}`} className={primaryCta}>
+              <Mail aria-hidden className="h-4 w-4" />
+              {t('freelance.emailCta')}
+            </a>
+            {freelance.bookingUrl && (
+              <a
+                href={freelance.bookingUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={secondaryCta}
+              >
+                <CalendarClock aria-hidden className="h-4 w-4" />
+                {t('freelance.bookCta')}
+              </a>
+            )}
+          </div>
         </FadeIn>
 
         {/* FAQ */}
@@ -76,24 +94,6 @@ export function Freelance() {
             ))}
           </dl>
         </FadeIn>
-      </div>
-
-      <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <a href={`mailto:${contact.email}`} className={primaryCta}>
-          <Mail aria-hidden className="h-4 w-4" />
-          {t('freelance.emailCta')}
-        </a>
-        {freelance.bookingUrl && (
-          <a
-            href={freelance.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
-            className={secondaryCta}
-          >
-            <CalendarClock aria-hidden className="h-4 w-4" />
-            {t('freelance.bookCta')}
-          </a>
-        )}
       </div>
     </section>
   )
