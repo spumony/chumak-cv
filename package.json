@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@fontsource/geist-mono": "^5.2.8",
-    "@fontsource/geist-sans": "^5.2.5",
+    "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.3.0",
     "i18next": "^26.3.0",
     "lucide-react": "^1.16.0",
