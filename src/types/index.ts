@@ -27,14 +27,18 @@ export const NAV_SECTION_IDS = [
 
 export type NavSectionId = (typeof NAV_SECTION_IDS)[number]
 
-export type FocusHighlight = {
-  title: LocalizedString
-  body: LocalizedString
+export type FocusProject = {
+  title: string
+  description: LocalizedString
+  technologies: string[]
 }
 
 export type FocusData = {
   lead: LocalizedString
-  highlights: FocusHighlight[]
+  /** Short, scannable one-liners. */
+  highlights: LocalizedString[]
+  /** The build that proves the transition. */
+  project: FocusProject
 }
 
 export type HeroData = {
@@ -56,6 +60,8 @@ export type ExperienceItem = {
   description: LocalizedString
   bullets?: LocalizedString[]
   technologies: string[]
+  /** Marks the current role — shows a live "Now" badge. */
+  current?: boolean
   logo?: string
 }
 

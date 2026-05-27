@@ -13,10 +13,16 @@
   },
   "hero": {
     "viewProjects": "View projects",
-    "getInTouch": "Get in touch"
+    "getInTouch": "Get in touch",
+    "openToWork": "Open to work"
+  },
+  "experience": {
+    "current": "Now"
   },
   "focus": {
-    "title": "Now"
+    "title": "Now",
+    "inProgress": "In progress",
+    "building": "Building now"
   },
   "projects": {
     "featured": "Featured",

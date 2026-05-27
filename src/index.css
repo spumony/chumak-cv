@@ -23,6 +23,7 @@
   --color-text-muted: var(--text-muted);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+  --color-success: var(--success);
 }
 
 :root,
@@ -36,6 +37,7 @@
   --text-muted: #737373;
   --accent: #7c3aed;
   --accent-hover: #6d28d9;
+  --success: #059669;
 }
 
 [data-theme='dark'] {
@@ -48,6 +50,7 @@
   --text-muted: #737373;
   --accent: #8b5cf6;
   --accent-hover: #a78bfa;
+  --success: #34d399;
 }
 
 /* ─── Base layer ─── */

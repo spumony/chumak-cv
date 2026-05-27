@@ -13,10 +13,16 @@
   },
   "hero": {
     "viewProjects": "Смотреть проекты",
-    "getInTouch": "Связаться"
+    "getInTouch": "Связаться",
+    "openToWork": "Открыт к работе"
+  },
+  "experience": {
+    "current": "Сейчас"
   },
   "focus": {
-    "title": "Сейчас"
+    "title": "Сейчас",
+    "inProgress": "В процессе",
+    "building": "Делаю сейчас"
   },
   "projects": {
     "featured": "Ключевой",

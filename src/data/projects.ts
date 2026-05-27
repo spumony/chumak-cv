@@ -4,28 +4,10 @@ import type { Project } from '../types'
 // Add `links: { live, source }` per project when you have public URLs.
 export const projects: Project[] = [
   {
-    title: {
-      ru: 'Learning Platform / Bookmark Manager',
-      en: 'Learning Platform / Bookmark Manager',
-    },
-    description: {
-      ru: 'Full-stack приложение с нуля: session-аутентификация (bcrypt, httpOnly-куки), защищённый REST API с авторизацией по владению ресурсом, менеджер закладок с фоновым скрейпингом OG-тегов (Inngest), пагинацией и поиском, и дашборд прогресса обучения. Каждая строка написана и осмыслена вручную.',
-      en: 'A from-scratch full-stack app: session auth (bcrypt, httpOnly cookies), a protected REST API with ownership-based authorization, a bookmark manager with background OG-tag scraping (Inngest), pagination and search, plus a learning-progress dashboard. Every line written and reasoned through by hand.',
-    },
-    technologies: [
-      'Next.js 16',
-      'PostgreSQL',
-      'Drizzle ORM',
-      'Inngest',
-      'TypeScript',
-    ],
-    featured: true,
-  },
-  {
     title: { ru: 'EVCARGO', en: 'EVCARGO' },
     description: {
-      ru: 'Логистическая платформа в сфере электромобильности. Отвечаю за архитектуру клиентской части, дизайн-систему и производительность интерфейса в продакшене.',
-      en: 'An e-mobility logistics platform. I own the client-side architecture, the design system and front-end performance in production.',
+      ru: 'Логистическая платформа в сфере электромобильности. Отвечал за архитектуру клиентской части, дизайн-систему и производительность интерфейса в продакшене.',
+      en: 'An e-mobility logistics platform. I owned the client-side architecture, the design system and front-end performance in production.',
     },
     technologies: [
       'React',
@@ -34,6 +16,7 @@ export const projects: Project[] = [
       'React Query',
       'Tailwind CSS',
     ],
+    featured: true,
   },
   {
     title: { ru: 'Дизайн-система', en: 'Design System' },

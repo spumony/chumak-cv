@@ -1,5 +1,6 @@
 import { ArrowRight, Mail, MapPin } from 'lucide-react'
 import { FadeIn } from '../components/ui/FadeIn'
+import { StatusDot } from '../components/ui/StatusDot'
 import { hero } from '../data/hero'
 import { useT } from '../i18n/useT'
 
@@ -17,6 +18,11 @@ export function Hero() {
       className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-5 py-24 sm:px-6 md:px-8"
     >
       <FadeIn className="flex flex-col items-start gap-6">
+        <span className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-3 py-1 text-sm font-medium text-success">
+          <StatusDot tone="success" />
+          {t('hero.openToWork')}
+        </span>
+
         {hero.avatar && (
           <img
             src={hero.avatar}
