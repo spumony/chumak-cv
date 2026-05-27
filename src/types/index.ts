@@ -40,8 +40,8 @@ export type ExperienceItem = {
   company: LocalizedString
   location: LocalizedString
   role: LocalizedString
-  /** Free-form period label, e.g. "2022 — Present". */
-  period: string
+  /** Free-form period label, e.g. "2022 — Present" / "2022 — наст. время". */
+  period: LocalizedString
   description: LocalizedString
   bullets?: LocalizedString[]
   technologies: string[]
@@ -61,7 +61,7 @@ export type Project = {
 }
 
 export type EducationItem = {
-  institution: string
+  institution: LocalizedString
   degree: LocalizedString
   field?: LocalizedString
   location?: LocalizedString

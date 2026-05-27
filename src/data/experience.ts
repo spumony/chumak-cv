@@ -8,7 +8,7 @@ export const experience: ExperienceItem[] = [
       ru: 'Frontend-разработчик',
       en: 'Frontend Developer',
     },
-    period: '2021 — настоящее время',
+    period: { ru: '2021 — настоящее время', en: '2021 — Present' },
     description: {
       ru: 'Развиваю frontend логистической платформы в сфере электромобильности — от проработки требований до релиза в Scrum-команде.',
       en: 'Building and evolving the frontend of an e-mobility logistics platform end to end — from requirements to release within a Scrum team.',
@@ -47,7 +47,7 @@ export const experience: ExperienceItem[] = [
       ru: 'Web-разработчик',
       en: 'Web Developer',
     },
-    period: '2019 — 2020',
+    period: { ru: '2019 — 2020', en: '2019 — 2020' },
     description: {
       ru: 'Разрабатывал и сопровождал веб-приложения для разных клиентов.',
       en: 'Built and maintained web applications for a range of clients.',
@@ -74,7 +74,7 @@ export const experience: ExperienceItem[] = [
       ru: 'Web-дизайнер',
       en: 'Web Designer',
     },
-    period: '2018 — 2019',
+    period: { ru: '2018 — 2019', en: '2018 — 2019' },
     description: {
       ru: 'Разрабатывал визуальные концепции и цифровые материалы для веб-проектов и маркетинга.',
       en: 'Created visual concepts and digital assets for web projects and marketing.',

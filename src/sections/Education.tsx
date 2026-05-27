@@ -23,7 +23,7 @@ export function Education() {
                 <h3 className="text-base font-semibold text-text-primary sm:text-lg">
                   {pick(item.degree)}
                 </h3>
-                <p className="text-text-secondary">{item.institution}</p>
+                <p className="text-text-secondary">{pick(item.institution)}</p>
               </div>
               <p className="font-mono text-sm whitespace-nowrap text-text-muted">
                 {item.period}

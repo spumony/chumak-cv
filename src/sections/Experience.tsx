@@ -32,7 +32,7 @@ export function Experience() {
               <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-sm text-text-muted">
                 <span className="flex items-center gap-1.5">
                   <Calendar aria-hidden className="h-4 w-4 shrink-0" />
-                  {item.period}
+                  {pick(item.period)}
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MapPin aria-hidden className="h-4 w-4 shrink-0" />
