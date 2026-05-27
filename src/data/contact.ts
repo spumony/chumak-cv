@@ -1,22 +1,19 @@
 import type { ContactData } from '../types'
 
 export const contact: ContactData = {
-  email: 'TODO: you@example.com',
+  email: 'ciumac.dev@gmail.com',
   links: [
     {
       kind: 'email',
-      label: 'TODO: you@example.com',
-      href: 'mailto:TODO@example.com',
+      label: 'ciumac.dev@gmail.com',
+      href: 'mailto:ciumac.dev@gmail.com',
     },
     {
       kind: 'linkedin',
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/TODO',
+      href: 'https://www.linkedin.com/in/spumony',
     },
-    {
-      kind: 'github',
-      label: 'GitHub',
-      href: 'https://github.com/TODO',
-    },
+    // Add your GitHub once you have the username:
+    // { kind: 'github', label: 'GitHub', href: 'https://github.com/<username>' },
   ],
 }

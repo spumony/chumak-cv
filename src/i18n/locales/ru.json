@@ -1,24 +1,27 @@
 {
   "meta": {
-    "title": "TODO: Имя — Роль",
-    "description": "TODO: Краткое профессиональное описание для SEO и превью ссылок."
+    "title": "Александр Чумак — Senior Frontend-разработчик",
+    "description": "Senior Frontend-разработчик (React, React Native), 5+ лет: масштабируемые производительные веб-приложения и дизайн-системы."
   },
   "nav": {
     "experience": "Опыт",
     "projects": "Проекты",
     "education": "Образование",
     "skills": "Навыки",
-    "certifications": "Сертификаты",
+    "languages": "Языки",
     "contact": "Контакты"
   },
   "hero": {
     "viewProjects": "Смотреть проекты",
     "getInTouch": "Связаться"
   },
-  "actions": {
-    "visit": "Открыть",
-    "source": "Исходники",
-    "verify": "Проверить"
+  "projects": {
+    "featured": "Ключевой",
+    "live": "Демо",
+    "source": "Код"
+  },
+  "contact": {
+    "lead": "Открыт к senior-позициям во фронтенде и фриланс-проектам. Быстрее всего — на почту."
   },
   "a11y": {
     "skipToContent": "Перейти к содержимому",

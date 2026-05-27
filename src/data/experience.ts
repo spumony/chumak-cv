@@ -2,41 +2,83 @@ import type { ExperienceItem } from '../types'
 
 export const experience: ExperienceItem[] = [
   {
-    company: 'TODO: Company Name',
-    location: { ru: 'TODO: Город (или Remote)', en: 'TODO: City (or Remote)' },
-    role: { ru: 'TODO: Должность', en: 'TODO: Role' },
-    period: '2022 — TODO',
+    company: { ru: 'TeamArt — EVCARGO', en: 'TeamArt — EVCARGO' },
+    location: { ru: 'Удалённо', en: 'Remote' },
+    role: {
+      ru: 'Frontend-разработчик',
+      en: 'Frontend Developer',
+    },
+    period: '2021 — настоящее время',
     description: {
-      ru: 'TODO: Одно предложение о роли, команде и зоне ответственности.',
-      en: 'TODO: One sentence about the role, team and scope of ownership.',
+      ru: 'Развиваю frontend логистической платформы в сфере электромобильности — от проработки требований до релиза в Scrum-команде.',
+      en: 'Building and evolving the frontend of an e-mobility logistics platform end to end — from requirements to release within a Scrum team.',
     },
     bullets: [
       {
-        ru: 'TODO: Достижение с измеримым результатом (например, ускорил загрузку на 40%).',
-        en: 'TODO: Achievement with a measurable result (e.g. cut load time by 40%).',
+        ru: 'Проектирую масштабируемую архитектуру клиентской части и переиспользуемые UI-компоненты.',
+        en: 'Designed a scalable client-side architecture and a library of reusable UI components.',
       },
       {
-        ru: 'TODO: Что вы спроектировали, внедрили или улучшили.',
-        en: 'TODO: Something you designed, shipped or improved.',
+        ru: 'Создаю и поддерживаю единую дизайн-систему, обеспечивая консистентность интерфейса.',
+        en: 'Built and maintain a shared design system that keeps the product UI consistent.',
+      },
+      {
+        ru: 'Интегрирую REST API и оптимизирую работу с данными на стороне клиента.',
+        en: 'Integrated REST APIs and optimised client-side data handling and caching.',
+      },
+      {
+        ru: 'Участвую в code review и техническом планировании задач.',
+        en: 'Drive code reviews and technical planning across the team.',
       },
     ],
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'React Query',
+      'Tailwind CSS',
+      'REST API',
+    ],
   },
   {
-    company: 'TODO: Previous Company',
-    location: { ru: 'TODO: Город', en: 'TODO: City' },
-    role: { ru: 'TODO: Предыдущая должность', en: 'TODO: Previous Role' },
-    period: '2019 — 2022',
+    company: { ru: 'Фриланс', en: 'Freelance' },
+    location: { ru: 'Удалённо', en: 'Remote' },
+    role: {
+      ru: 'Web-разработчик',
+      en: 'Web Developer',
+    },
+    period: '2019 — 2020',
     description: {
-      ru: 'TODO: Краткое описание предыдущего опыта.',
-      en: 'TODO: Short description of your previous experience.',
+      ru: 'Разрабатывал и сопровождал веб-приложения для разных клиентов.',
+      en: 'Built and maintained web applications for a range of clients.',
     },
     bullets: [
       {
-        ru: 'TODO: Ключевой результат или проект.',
-        en: 'TODO: A key result or project.',
+        ru: 'Рефакторил и модернизировал устаревшие интерфейсы.',
+        en: 'Refactored and modernised legacy interfaces.',
+      },
+      {
+        ru: 'Повышал производительность и улучшал пользовательский опыт.',
+        en: 'Improved performance and overall user experience.',
       },
     ],
-    technologies: ['JavaScript', 'Vue', 'Docker'],
+    technologies: ['React', 'JavaScript', 'CSS', 'HTML'],
+  },
+  {
+    company: {
+      ru: 'Exterior Security Systems',
+      en: 'Exterior Security Systems',
+    },
+    location: { ru: 'Кишинёв, Молдова', en: 'Chișinău, Moldova' },
+    role: {
+      ru: 'Web-дизайнер',
+      en: 'Web Designer',
+    },
+    period: '2018 — 2019',
+    description: {
+      ru: 'Разрабатывал визуальные концепции и цифровые материалы для веб-проектов и маркетинга.',
+      en: 'Created visual concepts and digital assets for web projects and marketing.',
+    },
+    technologies: ['Figma', 'HTML', 'CSS'],
   },
 ]

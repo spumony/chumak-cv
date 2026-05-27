@@ -1,24 +1,27 @@
 {
   "meta": {
-    "title": "TODO: Name — Role",
-    "description": "TODO: Short professional summary used for SEO and link previews."
+    "title": "Alexandr Chumak — Senior Frontend Developer",
+    "description": "Senior Frontend Developer (React, React Native) with 5+ years building scalable, performant web apps and design systems. Open to remote roles across Europe."
   },
   "nav": {
     "experience": "Experience",
     "projects": "Projects",
     "education": "Education",
     "skills": "Skills",
-    "certifications": "Certifications",
+    "languages": "Languages",
     "contact": "Contact"
   },
   "hero": {
     "viewProjects": "View projects",
     "getInTouch": "Get in touch"
   },
-  "actions": {
-    "visit": "Visit",
-    "source": "Source",
-    "verify": "Verify"
+  "projects": {
+    "featured": "Featured",
+    "live": "Live",
+    "source": "Source"
+  },
+  "contact": {
+    "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email."
   },
   "a11y": {
     "skipToContent": "Skip to content",

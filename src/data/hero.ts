@@ -1,15 +1,15 @@
 import type { HeroData } from '../types'
 
 export const hero: HeroData = {
-  name: { ru: 'TODO: Имя Фамилия', en: 'TODO: Name Surname' },
+  name: { ru: 'Александр Чумак', en: 'Alexandr Chumak' },
   role: {
-    ru: 'TODO: Senior Frontend-разработчик',
-    en: 'TODO: Senior Frontend Engineer',
+    ru: 'Senior Frontend-разработчик · React и React Native',
+    en: 'Senior Frontend Developer · React & React Native',
   },
   pitch: {
-    ru: 'TODO: Две-три строки о том, кто вы, что делаете и какую ценность приносите командам и продуктам.',
-    en: 'TODO: Two or three lines about who you are, what you build, and the value you bring to teams and products.',
+    ru: 'Более 5 лет создаю масштабируемые веб-приложения и цифровые продукты на основе React-экосистемы. Делаю производительные интерфейсы, чистую архитектуру и дизайн-системы, работаю в кросс-функциональных командах и участвую в технических решениях.',
+    en: '5+ years building scalable web apps and digital products across the React ecosystem. I focus on performant UIs, clean architecture and design systems, and thrive in cross-functional teams. Open to remote roles across Europe.',
   },
-  location: { ru: 'TODO: Город, Страна', en: 'TODO: City, Country' },
-  // avatar: '/avatar.jpg', // put an image in /public and uncomment to show it
+  location: { ru: 'Кишинёв, Молдова', en: 'Chișinău, Moldova' },
+  // avatar: '/avatar.jpg', // add an image to /public and uncomment to show it
 }

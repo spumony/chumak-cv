@@ -1,35 +1,41 @@
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
 import { Experience } from './sections/Experience'
-
-const PLACEHOLDER_IDS = [
-  'projects',
-  'education',
-  'skills',
-  'certifications',
-  'contact',
-] as const
+import { Projects } from './sections/Projects'
+import { Education } from './sections/Education'
+import { Skills } from './sections/Skills'
+import { Languages } from './sections/Languages'
+import { Contact } from './sections/Contact'
+import { useDocumentMeta } from './hooks/useDocumentMeta'
+import { useT } from './i18n/useT'
 
 function App() {
+  const { t } = useT()
+  useDocumentMeta()
+
   return (
     <>
+      <a
+        href="#main"
+        className="sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:font-medium focus:text-bg focus:not-sr-only"
+      >
+        {t('a11y.skipToContent')}
+      </a>
+
       <Header />
-      <main>
+
+      <main id="main">
         <Hero />
         <Experience />
-        {PLACEHOLDER_IDS.map((id) => (
-          <section
-            key={id}
-            id={id}
-            className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-5 sm:px-6 md:px-8"
-          >
-            <h2 className="font-mono text-sm text-text-muted">#{id}</h2>
-            <p className="mt-2 text-2xl font-semibold text-text-primary capitalize sm:text-3xl">
-              {id} placeholder
-            </p>
-          </section>
-        ))}
+        <Projects />
+        <Education />
+        <Skills />
+        <Languages />
+        <Contact />
       </main>
+
+      <Footer />
     </>
   )
 }

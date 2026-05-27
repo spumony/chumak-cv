@@ -2,19 +2,21 @@ import type { EducationItem } from '../types'
 
 export const education: EducationItem[] = [
   {
-    institution: 'TODO: University Name',
-    degree: { ru: 'TODO: Степень (например, бакалавр)', en: 'TODO: Degree' },
-    field: {
-      ru: 'TODO: Специальность',
-      en: 'TODO: Field of study',
+    institution: 'Technical University of Moldova',
+    degree: {
+      ru: 'Магистр информационных технологий',
+      en: "Master's in Information Technology",
     },
-    location: { ru: 'TODO: Город', en: 'TODO: City' },
-    period: '2015 — 2019',
+    location: { ru: 'Кишинёв, Молдова', en: 'Chișinău, Moldova' },
+    period: '2018 — 2020',
   },
   {
-    institution: 'TODO: Course or Bootcamp',
-    degree: { ru: 'TODO: Программа', en: 'TODO: Program' },
-    location: { ru: 'TODO: Онлайн', en: 'TODO: Online' },
-    period: '2020',
+    institution: 'Technical University of Moldova',
+    degree: {
+      ru: 'Бакалавр информационных технологий',
+      en: "Bachelor's in Information Technology",
+    },
+    location: { ru: 'Кишинёв, Молдова', en: 'Chișinău, Moldova' },
+    period: '2015 — 2018',
   },
 ]

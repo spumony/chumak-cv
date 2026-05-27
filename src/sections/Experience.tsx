@@ -20,13 +20,13 @@ export function Experience() {
 
       <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:gap-6">
         {experience.map((item, index) => (
-          <FadeIn key={`${item.company}-${index}`} delay={index * 0.05}>
+          <FadeIn key={index} delay={index * 0.05}>
             <Card>
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold text-text-primary sm:text-xl">
                   {pick(item.role)}
                 </h3>
-                <p className="font-medium text-accent">{item.company}</p>
+                <p className="font-medium text-accent">{pick(item.company)}</p>
               </div>
 
               <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-sm text-text-muted">

@@ -8,7 +8,7 @@ export const SECTION_IDS = [
   'projects',
   'education',
   'skills',
-  'certifications',
+  'languages',
   'contact',
 ] as const
 
@@ -20,7 +20,7 @@ export const NAV_SECTION_IDS = [
   'projects',
   'education',
   'skills',
-  'certifications',
+  'languages',
   'contact',
 ] as const
 
@@ -37,7 +37,7 @@ export type HeroData = {
 }
 
 export type ExperienceItem = {
-  company: string
+  company: LocalizedString
   location: LocalizedString
   role: LocalizedString
   /** Free-form period label, e.g. "2022 — Present". */
@@ -49,7 +49,7 @@ export type ExperienceItem = {
 }
 
 export type Project = {
-  title: string
+  title: LocalizedString
   description: LocalizedString
   technologies: string[]
   links?: {
@@ -70,16 +70,16 @@ export type EducationItem = {
 
 export type SkillCategory = {
   category: LocalizedString
-  items: string[]
+  /** Plain tech names stay as strings; translatable terms use LocalizedString. */
+  items: (string | LocalizedString)[]
 }
 
-export type Certification = {
-  name: string
-  issuer: string
-  /** Free-form issue date, e.g. "Mar 2024". */
-  date: string
-  /** Link to verify the credential. */
-  credentialUrl?: string
+export type LanguageItem = {
+  name: LocalizedString
+  /** Proficiency description, e.g. "Upper-Intermediate". */
+  level: LocalizedString
+  /** Short badge, e.g. "B2" or "Native". */
+  levelCode?: string
 }
 
 export type ContactKind =
