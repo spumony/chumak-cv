@@ -21,11 +21,15 @@ export function MobileMenu({ open, onClose, activeId }: MobileMenuProps) {
   function handleNavClick(event: MouseEvent<HTMLAnchorElement>, id: string) {
     event.preventDefault()
     onClose()
+    // Two frames so the close has committed (releasing the scroll-lock via the
+    // layout-effect cleanup) before we scroll — otherwise the scroll is blocked.
     requestAnimationFrame(() => {
-      document.getElementById(id)?.scrollIntoView({
-        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        })
+        history.replaceState(null, '', `#${id}`)
       })
-      history.replaceState(null, '', `#${id}`)
     })
   }
 

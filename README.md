@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# chumak-cv
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Minimal, bilingual (RU/EN) personal CV / portfolio — a static single-page
+site with smooth scroll navigation, a dark theme and subtle scroll
+animations. Mobile-first.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vite** + **React 19** + **TypeScript** (strict)
+- **Tailwind CSS v4** (via `@tailwindcss/vite`, CSS-first `@theme`)
+- **Motion** (Framer Motion) — scroll-in animations, respects `prefers-reduced-motion`
+- **i18next** + **react-i18next** — RU/EN with `localStorage` persistence
+- **lucide-react** — icons
+- **@fontsource** — self-hosted Inter (Latin + Cyrillic) and Geist Mono
+- ESLint + Prettier
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
+pnpm dev        # start dev server (http://localhost:5173)
+pnpm build      # type-check + production build to dist/
+pnpm preview    # preview the production build
+pnpm lint       # ESLint
+pnpm format     # Prettier --write
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Editing content
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+All content lives in two places. No component changes are needed.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. Section data — `src/data/`
+
+Each file is a typed array/object. Every translatable string is an object
+`{ ru: '…', en: '…' }`.
+
+| File | Section |
+| --- | --- |
+| `hero.ts` | Name, role, pitch, location, optional `avatar` |
+| `experience.ts` | Work history (role, company, period, bullets, tech) |
+| `projects.ts` | Project cards (title, description, tech, optional `links`) |
+| `education.ts` | Degrees |
+| `skills.ts` | Skill categories and items |
+| `languages.ts` | Spoken languages and levels |
+| `contact.ts` | Email + social links |
+
+Notes:
+
+- **Avatar:** add an image to `public/` and set `hero.avatar = '/your-image.jpg'`.
+- **Project links:** add `links: { live, source }` per project when you have public URLs.
+- **GitHub:** uncomment the GitHub entry in `contact.ts` once you have your username.
+
+### 2. UI strings — `src/i18n/locales/`
+
+`en.json` and `ru.json` hold navigation labels, button text, the SEO
+title/description and accessibility labels. Keys are type-checked.
+
+## Design tokens
+
+Colors and fonts are defined once via Tailwind v4 `@theme` in
+`src/index.css` and exposed as utilities (`bg-bg`, `text-text-primary`,
+`text-accent`, `border-border`, `font-mono`, …). Change them in one place.
+
+## Deploy to Vercel
+
+This is a static Vite SPA — no extra config needed.
+
+1. Push the repo to GitHub.
+2. Import it in Vercel. The Vite preset is auto-detected:
+   - Build command: `pnpm build`
+   - Output directory: `dist`
+3. Deploy. There is no client-side routing, so no rewrites / `vercel.json`
+   are required.
+
+## Accessibility & performance
+
+- Semantic landmarks, skip-to-content link, visible focus rings, AA contrast.
+- Touch targets ≥ 44×44px; iOS-safe 16px minimum body font.
+- Animations limited to `opacity`/`transform`, disabled under
+  `prefers-reduced-motion`.
+- Self-hosted fonts with `font-display: swap`; lazy images.

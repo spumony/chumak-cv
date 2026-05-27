@@ -38,7 +38,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden; /* safety net only; content must not overflow on its own */
+    /* Safety net for accidental horizontal overflow. `clip` (not `hidden`)
+       so the body does NOT become a scroll container — otherwise overflow-y
+       computes to `auto` and breaks viewport scrollIntoView / scroll-spy. */
+    overflow-x: clip;
   }
 
   :focus-visible {
