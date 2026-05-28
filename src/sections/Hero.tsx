@@ -1,4 +1,5 @@
 import { ArrowRight, Globe, Mail, MapPin } from 'lucide-react'
+import { AvatarLightbox } from '../components/AvatarLightbox'
 import { FadeIn } from '../components/ui/FadeIn'
 import { StatusDot } from '../components/ui/StatusDot'
 import { hero } from '../data/hero'
@@ -32,23 +33,33 @@ export function Hero() {
           </p>
         </div>
 
-        <p className="max-w-2xl text-base text-text-secondary sm:text-lg">
-          {pick(hero.pitch)}
-        </p>
-
-        <div className="flex flex-col gap-1.5 text-sm text-text-muted">
-          {hero.location && (
-            <p className="flex items-center gap-1.5">
-              <MapPin aria-hidden className="h-4 w-4 shrink-0" />
-              {pick(hero.location)}
-            </p>
+        <div className="flex w-full flex-col gap-5 rounded-2xl border border-border bg-bg-elevated p-5 sm:flex-row sm:items-start sm:gap-6 sm:p-6">
+          {hero.avatar && (
+            <AvatarLightbox src={hero.avatar} alt={pick(hero.name)} />
           )}
-          {hero.availability && (
-            <p className="flex items-start gap-1.5">
-              <Globe aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
-              <span className="text-balance">{pick(hero.availability)}</span>
+          <div className="flex flex-col gap-4">
+            <p className="text-base text-text-secondary sm:text-lg">
+              {pick(hero.pitch)}
             </p>
-          )}
+            {(hero.location || hero.availability) && (
+              <div className="flex flex-col gap-1.5 border-t border-border/60 pt-4 text-sm text-text-muted">
+                {hero.location && (
+                  <p className="flex items-center gap-1.5">
+                    <MapPin aria-hidden className="h-4 w-4 shrink-0" />
+                    {pick(hero.location)}
+                  </p>
+                )}
+                {hero.availability && (
+                  <p className="flex items-start gap-1.5">
+                    <Globe aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span className="text-balance">
+                      {pick(hero.availability)}
+                    </span>
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="mt-2 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
