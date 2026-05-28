@@ -52,7 +52,9 @@
   "contact": {
     "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email.",
     "copyEmail": "Copy email",
-    "copied": "Copied"
+    "copied": "Copied",
+    "openPhoto": "Open photo",
+    "closePhoto": "Close photo"
   },
   "a11y": {
     "skipToContent": "Skip to content",
