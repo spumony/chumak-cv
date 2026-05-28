@@ -1,10 +1,11 @@
-import { Globe, Mail, Send } from 'lucide-react'
+import { Globe, MapPin, Mail, Send } from 'lucide-react'
 import { Fragment, type ComponentType } from 'react'
 import { CopyEmailButton } from '../components/CopyEmailButton'
 import { FadeIn } from '../components/ui/FadeIn'
 import { GithubIcon, LinkedinIcon } from '../components/ui/icons'
 import { SectionTitle } from '../components/ui/SectionTitle'
 import { contact } from '../data/contact'
+import { hero } from '../data/hero'
 import type { ContactKind } from '../types'
 import { useT } from '../i18n/useT'
 
@@ -22,7 +23,7 @@ const primaryLink = `${baseLink} bg-accent text-bg hover:bg-accent-hover`
 const secondaryLink = `${baseLink} border border-border text-text-primary hover:border-accent/50`
 
 export function Contact() {
-  const { t } = useT()
+  const { t, pick } = useT()
 
   return (
     <section
@@ -31,6 +32,31 @@ export function Contact() {
     >
       <FadeIn>
         <SectionTitle>{t('nav.contact')}</SectionTitle>
+
+        {hero.avatar && (
+          <div className="mt-8 flex items-center gap-4 rounded-2xl border border-border bg-bg-elevated p-4 sm:gap-5 sm:p-5">
+            <img
+              src={hero.avatar}
+              alt={pick(hero.name)}
+              width={128}
+              height={128}
+              loading="lazy"
+              className="h-16 w-16 shrink-0 rounded-full border border-border object-cover grayscale transition-[filter,transform] duration-300 ease-out hover:grayscale-0 hover:scale-105 sm:h-20 sm:w-20 motion-reduce:transition-none motion-reduce:hover:scale-100"
+            />
+            <div className="flex flex-col gap-1">
+              <p className="text-base font-semibold text-text-primary sm:text-lg">
+                {pick(hero.name)}
+              </p>
+              {hero.location && (
+                <p className="flex items-center gap-1.5 text-sm text-text-muted">
+                  <MapPin aria-hidden className="h-4 w-4 shrink-0" />
+                  {pick(hero.location)}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
         <p className="mt-6 max-w-2xl text-base text-text-secondary sm:text-lg">
           {t('contact.lead')}
         </p>
