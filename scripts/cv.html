@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Alexandr Chumak — Senior Frontend Engineer</title>
     <style>
       @page {
         size: A4;
@@ -21,7 +22,7 @@
         font-size: 20pt;
         margin: 0;
       }
-      .title {
+      .role-line {
         font-size: 11pt;
         font-weight: bold;
         margin: 2pt 0 0;
@@ -29,10 +30,7 @@
       .contact {
         font-size: 9.5pt;
         color: #333;
-        margin: 4pt 0 0;
-      }
-      .summary {
-        margin: 8pt 0 0;
+        margin: 4pt 0 8pt;
       }
       h2 {
         font-size: 12.5pt;
@@ -40,12 +38,15 @@
         letter-spacing: 0.5pt;
         border-bottom: 1px solid #999;
         padding-bottom: 2pt;
-        margin: 11pt 0 5pt;
+        margin: 10pt 0 5pt;
       }
-      .job {
+      .summary {
+        margin: 0;
+      }
+      .entry {
         margin: 0 0 7pt;
       }
-      .job-head {
+      .entry-head {
         display: flex;
         justify-content: space-between;
         gap: 12pt;
@@ -69,7 +70,7 @@
       li {
         margin: 0 0 2pt;
       }
-      .skills p,
+      .group p,
       .langs p {
         margin: 0 0 3pt;
       }
@@ -81,130 +82,111 @@
   <body>
     <header>
       <h1>Alexandr Chumak</h1>
-      <p class="title">Senior Frontend Engineer &rarr; AI Product Engineer</p>
+      <p class="role-line">Senior Frontend Engineer &rarr; AI Product Engineer</p>
       <p class="contact">
         ciumac.dev@gmail.com &middot; linkedin.com/in/spumony &middot;
         Chi&#537;in&#259;u, Moldova (UTC+2)
       </p>
-      <p class="summary">
-        Senior Frontend Engineer with 5 years in React, TypeScript and Next.js,
-        moving into AI product engineering. I ship product UIs end to end and am
-        going deep on backend, databases and AI engineering (LLMs, RAG, evals).
-        Open to senior frontend / AI product roles across the EU, and freelance.
-      </p>
     </header>
+
+    <h2>Summary</h2>
+    <p class="summary">
+      Senior Frontend Engineer with 5 years shipping production React, TypeScript and Next.js. Now extending into AI product engineering: learning the application layer (Vercel AI SDK, RAG on pgvector, streaming UIs and evals) by building a real full-stack app. Open to senior frontend / AI Product Engineer roles across the EU and to long-term 10&ndash;20 hr/week retainers.
+    </p>
 
     <h2>Experience</h2>
 
-    <div class="job">
-      <div class="job-head">
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Lead Frontend Developer</span>
         <span class="period">2026 &ndash; Present</span>
       </div>
       <div class="company">Multisoft, Romania (Remote)</div>
       <ul>
-        <li>
-          Sole frontend developer on a restaurant CRM platform, owning
-          architecture, UI and feature delivery.
-        </li>
-        <li>
-          Building the client app from scratch in Next.js and TypeScript:
-          architecture, component system and routing.
-        </li>
-        <li>
-          Shipping order, menu and reporting modules with data-heavy tables,
-          filtering and complex forms.
-        </li>
-        <li>
-          Setting the design system and frontend standards, keeping the UI fast
-          and consistent.
-        </li>
+        <li>Sole frontend developer on a restaurant CRM platform, owning architecture, UI and feature delivery.</li>
+        <li>Building the client app from scratch in Next.js and TypeScript: architecture, component system and routing.</li>
+        <li>Shipping order, menu and reporting modules with data-heavy tables, filtering and complex forms.</li>
+        <li>Setting the design system and frontend standards, keeping the UI fast and consistent.</li>
       </ul>
     </div>
 
-    <div class="job">
-      <div class="job-head">
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Frontend Developer</span>
         <span class="period">2021 &ndash; Dec 2025</span>
       </div>
       <div class="company">TeamArt &mdash; EVCARGO (Remote)</div>
       <ul>
-        <li>
-          Built the frontend of a production e-mobility logistics platform
-          within a cross-functional Scrum team.
-        </li>
-        <li>
-          Built and maintained a shared design system and reusable component
-          library.
-        </li>
-        <li>
-          Designed scalable client-side architecture and integrated REST APIs
-          with React Query.
-        </li>
-        <li>
-          Drove code reviews and technical planning, from requirements to
-          release.
-        </li>
+        <li>Built the frontend of a production e-mobility logistics platform within a cross-functional Scrum team.</li>
+        <li>Built and maintained a shared design system and reusable component library.</li>
+        <li>Designed scalable client-side architecture and integrated REST APIs with React Query.</li>
+        <li>Drove code reviews and technical planning, from requirements to release.</li>
       </ul>
     </div>
 
-    <div class="job">
-      <div class="job-head">
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Web Developer</span>
         <span class="period">2019 &ndash; 2020</span>
       </div>
       <div class="company">Freelance (Remote)</div>
       <ul>
-        <li>
-          Delivered and modernised web apps for clients end to end; refactored
-          legacy interfaces and improved performance and UX.
-        </li>
+        <li>Delivered and modernised web apps for clients end to end; refactored legacy interfaces and improved performance and UX.</li>
       </ul>
     </div>
 
-    <div class="job">
-      <div class="job-head">
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Web Designer</span>
         <span class="period">2018 &ndash; 2019</span>
       </div>
-      <div class="company">
-        Exterior Security Systems, Chi&#537;in&#259;u, Moldova
-      </div>
+      <div class="company">Exterior Security Systems, Chi&#537;in&#259;u, Moldova</div>
       <ul>
-        <li>
-          Created visual concepts and digital assets for web and marketing.
-        </li>
+        <li>Created visual concepts and digital assets for web and marketing.</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role">Learning Platform / Bookmark Manager</span>
+        <span class="period">2026 &ndash; in progress</span>
+      </div>
+      <div class="company">Next.js 16, TypeScript, PostgreSQL, Drizzle ORM, Inngest, Zod</div>
+      <ul>
+        <li>From-scratch full-stack app for AI-engineering practice: session auth (bcrypt, httpOnly cookies), protected REST API with ownership-based authorization.</li>
+        <li>Bookmark manager with background OG-tag scraping via Inngest, pagination and search; schema migrations baseline via Drizzle.</li>
+        <li>Next: RAG search on pgvector and an evals harness for LLM features.</li>
       </ul>
     </div>
 
     <h2>Skills</h2>
-    <div class="skills">
+    <div class="group">
       <p>
-        <span class="label">Frontend:</span> React, TypeScript, Next.js (App
-        Router), Tailwind CSS, TanStack Query, Product/UI design (Figma)
+        <span class="label">Frontend:</span> React, TypeScript, Next.js (App Router), Tailwind CSS, TanStack Query, Zod, Vitest, Playwright, A11y (WCAG 2.2)
       </p>
       <p>
-        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Drizzle ORM,
-        Server Components/Actions, Zod, Session auth (bcrypt), REST API design,
-        Inngest
+        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Drizzle ORM, Server Components / Actions, Session auth (bcrypt), REST API design, Inngest, Sentry, Vercel
       </p>
       <p>
-        <span class="label">AI engineering (learning):</span> Vercel AI SDK,
-        OpenAI/Anthropic SDK, Embeddings + pgvector, RAG, Evals, Observability,
-        LLM agents / MCP
+        <span class="label">AI engineering (learning):</span> Vercel AI SDK, OpenAI / Anthropic / Gemini SDK, Embeddings + pgvector, RAG, Evals, Observability, Streaming UX (SSE), Prompt versioning, LLM agents / MCP
+      </p>
+      <p>
+        <span class="label">Practice:</span> Design systems, A/B testing, Product metrics, Cross-functional collaboration, Mentoring, Async written communication, Product / UI design (Figma)
       </p>
     </div>
 
     <h2>Education</h2>
-    <div class="job">
-      <div class="job-head">
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Master&rsquo;s in Information Technology</span>
         <span class="period">2018 &ndash; 2020</span>
       </div>
       <div class="company">Technical University of Moldova</div>
     </div>
-    <div class="job">
-      <div class="job-head">
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Bachelor&rsquo;s in Information Technology</span>
         <span class="period">2015 &ndash; 2018</span>
       </div>
@@ -213,10 +195,7 @@
 
     <h2>Languages</h2>
     <div class="langs">
-      <p>
-        Russian / Ukrainian (Native) &middot; English (C1) &middot; Romanian
-        (C1)
-      </p>
+      <p>Russian / Ukrainian (Native) &middot; English (C1) &middot; Romanian (C1)</p>
     </div>
   </body>
 </html>

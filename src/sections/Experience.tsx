@@ -7,11 +7,13 @@ import { StatusDot } from '../components/ui/StatusDot'
 import { experience } from '../data/experience'
 import { useT } from '../i18n/useT'
 
-// Drop an ATS-friendly PDF at this path in /public to show the download button.
-const RESUME_URL = '/Alexandr_Chumak_CV.pdf'
+// Language-aware ATS-friendly PDF paths in /public.
+const RESUME_URL_EN = '/Alexandr-Chumak-Senior-FE-Engineer.pdf'
+const RESUME_URL_RU = '/Alexandr-Chumak-Senior-FE-Engineer-RU.pdf'
 
 export function Experience() {
-  const { t, pick } = useT()
+  const { t, pick, lang } = useT()
+  const resumeUrl = lang === 'ru' ? RESUME_URL_RU : RESUME_URL_EN
 
   return (
     <section
@@ -21,16 +23,14 @@ export function Experience() {
       <FadeIn>
         <div className="flex flex-wrap items-center justify-between gap-4">
           <SectionTitle>{t('nav.experience')}</SectionTitle>
-          {RESUME_URL && (
-            <a
-              href={RESUME_URL}
-              download
-              className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
-            >
-              <Download aria-hidden className="h-4 w-4" />
-              {t('experience.downloadCv')}
-            </a>
-          )}
+          <a
+            href={resumeUrl}
+            download
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
+          >
+            <Download aria-hidden className="h-4 w-4" />
+            {t('experience.downloadCv')}
+          </a>
         </div>
       </FadeIn>
 
