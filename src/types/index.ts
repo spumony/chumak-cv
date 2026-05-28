@@ -5,6 +5,7 @@ export type LocalizedString = { ru: string; en: string }
 export const SECTION_IDS = [
   'hero',
   'focus',
+  'work',
   'experience',
   'education',
   'skills',
@@ -17,6 +18,7 @@ export type SectionId = (typeof SECTION_IDS)[number]
 
 /** Sections that appear in the navigation (everything except the hero). */
 export const NAV_SECTION_IDS = [
+  'work',
   'experience',
   'education',
   'skills',
@@ -27,23 +29,30 @@ export const NAV_SECTION_IDS = [
 
 export type NavSectionId = (typeof NAV_SECTION_IDS)[number]
 
-export type FocusProject = {
+export type FocusData = {
+  lead: LocalizedString
+  /** "Now" manifesto bullets (Building / Reading / Open to / Not taking). */
+  bullets: LocalizedString[]
+  /** Date string shown as "Updated …" — bilingual. */
+  updatedOn: LocalizedString
+}
+
+export type CaseStudyStatus = 'in-progress' | 'shipped' | 'current'
+
+export type CaseStudy = {
   title: string
-  description: LocalizedString
-  technologies: string[]
-  /** Optional public links — shown only when set. */
+  status?: CaseStudyStatus
+  /** Free-form period label, e.g. "2026 — Present". */
+  period?: LocalizedString
+  problem: LocalizedString
+  approach: LocalizedString
+  stack: string[]
+  outcome: LocalizedString
   links?: {
     live?: string
     repo?: string
+    writeup?: string
   }
-}
-
-export type FocusData = {
-  lead: LocalizedString
-  /** Short, scannable one-liners. */
-  highlights: LocalizedString[]
-  /** The build that proves the transition. */
-  project: FocusProject
 }
 
 export type HeroData = {
@@ -126,6 +135,8 @@ export type FreelanceFaq = {
 
 export type FreelanceData = {
   intro: LocalizedString
+  /** One-line "who I work with" tagline shown under the intro. */
+  whoIWorkWith?: LocalizedString
   offers: FreelanceOffer[]
   process: LocalizedString[]
   faq: FreelanceFaq[]

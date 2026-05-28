@@ -9,10 +9,10 @@ export const skills: SkillCategory[] = [
       'Next.js (App Router)',
       'Tailwind CSS',
       'TanStack Query',
-      {
-        ru: 'Продуктовый / UI-дизайн (Figma)',
-        en: 'Product / UI design (Figma)',
-      },
+      'Zod',
+      'Vitest',
+      'Playwright',
+      { ru: 'A11y (WCAG 2.2)', en: 'A11y (WCAG 2.2)' },
     ],
   },
   {
@@ -22,10 +22,11 @@ export const skills: SkillCategory[] = [
       'PostgreSQL',
       'Drizzle ORM',
       'Server Components / Actions',
-      'Zod',
       { ru: 'Session-аутентификация (bcrypt)', en: 'Session auth (bcrypt)' },
       { ru: 'Дизайн REST API', en: 'REST API design' },
       'Inngest',
+      'Sentry',
+      'Vercel',
     ],
   },
   {
@@ -33,12 +34,29 @@ export const skills: SkillCategory[] = [
     upcoming: true,
     items: [
       'Vercel AI SDK',
-      'OpenAI / Anthropic SDK',
+      'OpenAI / Anthropic / Gemini SDK',
       'Embeddings + pgvector',
       'RAG',
       'Evals',
       'Observability',
+      { ru: 'Streaming UX (SSE)', en: 'Streaming UX (SSE)' },
+      { ru: 'Версионирование промптов', en: 'Prompt versioning' },
       { ru: 'LLM-агенты / MCP', en: 'LLM agents / MCP' },
+    ],
+  },
+  {
+    category: { ru: 'Практики', en: 'Practice' },
+    items: [
+      { ru: 'Дизайн-системы', en: 'Design systems' },
+      { ru: 'A/B-тесты', en: 'A/B testing' },
+      { ru: 'Продуктовые метрики', en: 'Product metrics' },
+      {
+        ru: 'Кросс-функциональная работа',
+        en: 'Cross-functional collaboration',
+      },
+      { ru: 'Менторство', en: 'Mentoring' },
+      { ru: 'Асинхронная письменная коммуникация', en: 'Async written comms' },
+      { ru: 'Продуктовый / UI-дизайн (Figma)', en: 'Product / UI design (Figma)' },
     ],
   },
 ]

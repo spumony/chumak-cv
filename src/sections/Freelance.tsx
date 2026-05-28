@@ -25,6 +25,14 @@ export function Freelance() {
         <p className="mt-6 max-w-2xl text-base text-text-secondary sm:text-lg">
           {pick(freelance.intro)}
         </p>
+        {freelance.whoIWorkWith && (
+          <p className="mt-4 max-w-2xl text-sm text-text-muted">
+            <span className="font-mono tracking-wider uppercase">
+              {t('freelance.whoIWorkWith')}
+            </span>{' '}
+            · {pick(freelance.whoIWorkWith)}
+          </p>
+        )}
       </FadeIn>
 
       {/* What I help with */}

@@ -2,6 +2,7 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
 import { Focus } from './sections/Focus'
+import { Work } from './sections/Work'
 import { Experience } from './sections/Experience'
 import { Education } from './sections/Education'
 import { Skills } from './sections/Skills'
@@ -29,6 +30,7 @@ function App() {
       <main id="main">
         <Hero />
         <Focus />
+        <Work />
         <Experience />
         <Education />
         <Skills />

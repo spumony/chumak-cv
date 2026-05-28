@@ -5,6 +5,10 @@ export const freelance: FreelanceData = {
     ru: 'Беру 1–2 долгих клиента одновременно и встраиваюсь в команду как senior-инженер — а не делаю одноразовые сайты «под ключ».',
     en: 'I take on 1–2 long-term clients at a time and embed in your team as a senior engineer — not one-off “build me a website” gigs.',
   },
+  whoIWorkWith: {
+    ru: 'Команды Seed–Series B, которые шипят AI-фичи в стеке TypeScript / React.',
+    en: 'Seed–Series B teams shipping AI features in TypeScript / React stacks.',
+  },
   offers: [
     {
       title: { ru: 'AI-фичи для продуктов', en: 'AI features for products' },
@@ -79,6 +83,13 @@ export const freelance: FreelanceData = {
       a: {
         ru: 'Инвойс в конце месяца, NET 14, EUR/USD (Wise или банк). UTC+2 — пересекаюсь с EU и работаю по часам команды.',
         en: 'Invoice end of month, NET 14, EUR/USD (Wise or bank). UTC+2 — overlapping with the EU and working to your team’s hours.',
+      },
+    },
+    {
+      q: { ru: 'Что не беру?', en: 'What I don’t do?' },
+      a: {
+        ru: 'Разовые сайты «под ключ», работы только по дизайну и агентский subcontract.',
+        en: 'One-off “build me a website” gigs, design-only work and agency subcontracting.',
       },
     },
   ],

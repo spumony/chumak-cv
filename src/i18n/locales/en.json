@@ -4,6 +4,7 @@
     "description": "Senior Frontend Engineer (5y · React, TypeScript, Next.js) moving into AI product engineering. Open to senior FE / AI product roles across the EU, and freelance."
   },
   "nav": {
+    "work": "Work",
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
@@ -13,6 +14,7 @@
   },
   "freelance": {
     "title": "Work with me",
+    "whoIWorkWith": "Who I work with",
     "offersTitle": "What I help with",
     "processTitle": "How I work",
     "faqTitle": "FAQ",
@@ -34,6 +36,18 @@
     "building": "Building now",
     "live": "Live demo",
     "repo": "Source"
+  },
+  "work": {
+    "title": "Selected Work",
+    "problem": "Problem",
+    "approach": "Approach",
+    "stack": "Stack",
+    "outcome": "Outcome",
+    "status": {
+      "inProgress": "In progress",
+      "shipped": "Shipped",
+      "current": "Current"
+    }
   },
   "contact": {
     "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email.",
