@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OG card</title>
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --bg-elevated: #141414;
+        --border: #262626;
+        --text-primary: #f5f5f5;
+        --text-secondary: #a3a3a3;
+        --text-muted: #737373;
+        --accent: #8b5cf6;
+        --success: #34d399;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+      }
+      body {
+        width: 1200px;
+        height: 627px;
+        font-family:
+          'Inter',
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: var(--text-primary);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 80px;
+        position: relative;
+        overflow: hidden;
+      }
+      .accent-glow {
+        position: absolute;
+        top: -200px;
+        right: -150px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          closest-side,
+          rgba(139, 92, 246, 0.18),
+          transparent
+        );
+        pointer-events: none;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 22px;
+        color: var(--text-secondary);
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--success);
+        box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.18);
+      }
+      h1 {
+        font-size: 96px;
+        font-weight: 700;
+        letter-spacing: -2px;
+        line-height: 1;
+        margin: 0;
+      }
+      .role {
+        margin-top: 24px;
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 36px;
+        color: var(--accent);
+        letter-spacing: -0.5px;
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .pills {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .pill {
+        padding: 8px 18px;
+        border-radius: 999px;
+        font-size: 20px;
+      }
+      .pill.default {
+        border: 1px solid var(--border);
+        color: var(--text-secondary);
+        background: var(--bg-elevated);
+      }
+      .pill.accent {
+        border: 1px solid rgba(139, 92, 246, 0.4);
+        background: rgba(139, 92, 246, 0.12);
+        color: var(--accent);
+      }
+      .arrow {
+        color: var(--text-muted);
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accent-glow"></div>
+    <div class="top">
+      <span class="dot"></span>
+      <span>Open to senior FE / AI Product roles &middot; EU remote</span>
+    </div>
+
+    <div>
+      <h1>Alexandr Chumak</h1>
+      <div class="role">Senior Frontend Engineer &rarr; AI Product Engineer</div>
+    </div>
+
+    <div class="bottom">
+      <div class="pills">
+        <span class="pill default">React</span>
+        <span class="pill default">TypeScript</span>
+        <span class="pill default">Next.js</span>
+        <span class="pill accent">Vercel AI SDK</span>
+        <span class="pill accent">RAG</span>
+        <span class="pill accent">Evals</span>
+      </div>
+      <div>Chi&#537;in&#259;u, Moldova &middot; UTC+2</div>
+    </div>
+  </body>
+</html>
