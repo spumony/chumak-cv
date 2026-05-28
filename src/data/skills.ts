@@ -56,7 +56,10 @@ export const skills: SkillCategory[] = [
       },
       { ru: 'Менторство', en: 'Mentoring' },
       { ru: 'Асинхронная письменная коммуникация', en: 'Async written comms' },
-      { ru: 'Продуктовый / UI-дизайн (Figma)', en: 'Product / UI design (Figma)' },
+      {
+        ru: 'Продуктовый / UI-дизайн (Figma)',
+        en: 'Product / UI design (Figma)',
+      },
     ],
   },
 ]

@@ -38,13 +38,7 @@ export const work: CaseStudy[] = [
       ru: 'Спроектировал масштабируемую клиентскую архитектуру, создал и поддерживал общую дизайн-систему и библиотеку переиспользуемых компонентов, интегрировал REST API через React Query и вёл code review + техническое планирование от требований до релиза.',
       en: 'Designed a scalable client-side architecture, built and maintained a shared design system and reusable component library, integrated REST APIs via React Query and drove code reviews and technical planning from requirements to release.',
     },
-    stack: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'React Query',
-      'Tailwind CSS',
-    ],
+    stack: ['React', 'TypeScript', 'Next.js', 'React Query', 'Tailwind CSS'],
     outcome: {
       ru: 'Дизайн-система и общие компоненты ускорили доставку фич между продуктовыми зонами, REST-интеграции получили консистентный кэш-слой, а полный цикл (требования → код → ревью → релиз) шёл без блокировок между продуктом, дизайном и инженерией.',
       en: 'The design system and shared components sped up feature delivery across product areas, REST integrations got a consistent caching layer, and the full cycle (requirements → code → review → release) ran without blockers across product, design and engineering.',
@@ -62,13 +56,7 @@ export const work: CaseStudy[] = [
       ru: 'Строю клиентскую часть с нуля на Next.js + TypeScript: архитектура, система компонентов, роутинг и дизайн-стандарты. Делаю модули заказов, меню и отчётности — насыщенные данными таблицы, фильтры и сложные формы.',
       en: 'Building the client app from scratch on Next.js + TypeScript: architecture, component system, routing and frontend standards. Shipping order, menu and reporting modules with data-heavy tables, filtering and complex forms.',
     },
-    stack: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'REST API',
-    ],
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'REST API'],
     outcome: {
       ru: 'Поставляю фичи как senior IC, держу UI быстрым и консистентным, задаю фронтенд-стандарты и дизайн-систему как ведущий разработчик продукта.',
       en: 'Shipping as a senior IC, keeping the UI fast and consistent, and setting the frontend standards and design system as the lead developer on the product.',
