@@ -18,21 +18,22 @@ export function Hero() {
       className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-5 py-24 sm:px-6 md:px-8"
     >
       <FadeIn className="flex flex-col items-start gap-6">
-        <span className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-3 py-1 text-sm font-medium text-success">
-          <StatusDot tone="success" />
-          {t('hero.openToWork')}
-        </span>
-
-        {hero.avatar && (
-          <img
-            src={hero.avatar}
-            alt={pick(hero.name)}
-            width={128}
-            height={128}
-            loading="eager"
-            className="h-24 w-24 rounded-full border border-border object-cover sm:h-32 sm:w-32"
-          />
-        )}
+        <div className="flex items-center gap-2">
+          <span className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-3 py-1 text-sm font-medium text-success">
+            <StatusDot tone="success" />
+            {t('hero.openToWork')}
+          </span>
+          {hero.avatar && (
+            <img
+              src={hero.avatar}
+              alt={pick(hero.name)}
+              width={64}
+              height={64}
+              loading="eager"
+              className="h-7 w-7 rounded-full border border-border object-cover grayscale transition-[filter,transform] duration-300 ease-out hover:grayscale-0 hover:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100"
+            />
+          )}
+        </div>
 
         <div className="flex flex-col gap-3">
           <h1 className="text-4xl font-semibold tracking-tight text-balance text-text-primary sm:text-5xl md:text-7xl">
