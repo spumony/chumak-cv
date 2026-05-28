@@ -13,6 +13,11 @@ export const contact: ContactData = {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/spumony',
     },
+    {
+      kind: 'telegram',
+      label: 'Telegram',
+      href: 'https://t.me/spumony',
+    },
     // Add your GitHub once you have the username:
     // { kind: 'github', label: 'GitHub', href: 'https://github.com/<username>' },
   ],

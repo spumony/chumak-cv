@@ -15,5 +15,5 @@ export const hero: HeroData = {
     ru: 'Открыт к senior frontend / AI-product ролям в EU · удалёнка · долгосрочные контракты',
     en: 'Open to senior frontend / AI product roles across the EU · remote · long-term contracts',
   },
-  // avatar: '/avatar.jpg', // add an image to /public and uncomment to show it
+  avatar: '/avatar.jpg',
 }
