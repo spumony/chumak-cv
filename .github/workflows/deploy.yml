@@ -1,0 +1,73 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - '.github/**'
+      - '.vscode/**'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      DEPLOY_HOST: 204.168.196.101
+      DEPLOY_USER: deploy
+      DEPLOY_PATH: /var/www/chumak-cv/dist/
+      DEPLOY_URL: https://chumak.is-a.dev/
+      # Server SSH host key fingerprint — pinned to prevent MITM.
+      # Regenerate with: ssh-keyscan -t ed25519 <host>
+      SERVER_HOST_KEY: '204.168.196.101 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHeVRYjJXyG7vapHN0FifL3GJEkNpBDwcRhkp4MkfmkB'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$SERVER_HOST_KEY" >> ~/.ssh/known_hosts
+
+      - name: Deploy via rsync
+        run: |
+          rsync -avz --delete --human-readable \
+            -e 'ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes' \
+            dist/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}"
+
+      - name: Health-check live URL
+        run: |
+          set -e
+          status=$(curl -s -o /dev/null -w '%{http_code}' --max-time 10 "$DEPLOY_URL")
+          echo "GET $DEPLOY_URL → $status"
+          [ "$status" = "200" ]
+
+      - name: Summary
+        run: echo "Deployed → $DEPLOY_URL" >> "$GITHUB_STEP_SUMMARY"
