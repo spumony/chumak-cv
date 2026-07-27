@@ -9,7 +9,7 @@ export function Education() {
   return (
     <section
       id="education"
-      className="mx-auto max-w-3xl px-5 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12"
+      className="mx-auto max-w-3xl px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6"
     >
       <FadeIn>
         <SectionTitle>{t('nav.education')}</SectionTitle>
