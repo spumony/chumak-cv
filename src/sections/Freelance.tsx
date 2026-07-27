@@ -18,7 +18,7 @@ export function Freelance() {
   return (
     <section
       id="freelance"
-      className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16 md:px-8 md:py-20"
+      className="mx-auto max-w-5xl px-5 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12"
     >
       <FadeIn>
         <SectionTitle>{t('freelance.title')}</SectionTitle>

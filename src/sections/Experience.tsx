@@ -18,7 +18,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-16 md:px-8 md:py-20"
+      className="mx-auto max-w-3xl px-5 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12"
     >
       <FadeIn>
         <div className="flex flex-wrap items-center justify-between gap-4">
