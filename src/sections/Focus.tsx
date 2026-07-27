@@ -10,7 +10,7 @@ export function Focus() {
 
   return (
     <section id="focus" className="border-y border-border bg-accent/5">
-      <div className="mx-auto max-w-3xl px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24">
+      <div className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-16 md:px-8 md:py-20">
         <FadeIn>
           <SectionTitle>{t('focus.title')}</SectionTitle>
           <p className="mt-6 max-w-2xl text-base text-text-secondary sm:text-lg">
