@@ -8,6 +8,7 @@ import { useScrollSpy } from '../hooks/useScrollSpy'
 import { LanguageToggle } from './LanguageToggle'
 import { ThemeToggle } from './ThemeToggle'
 import { MobileMenu } from './MobileMenu'
+import { DownloadCvButton } from './DownloadCvButton'
 
 export function Header() {
   const { t, pick } = useT()
@@ -54,15 +55,18 @@ export function Header() {
             <LanguageToggle />
           </nav>
 
-          <button
-            type="button"
-            onClick={() => setMenuOpen(true)}
-            aria-label={t('a11y.openMenu')}
-            aria-expanded={menuOpen}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-text-secondary hover:text-text-primary lg:hidden"
-          >
-            <Menu aria-hidden className="h-6 w-6" />
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            <DownloadCvButton />
+            <button
+              type="button"
+              onClick={() => setMenuOpen(true)}
+              aria-label={t('a11y.openMenu')}
+              aria-expanded={menuOpen}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-text-secondary hover:text-text-primary lg:hidden"
+            >
+              <Menu aria-hidden className="h-6 w-6" />
+            </button>
+          </div>
         </div>
       </header>
 

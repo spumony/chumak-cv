@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Александр Чумак — Senior Frontend-инженер → AI Product Engineer",
-    "description": "Senior Frontend-инженер (5 лет · React, TypeScript, Next.js), перехожу в AI product engineering. Открыт к ролям в EU и фриланс-проектам."
+    "title": "Александр Чумак — Senior frontend-инженер (React, TypeScript, Next.js)",
+    "description": "Senior frontend-инженер. 6+ лет коммерческой разработки на React, TypeScript и Next.js. Открыт к senior-позициям и AI-продуктам, удалённо."
   },
   "nav": {
     "work": "Работы",
@@ -13,7 +13,7 @@
     "contact": "Контакты"
   },
   "freelance": {
-    "title": "Работа со мной",
+    "title": "Фриланс",
     "whoIWorkWith": "С кем работаю",
     "offersTitle": "С чем помогаю",
     "processTitle": "Как работаю",
@@ -31,9 +31,8 @@
     "downloadCv": "Скачать CV"
   },
   "focus": {
-    "title": "Сейчас",
+    "title": "Над чем работаю",
     "inProgress": "В процессе",
-    "building": "Делаю сейчас",
     "live": "Демо",
     "repo": "Код"
   },
@@ -45,12 +44,12 @@
     "outcome": "Результат",
     "status": {
       "inProgress": "В процессе",
-      "shipped": "Отгружено",
-      "current": "Сейчас"
+      "shipped": "Завершён",
+      "current": "В работе"
     }
   },
   "contact": {
-    "lead": "Открыт к senior-позициям во фронтенде и фриланс-проектам. Быстрее всего — на почту.",
+    "lead": "Ищете фронтенд-разработчика уровня senior или инженера для AI-продукта? Быстрее всего написать на почту.",
     "copyEmail": "Скопировать email",
     "copied": "Скопировано",
     "openPhoto": "Открыть фото",
@@ -65,7 +64,6 @@
     "primaryNav": "Основная навигация"
   },
   "footer": {
-    "builtWith": "Сделано на React, TypeScript и Tailwind CSS.",
-    "rights": "Все права защищены."
+    "builtWith": "Сделано на React и TypeScript."
   }
 }

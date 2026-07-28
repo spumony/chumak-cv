@@ -31,10 +31,8 @@ export type NavSectionId = (typeof NAV_SECTION_IDS)[number]
 
 export type FocusData = {
   lead: LocalizedString
-  /** "Now" manifesto bullets (Building / Reading / Open to / Not taking). */
+  /** Short status bullets: what is actually in progress right now. */
   bullets: LocalizedString[]
-  /** Date string shown as "Updated …" — bilingual. */
-  updatedOn: LocalizedString
 }
 
 export type CaseStudyStatus = 'in-progress' | 'shipped' | 'current'
@@ -93,7 +91,7 @@ export type SkillCategory = {
   category: LocalizedString
   /** Plain tech names stay as strings; translatable terms use LocalizedString. */
   items: (string | LocalizedString)[]
-  /** Aspirational / learning skills — rendered muted, never claimed as known. */
+  /** Newer / in-progress skills — rendered muted, never claimed as mastered. */
   upcoming?: boolean
 }
 

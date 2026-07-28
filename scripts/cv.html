@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Alexandr Chumak — Senior Frontend Engineer</title>
+    <title>
+      Alexandr Chumak — Senior Frontend Engineer (React, TypeScript, Next.js)
+    </title>
     <style>
       @page {
         size: A4;
@@ -42,6 +44,10 @@
       }
       .summary {
         margin: 0;
+      }
+      .entry,
+      .group {
+        break-inside: avoid;
       }
       .entry {
         margin: 0 0 7pt;
@@ -83,22 +89,24 @@
     <header>
       <h1>Alexandr Chumak</h1>
       <p class="role-line">
-        Senior Frontend Engineer &rarr; AI Product Engineer
+        Senior Frontend Engineer &middot; React, TypeScript, Next.js
       </p>
       <p class="contact">
         ciumac.dev@gmail.com &middot; linkedin.com/in/spumony &middot;
-        Chi&#537;in&#259;u, Moldova (UTC+2)
+        github.com/spumony &middot; Chi&#537;in&#259;u, Moldova (UTC+2)<br />
+        <strong>EU citizen &mdash; no sponsorship required</strong>
       </p>
     </header>
 
     <h2>Summary</h2>
     <p class="summary">
-      Senior Frontend Engineer with 5 years shipping production React,
-      TypeScript and Next.js. Now extending into AI product engineering:
-      learning the application layer (Vercel AI SDK, RAG on pgvector, streaming
-      UIs and evals) by building a real full-stack app. Open to senior frontend
-      / AI Product Engineer roles across the EU and to long-term 10&ndash;20
-      hr/week retainers.
+      EU citizen. Senior Frontend Engineer with 6+ years building for production
+      in React, TypeScript and Next.js. Currently Lead Frontend Developer at
+      Multisoft on a restaurant CRM client. Five years before that at EVCARGO,
+      owning the design system, component library and client-side architecture.
+      Also built Rivella solo, an AI sales-assistant SaaS: the LLM layer, the
+      backend and data schema, multi-tenancy, integrations and the admin panel.
+      Open to senior frontend and AI product roles across the EU. Remote, UTC+2.
     </p>
 
     <h2>Experience</h2>
@@ -106,25 +114,21 @@
     <div class="entry">
       <div class="entry-head">
         <span class="role">Lead Frontend Developer</span>
-        <span class="period">2026 &ndash; Present</span>
+        <span class="period">Jan 2026 &ndash; Present</span>
       </div>
       <div class="company">Multisoft, Romania (Remote)</div>
       <ul>
         <li>
-          Sole frontend developer on a restaurant CRM platform, owning
-          architecture, UI and feature delivery.
+          Only frontend engineer on a restaurant CRM platform; started the web
+          client from zero in January 2026.
         </li>
         <li>
-          Building the client app from scratch in Next.js and TypeScript:
-          architecture, component system and routing.
+          Set the architecture and component system in Next.js and TypeScript,
+          and wrote down the routing and frontend standards.
         </li>
         <li>
-          Shipping order, menu and reporting modules with data-heavy tables,
-          filtering and complex forms.
-        </li>
-        <li>
-          Setting the design system and frontend standards, keeping the UI fast
-          and consistent.
+          Build the order, menu and reporting modules on one shared component
+          set: dense tables, filtering, long forms.
         </li>
       </ul>
     </div>
@@ -132,39 +136,36 @@
     <div class="entry">
       <div class="entry-head">
         <span class="role">Frontend Developer</span>
-        <span class="period">2021 &ndash; Dec 2025</span>
+        <span class="period">Jan 2021 &ndash; Dec 2025</span>
       </div>
       <div class="company">TeamArt &mdash; EVCARGO (Remote)</div>
       <ul>
         <li>
-          Built the frontend of a production e-mobility logistics platform
-          within a cross-functional Scrum team.
+          Frontend of a production e-mobility logistics platform, inside a
+          cross-functional Scrum team.
         </li>
         <li>
-          Built and maintained a shared design system and reusable component
-          library.
+          Built and maintained the shared design system and component library,
+          then designed the client-side architecture around them.
         </li>
         <li>
-          Designed scalable client-side architecture and integrated REST APIs
-          with React Query.
+          Integrated REST APIs with React Query, so caching and invalidation
+          behaved the same on every screen.
         </li>
-        <li>
-          Drove code reviews and technical planning, from requirements to
-          release.
-        </li>
+        <li>Ran frontend code review and technical planning.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
         <span class="role">Web Developer</span>
-        <span class="period">2019 &ndash; 2020</span>
+        <span class="period">Aug 2019 &ndash; Dec 2020</span>
       </div>
       <div class="company">Freelance (Remote)</div>
       <ul>
         <li>
-          Delivered and modernised web apps for clients end to end; refactored
-          legacy interfaces and improved performance and UX.
+          Built web apps for clients and reworked existing ones; refactored
+          legacy interfaces in JavaScript and React.
         </li>
       </ul>
     </div>
@@ -172,14 +173,15 @@
     <div class="entry">
       <div class="entry-head">
         <span class="role">Web Designer</span>
-        <span class="period">2018 &ndash; 2019</span>
+        <span class="period">Oct 2018 &ndash; Mar 2019</span>
       </div>
       <div class="company">
         Exterior Security Systems, Chi&#537;in&#259;u, Moldova
       </div>
       <ul>
         <li>
-          Created visual concepts and digital assets for web and marketing.
+          Designed web pages and marketing material in Figma, and worked in the
+          site&rsquo;s HTML and CSS.
         </li>
       </ul>
     </div>
@@ -188,25 +190,24 @@
 
     <div class="entry">
       <div class="entry-head">
-        <span class="role">Learning Platform / Bookmark Manager</span>
-        <span class="period">2026 &ndash; in progress</span>
+        <span class="role">Rivella &mdash; AI sales assistant (SaaS)</span>
+        <span class="period">built solo</span>
       </div>
       <div class="company">
-        Next.js 16, TypeScript, PostgreSQL, Drizzle ORM, Inngest, Zod
+        Next.js (App Router), TypeScript, LLM, Telegram Bot API, YClients API
       </div>
       <ul>
         <li>
-          From-scratch full-stack app for AI-engineering practice: session auth
-          (bcrypt, httpOnly cookies), protected REST API with ownership-based
-          authorization.
+          Built the whole product alone: LLM layer (prompts, dialogue flows,
+          per-tenant knowledge base, objection handling), backend, data schema,
+          multi-tenancy and auth.
         </li>
         <li>
-          Bookmark manager with background OG-tag scraping via Inngest,
-          pagination and search; schema migrations baseline via Drizzle.
+          YClients and Telegram integrations so the assistant reads free slots
+          and creates bookings; admin panel with funnel, analytics and billing
+          tiers; bilingual RU/EN interface.
         </li>
-        <li>
-          Next: RAG search on pgvector and an evals harness for LLM features.
-        </li>
+        <li>Built end to end. Not launched to production yet.</li>
       </ul>
     </div>
 
@@ -214,8 +215,8 @@
     <div class="group">
       <p>
         <span class="label">Frontend:</span> React, TypeScript, Next.js (App
-        Router), Tailwind CSS, TanStack Query, Zod, Vitest, Playwright, A11y
-        (WCAG 2.2)
+        Router), React Native / Expo, Tailwind CSS, TanStack Query, Zod, Vitest,
+        Playwright, A11y (WCAG 2.2)
       </p>
       <p>
         <span class="label">Fullstack:</span> Node.js, PostgreSQL, Drizzle ORM,
@@ -223,14 +224,14 @@
         Inngest, Sentry, Vercel
       </p>
       <p>
-        <span class="label">AI engineering (learning):</span> Vercel AI SDK,
-        OpenAI / Anthropic / Gemini SDK, Embeddings + pgvector, RAG, Evals,
-        Observability, Streaming UX (SSE), Prompt versioning, LLM agents / MCP
+        <span class="label">AI:</span> Vercel AI SDK, OpenAI / Anthropic /
+        Gemini SDK, Embeddings + pgvector, RAG, Evals, Observability, Streaming
+        UX (SSE), Prompt versioning, LLM agents / MCP
       </p>
       <p>
-        <span class="label">Practice:</span> Design systems, A/B testing,
-        Product metrics, Cross-functional collaboration, Mentoring, Async
-        written communication, Product / UI design (Figma)
+        <span class="label">Practice:</span> Design systems, Cross-functional
+        collaboration, Mentoring, Async written communication, Product / UI
+        design (Figma)
       </p>
     </div>
 
@@ -238,14 +239,14 @@
     <div class="entry">
       <div class="entry-head">
         <span class="role">Master&rsquo;s in Information Technology</span>
-        <span class="period">2018 &ndash; 2020</span>
+        <span class="period">Sep 2018 &ndash; Jun 2020</span>
       </div>
       <div class="company">Technical University of Moldova</div>
     </div>
     <div class="entry">
       <div class="entry-head">
         <span class="role">Bachelor&rsquo;s in Information Technology</span>
-        <span class="period">2015 &ndash; 2018</span>
+        <span class="period">Sep 2015 &ndash; Jun 2018</span>
       </div>
       <div class="company">Technical University of Moldova</div>
     </div>

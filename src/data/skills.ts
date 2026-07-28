@@ -2,11 +2,12 @@ import type { SkillCategory } from '../types'
 
 export const skills: SkillCategory[] = [
   {
-    category: { ru: 'Frontend · 5 лет', en: 'Frontend · 5 years' },
+    category: { ru: 'Frontend', en: 'Frontend' },
     items: [
       'React',
       'TypeScript',
       'Next.js (App Router)',
+      'React Native / Expo',
       'Tailwind CSS',
       'TanStack Query',
       'Zod',
@@ -16,7 +17,7 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    category: { ru: 'Fullstack · на практике', en: 'Fullstack · hands-on' },
+    category: { ru: 'Fullstack', en: 'Fullstack' },
     items: [
       'Node.js',
       'PostgreSQL',
@@ -30,7 +31,7 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    category: { ru: 'AI-инжиниринг · изучаю', en: 'AI engineering · learning' },
+    category: { ru: 'AI', en: 'AI' },
     upcoming: true,
     items: [
       'Vercel AI SDK',
@@ -48,14 +49,15 @@ export const skills: SkillCategory[] = [
     category: { ru: 'Практики', en: 'Practice' },
     items: [
       { ru: 'Дизайн-системы', en: 'Design systems' },
-      { ru: 'A/B-тесты', en: 'A/B testing' },
-      { ru: 'Продуктовые метрики', en: 'Product metrics' },
       {
         ru: 'Кросс-функциональная работа',
         en: 'Cross-functional collaboration',
       },
       { ru: 'Менторство', en: 'Mentoring' },
-      { ru: 'Асинхронная письменная коммуникация', en: 'Async written comms' },
+      {
+        ru: 'Асинхронная работа в переписке',
+        en: 'Async written communication',
+      },
       {
         ru: 'Продуктовый / UI-дизайн (Figma)',
         en: 'Product / UI design (Figma)',

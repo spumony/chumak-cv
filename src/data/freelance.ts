@@ -2,19 +2,19 @@ import type { FreelanceData } from '../types'
 
 export const freelance: FreelanceData = {
   intro: {
-    ru: 'Беру 1–2 долгих клиента одновременно и встраиваюсь в команду как senior-инженер — а не делаю одноразовые сайты «под ключ».',
-    en: 'I take on 1–2 long-term clients at a time and embed in your team as a senior engineer — not one-off “build me a website” gigs.',
+    ru: 'В приоритете — постоянная работа в штате. Если такой позиции нет, беру одного-двух клиентов на долгий срок и работаю в команде как senior-разработчик.',
+    en: "Full-time roles come first. When a full-time hire isn't on the table, I take one or two long-term clients and work in the team as a senior engineer.",
   },
   whoIWorkWith: {
-    ru: 'Команды Seed–Series B, которые шипят AI-фичи в стеке TypeScript / React.',
-    en: 'Seed–Series B teams shipping AI features in TypeScript / React stacks.',
+    ru: 'Небольшие продуктовые команды на React и TypeScript, обычно те, кто добавляет AI-функции.',
+    en: 'Small product teams on React and TypeScript, usually the ones adding AI features.',
   },
   offers: [
     {
       title: { ru: 'AI-фичи для продуктов', en: 'AI features for products' },
       description: {
-        ru: 'Добавляю LLM-функции (чат, умный поиск, суммаризация) в существующие Next.js/React приложения — от промптов до streaming-UI.',
-        en: 'Add LLM features (chat, smart search, summarization) to existing Next.js/React apps — from prompts to streaming UI.',
+        ru: 'Добавляю чат или суммаризацию в существующее приложение на Next.js. Пишу слой промптов и streaming-интерфейс.',
+        en: 'Add chat or summarization to an existing Next.js app. I write the prompt layer and the streaming UI.',
       },
     },
     {
@@ -23,73 +23,73 @@ export const freelance: FreelanceData = {
         en: 'Frontend architecture & audits',
       },
       description: {
-        ru: 'Архитектура и аудит производительности для стартапов на Next.js/React — с конкретными deliverables и внедрением.',
-        en: 'Architecture and performance audits for Next.js/React startups — with concrete deliverables and follow-up implementation.',
+        ru: 'Письменный разбор кодовой базы на React со списком проблем, отсортированным по важности. Дальше могу сам их и починить.',
+        en: 'A written review of your React codebase with a list of problems sorted by importance. I can fix them afterwards.',
       },
     },
     {
       title: {
-        ru: 'Долгосрочный part-time',
+        ru: 'Частичная занятость',
         en: 'Long-term part-time',
       },
       description: {
-        ru: '10–20 часов в неделю как senior IC, встроенный в вашу команду: участвую в standup, шиплю фичи, делаю code review.',
-        en: '10–20 hrs/week as a senior IC embedded in your team: standups, shipping features and code reviews.',
+        ru: '10–20 часов в неделю в вашей команде: фичи и code review. Хожу на дейли вместе с командой.',
+        en: '10–20 hours a week in your team: features and code review. I join the same standups as everyone.',
       },
     },
   ],
   process: [
     {
-      ru: 'Интро-звонок (20 мин) — что строите, что нужно, подходим ли друг другу.',
-      en: 'Intro call (20 min) — what you’re building, what you need, whether we’re a fit.',
+      ru: 'Созвон на 20 минут. Рассказываете, что строите и чего не хватает.',
+      en: "A 20-minute call. You describe what you're building and what's missing.",
     },
     {
-      ru: 'Письменное предложение — скоуп, сроки, ставка, ритм коммуникации.',
-      en: 'Written proposal — scope, timeline, rate and communication cadence.',
+      ru: 'Письменное предложение: объём работ и стоимость.',
+      en: 'A written proposal: scope of work and cost.',
     },
     {
-      ru: 'Пробная неделя — оплачиваемая, без долгого обязательства.',
-      en: 'Trial week — paid, no long-term commitment yet.',
+      ru: 'Оплачиваемая пробная неделя. Без обязательств по долгосрочному контракту.',
+      en: 'A paid trial week. No long-term commitment on either side yet.',
     },
     {
-      ru: 'Встраиваюсь в команду и шиплю как senior-инженер с еженедельным синком.',
-      en: 'I embed in the team and ship as a senior engineer with a weekly sync.',
+      ru: 'Дальше — основная работа и один созвон в неделю.',
+      en: 'Then the real work, with one call a week.',
     },
   ],
   faq: [
     {
-      q: { ru: 'Сколько стоит?', en: 'What’s your rate?' },
+      q: { ru: 'Сколько стоит?', en: "What's your rate?" },
       a: {
-        ru: 'Зависит от скоупа: фиксированная месячная ставка для retainer и фикс-цена для аудита.',
-        en: 'Depends on scope: a fixed monthly rate for retainers and a fixed price for audits.',
+        ru: 'Зависит от объёма. На долгосрочных проектах — фиксированная ставка в месяц, за аудит — фиксированная цена.',
+        en: 'It depends on the scope. A fixed monthly rate for long-term work, a fixed price for an audit.',
       },
     },
     {
       q: { ru: 'Есть ли свободные слоты?', en: 'Are you available?' },
       a: {
-        ru: 'Беру 1–2 долгих клиента одновременно. Актуальный статус уточню на звонке.',
-        en: 'I take 1–2 long-term clients at a time. I’ll confirm current availability on the call.',
+        ru: 'Уточню на созвоне.',
+        en: "I'll confirm on the call.",
       },
     },
     {
       q: { ru: 'NDA и договор?', en: 'NDA & contracts?' },
       a: {
-        ru: 'Да — работаю по NDA и вашему договору (B2B / самозанятость).',
-        en: 'Yes — I work under an NDA and your contract (B2B / sole proprietor).',
+        ru: 'Да. Работаю по вашему NDA и вашему договору (B2B или самозанятость).',
+        en: 'Yes. I work under your NDA and your contract (B2B or sole proprietor).',
       },
     },
     {
       q: { ru: 'Как оплата и таймзона?', en: 'Payments & timezone?' },
       a: {
-        ru: 'Инвойс в конце месяца, NET 14, EUR/USD (Wise или банк). UTC+2 — пересекаюсь с EU и работаю по часам команды.',
-        en: 'Invoice end of month, NET 14, EUR/USD (Wise or bank). UTC+2 — overlapping with the EU and working to your team’s hours.',
+        ru: 'Счёт в конце месяца, NET 14, EUR или USD (Wise или банковский перевод). Мой часовой пояс — UTC+2, подстраиваюсь под рабочие часы вашей команды.',
+        en: "Invoice at the end of the month, NET 14, EUR or USD (Wise or bank transfer). My timezone is UTC+2 and I fit your team's working hours.",
       },
     },
     {
-      q: { ru: 'Что не беру?', en: 'What I don’t do?' },
+      q: { ru: 'За что не берётесь?', en: "Anything you don't take on?" },
       a: {
-        ru: 'Разовые сайты «под ключ», работы только по дизайну и агентский subcontract.',
-        en: 'One-off “build me a website” gigs, design-only work and agency subcontracting.',
+        ru: 'За разовые сайты «под ключ» и субподряд для агентств. Работу только по дизайну тоже не беру.',
+        en: "One-off marketing sites and agency subcontracting. I don't do design-only work either.",
       },
     },
   ],

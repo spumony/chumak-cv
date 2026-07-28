@@ -3,17 +3,17 @@ import type { HeroData } from '../types'
 export const hero: HeroData = {
   name: { ru: 'Александр Чумак', en: 'Alexandr Chumak' },
   role: {
-    ru: 'Senior Frontend-инженер → AI Product Engineer',
-    en: 'Senior Frontend Engineer → AI Product Engineer',
+    ru: 'Senior frontend-инженер · React, TypeScript, Next.js',
+    en: 'Senior Frontend Engineer · React, TypeScript, Next.js',
   },
   pitch: {
-    ru: '5 лет в продакшне на React, TypeScript и Next.js — расширяюсь в AI product engineering: разбираюсь в прикладном слое (Vercel AI SDK, RAG поверх pgvector, streaming-интерфейсы, evals), строя реальное full-stack приложение, а не туториалы. Открыт к senior FE / AI Product ролям (EU, remote) и retainer’ам 10–20 ч/нед.',
-    en: '5 years shipping production React, TypeScript and Next.js — now extending into AI product engineering: learning the application layer (Vercel AI SDK, RAG on pgvector, streaming UIs and evals) by building a real full-stack app, not following tutorials. Open to senior FE / AI Product roles (EU remote) and 10–20 hr/wk retainers.',
+    ru: '6+ лет коммерческой разработки. Веду фронтенд CRM для ресторанов в Multisoft: в основном модули заказов и меню и плотные таблицы отчётности. Отдельно собрал в одиночку Rivella — AI-ассистент для продаж на Next.js.',
+    en: '6+ years building for production. I lead the frontend of a restaurant CRM at Multisoft, mostly order and menu modules and dense reporting tables. On my own I built Rivella, an AI sales assistant on Next.js.',
   },
   location: { ru: 'Кишинёв, Молдова · UTC+2', en: 'Chișinău, Moldova · UTC+2' },
   availability: {
-    ru: 'Открыт к senior frontend / AI-product ролям в EU · удалёнка · долгосрочные контракты',
-    en: 'Open to senior frontend / AI product roles across the EU · remote · long-term contracts',
+    ru: 'Гражданство ЕС, спонсорство не требуется. Открыт к senior-позициям во фронтенде и AI-продуктах, удалённо в ЕС.',
+    en: 'EU citizen, no sponsorship needed. Open to senior frontend and AI product roles, remote across the EU.',
   },
   avatar: '/avatar.jpg',
 }

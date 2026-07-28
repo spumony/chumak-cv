@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Alexandr Chumak — Senior Frontend Engineer → AI Product Engineer",
-    "description": "Senior Frontend Engineer (5y · React, TypeScript, Next.js) moving into AI product engineering. Open to senior FE / AI product roles across the EU, and freelance."
+    "title": "Alexandr Chumak — Senior Frontend Engineer (React, TypeScript, Next.js)",
+    "description": "Senior Frontend Engineer. 6+ years building for production with React, TypeScript and Next.js. Open to senior frontend and AI product roles, remote for EU teams."
   },
   "nav": {
     "work": "Work",
@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "freelance": {
-    "title": "Work with me",
+    "title": "Freelance work",
     "whoIWorkWith": "Who I work with",
     "offersTitle": "What I help with",
     "processTitle": "How I work",
@@ -31,9 +31,8 @@
     "downloadCv": "Download CV"
   },
   "focus": {
-    "title": "Now",
+    "title": "What I'm working on",
     "inProgress": "In progress",
-    "building": "Building now",
     "live": "Live demo",
     "repo": "Source"
   },
@@ -45,12 +44,12 @@
     "outcome": "Outcome",
     "status": {
       "inProgress": "In progress",
-      "shipped": "Shipped",
-      "current": "Current"
+      "shipped": "Completed",
+      "current": "Ongoing"
     }
   },
   "contact": {
-    "lead": "Open to senior frontend roles and freelance work. The fastest way to reach me is email.",
+    "lead": "Hiring for a senior frontend or AI product role? Email is the fastest way to reach me.",
     "copyEmail": "Copy email",
     "copied": "Copied",
     "openPhoto": "Open photo",
@@ -65,7 +64,6 @@
     "primaryNav": "Primary navigation"
   },
   "footer": {
-    "builtWith": "Built with React, TypeScript and Tailwind CSS.",
-    "rights": "All rights reserved."
+    "builtWith": "Built with React and TypeScript."
   }
 }

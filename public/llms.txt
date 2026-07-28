@@ -1,10 +1,11 @@
 # Alexandr Chumak
 
-> Senior Frontend Engineer (React, TypeScript, Next.js) moving into AI Product Engineering. Open to senior frontend / AI product roles across the EU, and to long-term freelance.
+> EU citizen, no sponsorship required. Senior Frontend Engineer with 6+ years building for production in React, TypeScript and Next.js. Currently Lead Frontend Developer at Multisoft (Romania, remote). Open to senior frontend and AI product roles across the EU.
 
-Lead frontend developer on a restaurant CRM platform (Multisoft, Romania), and building a from-scratch full-stack learning project (Next.js, PostgreSQL, Drizzle, Inngest) to move into AI engineering. Frontend core: React, TypeScript, Next.js, Tailwind CSS. Learning: Vercel AI SDK, OpenAI/Anthropic SDKs, embeddings + pgvector, RAG, evals, agents/MCP.
+Builds the client app for the Multisoft restaurant CRM: order and menu modules, reporting tables, filtering, long forms. Also built Rivella single-handedly, an AI sales-assistant SaaS on Next.js: the LLM layer with prompts, dialogue flows and a per-tenant knowledge base, the backend and data schema, multi-tenancy and auth, YClients and Telegram integrations, and an admin panel with analytics and billing tiers — built end to end, not launched to production yet. Five years before that at EVCARGO on an e-mobility logistics platform, owning the design system, component library and client-side architecture, and running frontend code review. Frontend: React, TypeScript, Next.js, React Native / Expo, Tailwind CSS, TanStack Query, Zod. Based in Chișinău, UTC+2.
 
 ## Links
 
 - [LinkedIn](https://www.linkedin.com/in/spumony): professional profile and updates
+- [GitHub](https://github.com/spumony): code
 - [Email](mailto:ciumac.dev@gmail.com): direct contact

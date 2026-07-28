@@ -2,29 +2,17 @@ import type { FocusData } from '../types'
 
 export const focus: FocusData = {
   lead: {
-    ru: 'Перехожу из фронтенда в AI-инжиниринг — учусь, строя реальный продукт, а не туториалы.',
-    en: 'Moving from frontend into AI engineering — learning by building a real product, not following tutorials.',
+    ru: 'Два направления. В Multisoft основная работа над CRM для ресторанов. Свой AI-продукт Rivella собрал целиком сам, от слоя LLM до админки.',
+    en: 'Two tracks. The restaurant CRM at Multisoft is the day job. Rivella, my own AI product, I built end to end, from the LLM layer to the admin panel.',
   },
   bullets: [
     {
-      ru: 'Делаю — учебную платформу / менеджер закладок на Next.js 16, Drizzle и Inngest; сейчас работаю над фоновыми задачами и каркасом для evals.',
-      en: 'Building — a learning platform / bookmark manager on Next.js 16, Drizzle and Inngest; currently shipping the background-jobs layer and an evals scaffold.',
+      ru: 'В Multisoft работаю над модулями отчётности и меню: большие таблицы и длинные формы.',
+      en: 'At Multisoft I work on the reporting and menu modules: data-heavy tables and long forms.',
     },
     {
-      ru: 'Читаю — Chip Huyen «AI Engineering» (главы про evals), документацию Vercel AI SDK и гайды по prompt engineering от Anthropic.',
-      en: 'Reading — Chip Huyen’s “AI Engineering” (the evals chapters), the Vercel AI SDK docs and Anthropic’s prompt-engineering guides.',
-    },
-    {
-      ru: 'Открыт — к senior frontend / AI Product Engineer ролям (EU, remote) и долгосрочным retainer’ам 10–20 ч/нед.',
-      en: 'Open to — senior frontend / AI Product Engineer roles (EU remote) and long-term retainers, 10–20 hrs/week.',
-    },
-    {
-      ru: 'Не берусь — за разовые «сайт-под-ключ», работу только по дизайну и агентский subcontract.',
-      en: 'Not taking — one-off “build me a website” gigs, design-only work or agency subcontracting.',
+      ru: 'Мобильное приложение на React Native и Expo сейчас в TestFlight, готовится к публикации в App Store.',
+      en: 'A React Native and Expo app is in TestFlight now, on its way to the App Store.',
     },
   ],
-  updatedOn: {
-    ru: 'Обновлено 28 мая 2026',
-    en: 'Updated 28 May 2026',
-  },
 }

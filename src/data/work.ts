@@ -2,64 +2,56 @@ import type { CaseStudy } from '../types'
 
 export const work: CaseStudy[] = [
   {
-    title: 'Learning Platform / Bookmark Manager',
-    status: 'in-progress',
-    period: { ru: '2026 — в процессе', en: '2026 — in progress' },
+    title: 'Multisoft — restaurant CRM platform',
+    status: 'current',
+    period: { ru: '01.2026 — настоящее время', en: 'Jan 2026 — Present' },
     problem: {
-      ru: 'Хочу перейти из фронтенда в AI-инжиниринг — но туториалы не дают глубины. Нужен реальный full-stack продукт, на котором можно учиться backend, БД, фоновым задачам и LLM-фичам, ловить настоящие баги и принимать архитектурные решения.',
-      en: 'I wanted to move from frontend into AI engineering — but tutorials never go deep enough. I needed a real full-stack product to learn backend, databases, background jobs and LLM features on, with real bugs and real architecture calls.',
+      ru: 'Multisoft делает CRM для ресторанов: через неё принимают заказы и ведут меню, а поверх этого — отчётность. Пришёл на проект в январе 2026 года. Клиентскую часть начинал с нуля и веду один.',
+      en: 'Multisoft sells a CRM for restaurants: orders and menu management, with reporting layered on top. I joined in January 2026. The web client started from zero and I am the only frontend engineer on it.',
     },
     approach: {
-      ru: 'Строю с нуля на Next.js 16 + TypeScript: session-аутентификация (bcrypt, httpOnly-куки), REST API с авторизацией по владению ресурсом, схема PostgreSQL с Drizzle ORM (включая baseline-миграции), фоновый скрейпинг OG-тегов через Inngest. Дальше — RAG-поиск (pgvector) и harness для evals.',
-      en: 'Building from scratch on Next.js 16 + TypeScript: session auth (bcrypt, httpOnly cookies), a REST API with ownership-based authorization, a PostgreSQL schema via Drizzle ORM (including baseline migrations) and background OG-tag scraping via Inngest. Next: RAG search (pgvector) and an evals harness.',
+      ru: 'Архитектуру и систему компонентов взял на себя, роутинг и фронтенд-стандарты зафиксировал письменно. Стек — Next.js и TypeScript. Больше всего работы в экранах с плотными данными: модули заказов и меню, таблицы отчётов, фильтры, длинные формы.',
+      en: 'The architecture and the component system were my call, and the routing and frontend standards are written down. Stack is Next.js and TypeScript. Most of the work sits in dense screens: order and menu modules, reporting tables, filtering, long forms.',
     },
-    stack: [
-      'Next.js 16',
-      'TypeScript',
-      'PostgreSQL',
-      'Drizzle ORM',
-      'Inngest',
-      'Zod',
-    ],
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'REST API'],
     outcome: {
-      ru: 'За ~месяц с нуля прошёл цепочку SQL → ORM → auth → REST → фоновые задачи, написав каждую строку руками: ловил баги (integer overflow, race conditions, валидация), разбирался в security-компромиссах (хеш vs шифрование, authN vs authZ, idempotency). Получился редкий микс «продукт + AI» — профиль Product Engineer.',
-      en: 'In ~a month from zero, walked the chain SQL → ORM → auth → REST → background jobs — every line by hand. Caught my own bugs (integer overflow, race conditions, validation) and reasoned through security trade-offs (hashing vs encryption, authN vs authZ, idempotency). The product + AI mix is the Product Engineer profile.',
+      ru: 'Делаю модули заказов, меню и отчётности на одном наборе компонентов. Фронтенд-стандарты в этом проекте написал я.',
+      en: 'I build the order, menu and reporting modules on one shared component set. The frontend conventions on this codebase are the ones I wrote.',
+    },
+  },
+  {
+    title: 'Rivella — AI sales assistant',
+    status: 'in-progress',
+    problem: {
+      ru: 'Салоны и студии с записью на услуги теряют заявки, которые приходят вне рабочих часов: отвечает менеджер, а он работает по графику. Идея — ассистент, который отвечает сам и сразу бронирует свободный слот.',
+      en: 'Businesses that run on appointments lose the enquiries that arrive outside working hours, because a human manager only answers during them. The idea was an assistant that replies on its own and books a free slot right away.',
+    },
+    approach: {
+      ru: 'Собрал продукт целиком один на Next.js (App Router) и TypeScript. Слой LLM: промпты, сценарии диалога, база знаний под каждого клиента, отработка возражений. Бэкенд со схемой данных, мультитенантностью и аутентификацией. Интеграции с YClients и Telegram — бот читает свободные слоты и создаёт записи. Админка с воронкой, аналитикой и тарифами. Интерфейс двуязычный, RU и EN.',
+      en: 'Built the whole product solo on Next.js (App Router) and TypeScript. The LLM layer: prompts, dialogue flows, a per-tenant knowledge base, objection handling. A backend with the data schema, multi-tenancy and auth. YClients and Telegram integrations, so the bot reads free slots and creates bookings. An admin panel with a funnel, analytics and billing tiers. The UI ships in Russian and English.',
+    },
+    stack: ['Next.js', 'TypeScript', 'LLM', 'Telegram Bot API', 'YClients API'],
+    outcome: {
+      ru: 'Продукт собран end-to-end: от схемы базы и слоя LLM до админки и тарифов. В продакшене пока не запускался.',
+      en: 'The product is built end to end, from the database schema and the LLM layer through to the admin panel and billing tiers. It has not gone to production yet.',
     },
   },
   {
     title: 'EVCARGO — e-mobility logistics platform',
     status: 'shipped',
-    period: { ru: '2021 — декабрь 2025', en: '2021 — Dec 2025' },
+    period: { ru: '01.2021 — 12.2025', en: 'Jan 2021 — Dec 2025' },
     problem: {
-      ru: 'Логистической платформе в сфере электромобильности нужно было быстро развивать продакшн-frontend в кросс-функциональной Scrum-команде — без потери качества и единства интерфейса между продуктовыми зонами.',
-      en: 'A production e-mobility logistics platform needed to evolve its frontend quickly inside a cross-functional Scrum team — without losing quality or UI consistency across product areas.',
+      ru: 'EVCARGO — логистическая платформа для электротранспорта, работавшая в продакшене. В продукте было несколько разделов, интерфейс должен был оставаться единым.',
+      en: 'EVCARGO is a production logistics platform in e-mobility. The product spanned several areas and the UI had to hold together across them.',
     },
     approach: {
-      ru: 'Спроектировал масштабируемую клиентскую архитектуру, создал и поддерживал общую дизайн-систему и библиотеку переиспользуемых компонентов, интегрировал REST API через React Query и вёл code review + техническое планирование от требований до релиза.',
-      en: 'Designed a scalable client-side architecture, built and maintained a shared design system and reusable component library, integrated REST APIs via React Query and drove code reviews and technical planning from requirements to release.',
+      ru: 'Собрал общую дизайн-систему и библиотеку компонентов, вокруг них выстроил клиентскую архитектуру. Данные из REST шли через React Query, поэтому кэширование и инвалидация работали одинаково на всех экранах. Вёл code review и техническое планирование по фронтенду.',
+      en: 'I built the shared design system and component library, then designed the client-side architecture around them. REST data went through React Query, so caching and invalidation behaved the same on every screen. I ran frontend code review and technical planning.',
     },
     stack: ['React', 'TypeScript', 'Next.js', 'React Query', 'Tailwind CSS'],
     outcome: {
-      ru: 'Дизайн-система и общие компоненты ускорили доставку фич между продуктовыми зонами, REST-интеграции получили консистентный кэш-слой, а полный цикл (требования → код → ревью → релиз) шёл без блокировок между продуктом, дизайном и инженерией.',
-      en: 'The design system and shared components sped up feature delivery across product areas, REST integrations got a consistent caching layer, and the full cycle (requirements → code → review → release) ran without blockers across product, design and engineering.',
-    },
-  },
-  {
-    title: 'Multisoft — restaurant CRM platform',
-    status: 'current',
-    period: { ru: '2026 — настоящее время', en: '2026 — Present' },
-    problem: {
-      ru: 'CRM-платформе для ресторанов нужен единственный фронтенд-разработчик, который возьмёт ответственность за архитектуру, дизайн-систему и поставку фич — от заказов и меню до отчётности.',
-      en: 'A restaurant CRM platform needed a sole frontend developer to own architecture, the design system and feature delivery — from order and menu modules to reporting.',
-    },
-    approach: {
-      ru: 'Строю клиентскую часть с нуля на Next.js + TypeScript: архитектура, система компонентов, роутинг и дизайн-стандарты. Делаю модули заказов, меню и отчётности — насыщенные данными таблицы, фильтры и сложные формы.',
-      en: 'Building the client app from scratch on Next.js + TypeScript: architecture, component system, routing and frontend standards. Shipping order, menu and reporting modules with data-heavy tables, filtering and complex forms.',
-    },
-    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'REST API'],
-    outcome: {
-      ru: 'Поставляю фичи как senior IC, держу UI быстрым и консистентным, задаю фронтенд-стандарты и дизайн-систему как ведущий разработчик продукта.',
-      en: 'Shipping as a senior IC, keeping the UI fast and consistent, and setting the frontend standards and design system as the lead developer on the product.',
+      ru: 'Пять лет на одной продакшн-платформе, с января 2021 по декабрь 2025 года. Новые фичи собирали из дизайн-системы, я вёл code review по фронтенду.',
+      en: 'Five years on the same production platform, January 2021 to December 2025. New frontend work was built from the design system, and I ran frontend code review.',
     },
   },
 ]

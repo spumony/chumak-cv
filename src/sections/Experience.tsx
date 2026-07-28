@@ -5,15 +5,11 @@ import { FadeIn } from '../components/ui/FadeIn'
 import { SectionTitle } from '../components/ui/SectionTitle'
 import { StatusDot } from '../components/ui/StatusDot'
 import { experience } from '../data/experience'
+import { resumeUrl } from '../data/resume'
 import { useT } from '../i18n/useT'
-
-// Language-aware ATS-friendly PDF paths in /public.
-const RESUME_URL_EN = '/Alexandr-Chumak-Senior-FE-Engineer.pdf'
-const RESUME_URL_RU = '/Alexandr-Chumak-Senior-FE-Engineer-RU.pdf'
 
 export function Experience() {
   const { t, pick, lang } = useT()
-  const resumeUrl = lang === 'ru' ? RESUME_URL_RU : RESUME_URL_EN
 
   return (
     <section
@@ -24,7 +20,7 @@ export function Experience() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <SectionTitle>{t('nav.experience')}</SectionTitle>
           <a
-            href={resumeUrl}
+            href={resumeUrl[lang]}
             download
             className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
           >
