@@ -120,10 +120,10 @@
         на React, TypeScript и Next.js. Сейчас ведущий frontend-разработчик в
         Multisoft, делаю клиентскую часть CRM для ресторанов. До этого пять лет
         в EVCARGO: дизайн-система, библиотека компонентов, клиентская
-        архитектура. Отдельно собрал в одиночку Rivella, AI-ассистент для
-        продаж: слой LLM, бэкенд и схему данных, мультитенантность, интеграции и
-        админку. Открыт к senior-позициям во фронтенде и AI-продуктах в ЕС.
-        Удалённо, UTC+2.
+        архитектура. Сам собрал два AI-продукта: Prosvetum, iOS-приложение с
+        саммари книг и RAG-ментором, уже в TestFlight, и Rivella, AI-ассистент
+        для записи клиентов. Открыт к senior-позициям во фронтенде и
+        AI-продуктах в ЕС. Удалённо, UTC+2.
       </p>
     </div>
 
@@ -131,8 +131,8 @@
     <div class="tech">
       <p>
         React, TypeScript, Next.js (App Router), Tailwind CSS, TanStack Query,
-        Zod, Node.js, PostgreSQL, Drizzle ORM, Inngest, Vercel AI SDK, RAG +
-        pgvector
+        Zod, React Native / Expo, Node.js, PostgreSQL, Supabase, RAG + pgvector,
+        Claude
       </p>
     </div>
 
@@ -230,24 +230,57 @@
     <h2>Проекты</h2>
     <div class="entry">
       <div class="entry-head">
+        <span class="role"
+          >Prosvetum &mdash; саммари книг с AI-наставником (iOS)</span
+        >
+        <span class="period">v1.0.0, TestFlight</span>
+      </div>
+      <div class="company">
+        Expo SDK 56, React Native 0.85, TypeScript, Supabase (Postgres, RLS,
+        Edge Functions), pgvector, Claude, Voyage AI
+      </div>
+      <ul>
+        <li>
+          Собрал продукт целиком один: iOS-клиент, базу, Edge Functions и
+          конвейер контента. В каталоге 39 саммари. Сборка v1.0.0 живёт в
+          TestFlight, публикация в App Store ещё впереди.
+        </li>
+        <li>
+          RAG-ментор: эмбеддинги Voyage на 1024 измерения в pgvector под
+          HNSW-индексом, ответы Claude стримом по SSE, квоты на AI считаются на
+          сервере.
+        </li>
+        <li>
+          Postgres с политиками доступа на 20 миграций, поэтому платный контент
+          выдаёт сама база. Свой набор тестов покрывает 43 правила доступа,
+          проходят все.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Rivella &mdash; AI-ассистент для продаж (SaaS)</span>
-        <span class="period">сделал один</span>
+        <span class="period">rivella.app</span>
       </div>
       <div class="company">
         Next.js (App Router), TypeScript, LLM, Telegram Bot API, YClients API
       </div>
       <ul>
         <li>
-          Собрал продукт целиком один: слой LLM (промпты, сценарии диалога, база
-          знаний под каждого клиента, отработка возражений), бэкенд, схема
-          данных, мультитенантность и аутентификация.
+          Собрал продукт целиком один: слой LLM (промпты, сценарии диалога, RAG
+          по базе знаний, своей у каждого клиента, отработка возражений),
+          бэкенд, схема данных, мультитенантность и аутентификация.
         </li>
         <li>
           Интеграции с YClients и Telegram — ассистент читает свободные слоты и
           создаёт записи; админка с воронкой, аналитикой и тарифами; двуязычный
           интерфейс RU/EN.
         </li>
-        <li>Собрано end-to-end. В продакшене пока не запускалось.</li>
+        <li>
+          Развёрнут и работает на rivella.app. Платящих клиентов пока нет,
+          подключаю первых.
+        </li>
       </ul>
     </div>
 
@@ -256,17 +289,18 @@
       <p>
         <span class="label">Frontend:</span> React, TypeScript, Next.js (App
         Router), React Native / Expo, Tailwind CSS, TanStack Query, Zod, Vitest,
-        Playwright, A11y (WCAG 2.2)
+        Playwright
       </p>
       <p>
-        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Drizzle ORM,
-        Server Components / Actions, Session-аутентификация (bcrypt), Дизайн
-        REST API, Inngest, Sentry, Vercel
+        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Supabase
+        (RLS, Edge Functions), Drizzle ORM, Server Components / Actions,
+        Session-аутентификация (bcrypt), Дизайн REST API, Inngest, Sentry,
+        Vercel
       </p>
       <p>
-        <span class="label">AI:</span> Vercel AI SDK, OpenAI / Anthropic /
-        Gemini SDK, Embeddings + pgvector, RAG, Evals, Observability, Streaming
-        UX (SSE), Версионирование промптов, LLM-агенты / MCP
+        <span class="label">AI:</span> RAG, Embeddings + pgvector, векторный
+        поиск (HNSW), Anthropic / OpenAI SDK, Voyage AI, Streaming UX (SSE),
+        промптинг и сценарии диалога
       </p>
       <p>
         <span class="label">Практики:</span> Дизайн-системы,

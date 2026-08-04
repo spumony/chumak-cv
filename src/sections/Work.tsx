@@ -13,7 +13,7 @@ const subheading = 'font-mono text-xs tracking-wider text-text-muted uppercase'
 const projectLink =
   'inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-accent'
 
-type StatusKey = 'inProgress' | 'shipped' | 'current'
+type StatusKey = 'inProgress' | 'beta' | 'shipped' | 'current'
 
 function statusKey(status: CaseStudyStatus): StatusKey {
   // Map kebab-case data status to camelCase i18n key.
@@ -35,15 +35,14 @@ export function Work() {
       <div className="mt-8 flex flex-col gap-6 sm:mt-12 sm:gap-8">
         {work.map((caseStudy, index) => {
           const status = caseStudy.status
-          const showLiveDot = status === 'in-progress' || status === 'current'
+          const showLiveDot =
+            status === 'in-progress' ||
+            status === 'current' ||
+            status === 'beta'
           return (
             <FadeIn key={caseStudy.title} delay={index * 0.05}>
               <Card
-                className={
-                  status === 'in-progress' || status === 'current'
-                    ? 'ring-1 ring-accent/20'
-                    : undefined
-                }
+                className={showLiveDot ? 'ring-1 ring-accent/20' : undefined}
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="flex min-w-0 flex-col gap-1">

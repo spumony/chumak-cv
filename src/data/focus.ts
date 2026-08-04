@@ -2,8 +2,8 @@ import type { FocusData } from '../types'
 
 export const focus: FocusData = {
   lead: {
-    ru: 'Два направления. В Multisoft основная работа над CRM для ресторанов. Свой AI-продукт Rivella собрал целиком сам, от слоя LLM до админки.',
-    en: 'Two tracks. The restaurant CRM at Multisoft is the day job. Rivella, my own AI product, I built end to end, from the LLM layer to the admin panel.',
+    ru: 'Два направления. В Multisoft основная работа над CRM для ресторанов. Параллельно свои AI-продукты, Prosvetum и Rivella.',
+    en: 'Two tracks. The restaurant CRM at Multisoft is the day job. Alongside it, my own AI products, Prosvetum and Rivella.',
   },
   bullets: [
     {
@@ -11,8 +11,8 @@ export const focus: FocusData = {
       en: 'At Multisoft I work on the reporting and menu modules: data-heavy tables and long forms.',
     },
     {
-      ru: 'Мобильное приложение на React Native и Expo сейчас в TestFlight, готовится к публикации в App Store.',
-      en: 'A React Native and Expo app is in TestFlight now, on its way to the App Store.',
+      ru: 'Prosvetum v1.0.0 в TestFlight, готовлю публикацию в App Store: скриншоты, privacy-политика и листинг.',
+      en: 'Prosvetum v1.0.0 is in TestFlight. I am preparing the App Store release: screenshots, privacy policy and the listing.',
     },
   ],
 }

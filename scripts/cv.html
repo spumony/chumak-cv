@@ -104,9 +104,9 @@
       in React, TypeScript and Next.js. Currently Lead Frontend Developer at
       Multisoft on a restaurant CRM client. Five years before that at EVCARGO,
       owning the design system, component library and client-side architecture.
-      Also built Rivella solo, an AI sales-assistant SaaS: the LLM layer, the
-      backend and data schema, multi-tenancy, integrations and the admin panel.
-      Open to senior frontend and AI product roles across the EU. Remote, UTC+2.
+      Also builds AI products solo: Prosvetum, an iOS book-summary app with a
+      RAG mentor now in TestFlight, and Rivella, an AI sales assistant. Open to
+      senior frontend and AI product roles across the EU. Remote, UTC+2.
     </p>
 
     <h2>Experience</h2>
@@ -190,24 +190,57 @@
 
     <div class="entry">
       <div class="entry-head">
+        <span class="role"
+          >Prosvetum &mdash; book summaries with an AI mentor (iOS)</span
+        >
+        <span class="period">v1.0.0, TestFlight</span>
+      </div>
+      <div class="company">
+        Expo SDK 56, React Native 0.85, TypeScript, Supabase (Postgres, RLS,
+        Edge Functions), pgvector, Claude, Voyage AI
+      </div>
+      <ul>
+        <li>
+          Built the whole product alone: iOS client, database, Edge Functions
+          and the content pipeline. 39 summaries in the catalogue. v1.0.0 is in
+          TestFlight; the App Store listing is still ahead.
+        </li>
+        <li>
+          RAG mentor: 1024-dimension Voyage embeddings in pgvector behind an
+          HNSW index, answers streamed from Claude over SSE, AI quotas enforced
+          server-side.
+        </li>
+        <li>
+          Postgres with row-level security across 20 migrations, so the database
+          itself decides who gets paid content. My own suite covers 43 access
+          rules and all 43 pass.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
         <span class="role">Rivella &mdash; AI sales assistant (SaaS)</span>
-        <span class="period">built solo</span>
+        <span class="period">rivella.app</span>
       </div>
       <div class="company">
         Next.js (App Router), TypeScript, LLM, Telegram Bot API, YClients API
       </div>
       <ul>
         <li>
-          Built the whole product alone: LLM layer (prompts, dialogue flows,
-          per-tenant knowledge base, objection handling), backend, data schema,
-          multi-tenancy and auth.
+          Built the whole product alone: LLM layer (prompts, dialogue flows, RAG
+          over a per-tenant knowledge base, objection handling), backend, data
+          schema, multi-tenancy and auth.
         </li>
         <li>
           YClients and Telegram integrations so the assistant reads free slots
           and creates bookings; admin panel with funnel, analytics and billing
           tiers; bilingual RU/EN interface.
         </li>
-        <li>Built end to end. Not launched to production yet.</li>
+        <li>
+          Deployed and running at rivella.app. No paying customers yet;
+          onboarding the first businesses.
+        </li>
       </ul>
     </div>
 
@@ -216,17 +249,17 @@
       <p>
         <span class="label">Frontend:</span> React, TypeScript, Next.js (App
         Router), React Native / Expo, Tailwind CSS, TanStack Query, Zod, Vitest,
-        Playwright, A11y (WCAG 2.2)
+        Playwright
       </p>
       <p>
-        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Drizzle ORM,
-        Server Components / Actions, Session auth (bcrypt), REST API design,
-        Inngest, Sentry, Vercel
+        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Supabase
+        (RLS, Edge Functions), Drizzle ORM, Server Components / Actions, Session
+        auth (bcrypt), REST API design, Inngest, Sentry, Vercel
       </p>
       <p>
-        <span class="label">AI:</span> Vercel AI SDK, OpenAI / Anthropic /
-        Gemini SDK, Embeddings + pgvector, RAG, Evals, Observability, Streaming
-        UX (SSE), Prompt versioning, LLM agents / MCP
+        <span class="label">AI:</span> RAG, Embeddings + pgvector, Vector search
+        (HNSW), Anthropic / OpenAI SDK, Voyage AI, Streaming UX (SSE), Prompting
+        &amp; dialogue flows
       </p>
       <p>
         <span class="label">Practice:</span> Design systems, Cross-functional

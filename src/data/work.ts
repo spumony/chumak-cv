@@ -20,20 +20,24 @@ export const work: CaseStudy[] = [
     },
   },
   {
-    title: 'Rivella — AI sales assistant',
-    status: 'in-progress',
+    title: 'Prosvetum — book summaries with an AI mentor (iOS)',
+    status: 'beta',
+    period: {
+      ru: 'v1.0.0 в TestFlight, бета Apple',
+      en: 'v1.0.0 in TestFlight, Apple beta',
+    },
     problem: {
-      ru: 'Салоны и студии с записью на услуги теряют заявки, которые приходят вне рабочих часов: отвечает менеджер, а он работает по графику. Идея — ассистент, который отвечает сам и сразу бронирует свободный слот.',
-      en: 'Businesses that run on appointments lose the enquiries that arrive outside working hours, because a human manager only answers during them. The idea was an assistant that replies on its own and books a free slot right away.',
+      ru: 'Нонфикшн покупают чаще, чем дочитывают. Prosvetum собирает ключевые идеи книг из общественного достояния в текст и аудио, а квизы и карточки с повторением помогают их удержать.',
+      en: 'People buy nonfiction more often than they finish it. Prosvetum turns public-domain books into key ideas you can read or listen to, and quizzes and flashcards help them stick.',
     },
     approach: {
-      ru: 'Собрал продукт целиком один на Next.js (App Router) и TypeScript. Слой LLM: промпты, сценарии диалога, база знаний под каждого клиента, отработка возражений. Бэкенд со схемой данных, мультитенантностью и аутентификацией. Интеграции с YClients и Telegram — бот читает свободные слоты и создаёт записи. Админка с воронкой, аналитикой и тарифами. Интерфейс двуязычный, RU и EN.',
-      en: 'Built the whole product solo on Next.js (App Router) and TypeScript. The LLM layer: prompts, dialogue flows, a per-tenant knowledge base, objection handling. A backend with the data schema, multi-tenancy and auth. YClients and Telegram integrations, so the bot reads free slots and creates bookings. An admin panel with a funnel, analytics and billing tiers. The UI ships in Russian and English.',
+      ru: 'Платный доступ проверяет сама база, поэтому подмена на стороне приложения ничего не даёт. Наставник заперт в одной книге. Вопрос уходит в эмбеддинги Voyage, ближайшие фрагменты находит HNSW-индекс в pgvector, Claude отвечает потоком.',
+      en: 'The database itself decides who gets paid content, so tampering with the app changes nothing. The mentor is fenced to one book. A question goes to Voyage embeddings, an HNSW index in pgvector finds the nearest passages, and Claude streams the answer.',
     },
-    stack: ['Next.js', 'TypeScript', 'LLM', 'Telegram Bot API', 'YClients API'],
+    stack: ['React Native / Expo', 'TypeScript', 'Supabase', 'RAG', 'Claude'],
     outcome: {
-      ru: 'Продукт собран end-to-end: от схемы базы и слоя LLM до админки и тарифов. В продакшене пока не запускался.',
-      en: 'The product is built end to end, from the database schema and the LLM layer through to the admin panel and billing tiers. It has not gone to production yet.',
+      ru: '39 саммари в каталоге, весь контент подготовил через собственный конвейер. Сборка v1.0.0 живёт в TestFlight, публикация в App Store ещё впереди. Свой набор тестов покрывает 43 правила доступа, проходят все.',
+      en: '39 summaries in the catalogue, all produced through a pipeline I wrote. The v1.0.0 build is live in TestFlight and the App Store listing is still ahead. My own test suite covers 43 access rules and all 43 pass.',
     },
   },
   {
@@ -53,5 +57,23 @@ export const work: CaseStudy[] = [
       ru: 'Пять лет на одной продакшн-платформе, с января 2021 по декабрь 2025 года. Новые фичи собирали из дизайн-системы, я вёл code review по фронтенду.',
       en: 'Five years on the same production platform, January 2021 to December 2025. New frontend work was built from the design system, and I ran frontend code review.',
     },
+  },
+  {
+    title: 'Rivella — AI sales assistant',
+    status: 'in-progress',
+    problem: {
+      ru: 'Салоны и студии с записью на услуги теряют заявки, которые приходят вне рабочих часов: отвечает менеджер, а он работает по графику. Идея — ассистент, который отвечает сам и сразу бронирует свободный слот.',
+      en: 'Businesses that run on appointments lose the enquiries that arrive outside working hours, because a human manager only answers during them. The idea was an assistant that replies on its own and books a free slot right away.',
+    },
+    approach: {
+      ru: 'Собрал продукт целиком один на Next.js (App Router) и TypeScript. Слой LLM: промпты, сценарии диалога, отработка возражений и RAG по базе знаний, своей у каждого клиента. Бэкенд со схемой данных, мультитенантностью и аутентификацией. Интеграции с YClients и Telegram — бот читает свободные слоты и создаёт записи. Админка с воронкой, аналитикой и тарифами. Интерфейс двуязычный, RU и EN.',
+      en: 'Built the whole product solo on Next.js (App Router) and TypeScript. The LLM layer: prompts, dialogue flows, objection handling and RAG over a knowledge base that is separate per tenant. A backend with the data schema, multi-tenancy and auth. YClients and Telegram integrations, so the bot reads free slots and creates bookings. An admin panel with a funnel, analytics and billing tiers. The UI ships in Russian and English.',
+    },
+    stack: ['Next.js', 'TypeScript', 'RAG', 'Telegram Bot API', 'YClients API'],
+    outcome: {
+      ru: 'Продукт собран целиком, от схемы базы и слоя LLM до админки с воронкой и аналитикой. Развёрнут и работает. Платящих клиентов пока нет.',
+      en: 'The product is built in full, from the database schema and the LLM layer through to the admin panel with its funnel and analytics. It is deployed and running. There are no paying customers yet.',
+    },
+    links: { live: 'https://rivella.app' },
   },
 ]

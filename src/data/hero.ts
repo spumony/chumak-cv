@@ -7,8 +7,8 @@ export const hero: HeroData = {
     en: 'Senior Frontend Engineer · React, TypeScript, Next.js',
   },
   pitch: {
-    ru: '6+ лет коммерческой разработки. Веду фронтенд CRM для ресторанов в Multisoft: в основном модули заказов и меню и плотные таблицы отчётности. Отдельно собрал в одиночку Rivella — AI-ассистент для продаж на Next.js.',
-    en: '6+ years building for production. I lead the frontend of a restaurant CRM at Multisoft, mostly order and menu modules and dense reporting tables. On my own I built Rivella, an AI sales assistant on Next.js.',
+    ru: '6+ лет коммерческой разработки. Веду фронтенд CRM для ресторанов в Multisoft. Сам собрал два AI-продукта: Prosvetum — приложение с саммари книг и RAG-ментором, уже в TestFlight, и Rivella — ассистент для записи клиентов.',
+    en: '6+ years building for production. I lead the frontend of a restaurant CRM at Multisoft. I also built two AI products alone: Prosvetum, a book-summary app with a RAG mentor now in TestFlight, and Rivella, an assistant that books appointments.',
   },
   location: { ru: 'Кишинёв, Молдова · UTC+2', en: 'Chișinău, Moldova · UTC+2' },
   availability: {

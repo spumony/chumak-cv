@@ -16,7 +16,7 @@
     "title": "Фриланс",
     "whoIWorkWith": "С кем работаю",
     "offersTitle": "С чем помогаю",
-    "processTitle": "Как работаю",
+    "processTitle": "Процесс",
     "faqTitle": "Частые вопросы",
     "emailCta": "Написать о проекте",
     "bookCta": "Созвон на 20 минут"
@@ -36,6 +36,9 @@
     "live": "Демо",
     "repo": "Код"
   },
+  "principles": {
+    "title": "Как я работаю"
+  },
   "work": {
     "title": "Избранные работы",
     "problem": "Задача",
@@ -44,6 +47,7 @@
     "outcome": "Результат",
     "status": {
       "inProgress": "В процессе",
+      "beta": "Бета",
       "shipped": "Завершён",
       "current": "В работе"
     }

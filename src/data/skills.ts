@@ -13,7 +13,6 @@ export const skills: SkillCategory[] = [
       'Zod',
       'Vitest',
       'Playwright',
-      { ru: 'A11y (WCAG 2.2)', en: 'A11y (WCAG 2.2)' },
     ],
   },
   {
@@ -21,6 +20,7 @@ export const skills: SkillCategory[] = [
     items: [
       'Node.js',
       'PostgreSQL',
+      'Supabase (RLS, Edge Functions)',
       'Drizzle ORM',
       'Server Components / Actions',
       { ru: 'Session-аутентификация (bcrypt)', en: 'Session auth (bcrypt)' },
@@ -32,17 +32,14 @@ export const skills: SkillCategory[] = [
   },
   {
     category: { ru: 'AI', en: 'AI' },
-    upcoming: true,
     items: [
-      'Vercel AI SDK',
-      'OpenAI / Anthropic / Gemini SDK',
-      'Embeddings + pgvector',
       'RAG',
-      'Evals',
-      'Observability',
+      'Embeddings + pgvector',
+      { ru: 'Векторный поиск (HNSW)', en: 'Vector search (HNSW)' },
+      'Anthropic / OpenAI SDK',
+      'Voyage AI',
       { ru: 'Streaming UX (SSE)', en: 'Streaming UX (SSE)' },
-      { ru: 'Версионирование промптов', en: 'Prompt versioning' },
-      { ru: 'LLM-агенты / MCP', en: 'LLM agents / MCP' },
+      { ru: 'Промптинг и сценарии диалога', en: 'Prompting & dialogue flows' },
     ],
   },
   {

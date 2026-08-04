@@ -9,6 +9,7 @@ export const SECTION_IDS = [
   'experience',
   'education',
   'skills',
+  'principles',
   'languages',
   'freelance',
   'contact',
@@ -35,7 +36,13 @@ export type FocusData = {
   bullets: LocalizedString[]
 }
 
-export type CaseStudyStatus = 'in-progress' | 'shipped' | 'current'
+/** A short stance on how the work gets done, shown in the "How I work" section. */
+export type Principle = {
+  title: LocalizedString
+  body: LocalizedString
+}
+
+export type CaseStudyStatus = 'in-progress' | 'beta' | 'shipped' | 'current'
 
 export type CaseStudy = {
   title: string

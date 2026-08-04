@@ -16,7 +16,7 @@
     "title": "Freelance work",
     "whoIWorkWith": "Who I work with",
     "offersTitle": "What I help with",
-    "processTitle": "How I work",
+    "processTitle": "Process",
     "faqTitle": "FAQ",
     "emailCta": "Email me about your project",
     "bookCta": "Book a 20-min intro call"
@@ -36,6 +36,9 @@
     "live": "Live demo",
     "repo": "Source"
   },
+  "principles": {
+    "title": "How I work"
+  },
   "work": {
     "title": "Selected Work",
     "problem": "Problem",
@@ -44,6 +47,7 @@
     "outcome": "Outcome",
     "status": {
       "inProgress": "In progress",
+      "beta": "Beta",
       "shipped": "Completed",
       "current": "Ongoing"
     }
