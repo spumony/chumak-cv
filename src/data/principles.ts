@@ -1,35 +1,29 @@
 import type { Principle } from '../types'
 
+// Three, not four. A recruiter reads the section header and one line of each.
 export const principles: Principle[] = [
   {
     title: { ru: 'Отвечаю за весь путь', en: 'End-to-end ownership' },
     body: {
-      ru: 'Веду фичу от схемы данных до экрана. На двух продуктах я единственный фронтенд-инженер, а Prosvetum и Rivella написал один целиком.',
-      en: 'I carry a feature from the data schema to the screen. I am the only frontend engineer on two products, and I wrote Prosvetum and Rivella alone.',
+      ru: 'Веду работу от требований и контрактов API до архитектуры фронтенда, реализации, тестов и релиза. На текущем продукте я единственный фронтенд-инженер, а Rivella собрал и развернул один целиком.',
+      en: 'I take product work from requirements and API contracts through frontend architecture, implementation, testing and release. I am the sole frontend engineer on the current product, and I built and deployed Rivella end to end alone.',
+    },
+  },
+  {
+    title: { ru: 'Система раньше экранов', en: 'Systems over one-off screens' },
+    body: {
+      ru: 'Начинаю с набора компонентов и общих паттернов данных, чтобы новые сценарии наследовали консистентность, а не собирали её заново. Навести её потом дороже, чем заложить сразу.',
+      en: 'I start from a component set and shared data patterns, so new workflows inherit consistency instead of recreating it. Retrofitting it later costs more than building it in.',
     },
   },
   {
     title: {
-      ru: 'Договорённости — в репозитории',
-      en: 'Conventions live in the repo',
+      ru: 'Доказательства вместо заявлений',
+      en: 'Evidence over claims',
     },
     body: {
-      ru: 'Роутинг, структура и правила именования записаны в проекте, а не держатся в голове. Следующему человеку не придётся спрашивать.',
-      en: 'Routing, structure and naming rules are written down in the project rather than kept in my head. The next person should not have to ask.',
-    },
-  },
-  {
-    title: { ru: 'Система раньше экранов', en: 'A system before screens' },
-    body: {
-      ru: 'Начинаю с набора компонентов, а не с макета отдельной страницы. Навести консистентность потом дороже, чем заложить её сразу.',
-      en: 'I start from a component set, not from one page mockup. Retrofitting consistency costs more than building it in.',
-    },
-  },
-  {
-    title: { ru: 'Минимум зависимостей', en: 'A small dependency list' },
-    body: {
-      ru: 'Новая библиотека должна себя окупать. Чаще всего задача закрывается тем, что уже есть в проекте или в самой платформе.',
-      en: 'A new library has to earn its place. Most of the time the job is done by what the project or the platform already has.',
+      ru: 'Решения записываю, границы, которые важны, покрываю тестами, а каждое число держу привязанным к команде, которая его выдаёт. Число без источника — это не доказательство.',
+      en: 'I write decisions down, test the boundaries that matter, and keep every number tied to the command that produced it. A number without a source is not evidence.',
     },
   },
 ]

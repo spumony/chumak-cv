@@ -13,7 +13,7 @@ export function Skills() {
       className="mx-auto max-w-3xl px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6"
     >
       <FadeIn>
-        <SectionTitle>{t('nav.skills')}</SectionTitle>
+        <SectionTitle>{t('skills.title')}</SectionTitle>
       </FadeIn>
 
       <div className="mt-8 flex flex-col gap-6 sm:mt-10 sm:gap-8">
@@ -25,10 +25,7 @@ export function Skills() {
               </h3>
               <div className="mt-3 flex flex-wrap gap-2">
                 {group.items.map((item, itemIndex) => (
-                  <Badge
-                    key={itemIndex}
-                    tone={group.upcoming ? 'muted' : 'accent'}
-                  >
+                  <Badge key={itemIndex} tone="accent">
                     {typeof item === 'string' ? item : pick(item)}
                   </Badge>
                 ))}

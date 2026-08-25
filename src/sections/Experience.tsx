@@ -18,7 +18,7 @@ export function Experience() {
     >
       <FadeIn>
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <SectionTitle>{t('nav.experience')}</SectionTitle>
+          <SectionTitle>{t('experience.title')}</SectionTitle>
           <a
             href={resumeUrl[lang]}
             download

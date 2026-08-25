@@ -27,33 +27,51 @@ pnpm format     # Prettier --write
 
 ## Editing content
 
-All content lives in two places. No component changes are needed.
+### Facts come first
+
+`docs/candidate-evidence.md` is the publication policy for every factual claim on
+the site, in the CV PDFs and in `public/llms.txt`: what may be published, what may
+not, and which wordings are barred. Change a fact there first, then propagate it.
+
+`HUMAN_INPUT_REQUIRED.md` lists the open questions. This repository is public, so
+neither file carries anything a project's own publication policy disallows.
 
 ### 1. Section data — `src/data/`
 
 Each file is a typed array/object. Every translatable string is an object
 `{ ru: '…', en: '…' }`.
 
-| File            | Section                                                    |
-| --------------- | ---------------------------------------------------------- |
-| `hero.ts`       | Name, role, pitch, location, optional `avatar`             |
-| `experience.ts` | Work history (role, company, period, bullets, tech)        |
-| `projects.ts`   | Project cards (title, description, tech, optional `links`) |
-| `education.ts`  | Degrees                                                    |
-| `skills.ts`     | Skill categories and items                                 |
-| `languages.ts`  | Spoken languages and levels                                |
-| `contact.ts`    | Email + social links                                       |
+| File            | Section                                                       |
+| --------------- | ------------------------------------------------------------- |
+| `hero.ts`       | Name, role, stack, pitch, location, availability, proof strip |
+| `work.ts`       | Selected-work cards (context, role, system, evidence, stack)  |
+| `experience.ts` | Work history (role, company, period, bullets, tech)           |
+| `skills.ts`     | Skill groups — Frontend first, always                         |
+| `principles.ts` | The three "How I work" statements                             |
+| `education.ts`  | Degrees                                                       |
+| `languages.ts`  | Spoken languages and levels                                   |
+| `contact.ts`    | Email + social links                                          |
+| `resume.ts`     | Which CV PDF the download button serves, per language         |
 
-Notes:
-
-- **Avatar:** add an image to `public/` and set `hero.avatar = '/your-image.jpg'`.
-- **Project links:** add `links: { live, source }` per project when you have public URLs.
-- **GitHub:** uncomment the GitHub entry in `contact.ts` once you have your username.
+**Avatar:** add an image to `public/` and set `hero.avatar = '/your-image.jpg'`.
 
 ### 2. UI strings — `src/i18n/locales/`
 
 `en.json` and `ru.json` hold navigation labels, button text, the SEO
 title/description and accessibility labels. Keys are type-checked.
+
+## CV PDFs
+
+The HTML in `scripts/` is the source; the PDFs in `public/` are build output.
+Never edit a PDF.
+
+```bash
+./scripts/build-cv.sh
+```
+
+It renders all three variants through headless Chrome and then checks each one:
+page count, extractable name, core keyword, and whether the last page is a blank
+tail. See `docs/tailor-cv.md` for which variant to send where.
 
 ## Design tokens & theming
 
@@ -68,16 +86,11 @@ The theme toggle lives in the header (and mobile menu); the choice persists
 to `localStorage` and defaults to the OS `prefers-color-scheme`. An inline
 script in `index.html` applies it before paint to avoid a flash.
 
-## Deploy to Vercel
+## Deploy
 
-This is a static Vite SPA — no extra config needed.
-
-1. Push the repo to GitHub.
-2. Import it in Vercel. The Vite preset is auto-detected:
-   - Build command: `pnpm build`
-   - Output directory: `dist`
-3. Deploy. There is no client-side routing, so no rewrites / `vercel.json`
-   are required.
+`main` deploys itself: `.github/workflows/deploy.yml` runs `format:check`, `lint`
+and `build`, then rsyncs `dist/` to the server behind `chumak.is-a.dev` and
+health-checks the live URL. `scripts/deploy.sh` does the same thing by hand.
 
 ## Accessibility & performance
 

@@ -1,0 +1,111 @@
+/* Shared print stylesheet for every CV variant (see scripts/build-cv.sh).
+   One column, real headings, selectable text, no icons carrying meaning —
+   ATS parsers read this the same way a person does. */
+
+@page {
+  size: A4;
+  margin: 11mm 13mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  line-height: 1.38;
+  color: #111;
+  margin: 0;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 19pt;
+  margin: 0;
+  letter-spacing: -0.2pt;
+}
+
+.role-line {
+  font-size: 10.5pt;
+  font-weight: bold;
+  margin: 2pt 0 0;
+}
+
+.contact {
+  font-size: 9pt;
+  color: #333;
+  margin: 4pt 0 7pt;
+}
+
+h2 {
+  font-size: 11.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  border-bottom: 1px solid #999;
+  padding-bottom: 2pt;
+  margin: 9pt 0 5pt;
+}
+
+.summary {
+  margin: 0;
+}
+
+.entry,
+.group {
+  break-inside: avoid;
+}
+
+.entry {
+  margin: 0 0 6pt;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12pt;
+}
+
+.role {
+  font-weight: bold;
+}
+
+.period {
+  white-space: nowrap;
+  color: #333;
+}
+
+/* Company line for jobs; stack line for projects. */
+.company {
+  font-size: 9.5pt;
+  color: #333;
+  margin: 1pt 0 3pt;
+}
+
+ul {
+  margin: 3pt 0 0;
+  padding-left: 15pt;
+}
+
+li {
+  margin: 0 0 2pt;
+}
+
+.group p,
+.langs p {
+  margin: 0 0 3pt;
+}
+
+.label {
+  font-weight: bold;
+}
+
+/* One-line role with no bullets — early history that must not outweigh
+   the engineering experience above it. */
+.entry.compact {
+  margin-bottom: 4pt;
+}

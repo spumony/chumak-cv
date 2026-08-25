@@ -1,59 +1,48 @@
 {
   "meta": {
-    "title": "Александр Чумак — Senior frontend-инженер (React, TypeScript, Next.js)",
-    "description": "Senior frontend-инженер. 6+ лет коммерческой разработки на React, TypeScript и Next.js. Открыт к senior-позициям и AI-продуктам, удалённо."
+    "title": "Александр Чумак — Senior Frontend / Product-инженер",
+    "description": "Senior Frontend / Product-инженер, 6+ лет на React, TypeScript и Next.js. Коммерческий опыт в CRM и логистике, React Native и AI-продукты, собранные целиком."
   },
   "nav": {
     "work": "Работы",
     "experience": "Опыт",
-    "education": "Образование",
     "skills": "Навыки",
-    "languages": "Языки",
-    "freelance": "Фриланс",
     "contact": "Контакты"
   },
-  "freelance": {
-    "title": "Фриланс",
-    "whoIWorkWith": "С кем работаю",
-    "offersTitle": "С чем помогаю",
-    "processTitle": "Процесс",
-    "faqTitle": "Частые вопросы",
-    "emailCta": "Написать о проекте",
-    "bookCta": "Созвон на 20 минут"
-  },
   "hero": {
-    "viewWork": "Смотреть опыт",
+    "viewWork": "Смотреть работы",
+    "downloadCv": "Скачать CV",
     "getInTouch": "Связаться",
     "openToWork": "Открыт к работе"
   },
   "experience": {
+    "title": "Опыт",
     "current": "Сейчас",
     "downloadCv": "Скачать CV"
   },
-  "focus": {
-    "title": "Над чем работаю",
-    "inProgress": "В процессе",
-    "live": "Демо",
-    "repo": "Код"
-  },
-  "principles": {
+  "approach": {
     "title": "Как я работаю"
+  },
+  "background": {
+    "title": "Образование и языки",
+    "education": "Образование",
+    "languages": "Языки"
+  },
+  "skills": {
+    "title": "Ключевые навыки"
   },
   "work": {
     "title": "Избранные работы",
-    "problem": "Задача",
-    "approach": "Подход",
+    "role": "Роль",
+    "system": "Система",
+    "evidence": "Факты",
     "stack": "Стек",
-    "outcome": "Результат",
-    "status": {
-      "inProgress": "В процессе",
-      "beta": "Бета",
-      "shipped": "Завершён",
-      "current": "В работе"
-    }
+    "live": "Открыть",
+    "repo": "Код",
+    "writeup": "Разбор"
   },
   "contact": {
-    "lead": "Ищете фронтенд-разработчика уровня senior или инженера для AI-продукта? Быстрее всего написать на почту.",
+    "lead": "Открыт к senior-позициям во фронтенде и продуктовой инженерии по ЕС. Быстрее всего написать на почту.",
     "copyEmail": "Скопировать email",
     "copied": "Скопировано",
     "openPhoto": "Открыть фото",

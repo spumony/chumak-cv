@@ -1,14 +1,11 @@
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
-import { Focus } from './sections/Focus'
 import { Work } from './sections/Work'
 import { Experience } from './sections/Experience'
-import { Education } from './sections/Education'
 import { Skills } from './sections/Skills'
-import { Principles } from './sections/Principles'
-import { Languages } from './sections/Languages'
-import { Freelance } from './sections/Freelance'
+import { Approach } from './sections/Approach'
+import { Background } from './sections/Background'
 import { Contact } from './sections/Contact'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
 import { useT } from './i18n/useT'
@@ -28,16 +25,14 @@ function App() {
 
       <Header />
 
+      {/* Proof first, then commercial history, then the supporting detail. */}
       <main id="main">
         <Hero />
-        <Focus />
         <Work />
         <Experience />
-        <Education />
         <Skills />
-        <Principles />
-        <Languages />
-        <Freelance />
+        <Approach />
+        <Background />
         <Contact />
       </main>
 

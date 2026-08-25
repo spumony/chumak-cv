@@ -4,55 +4,53 @@ export type LocalizedString = { ru: string; en: string }
 /** Section ids — used for anchors, smooth scroll and scroll-spy. */
 export const SECTION_IDS = [
   'hero',
-  'focus',
   'work',
   'experience',
-  'education',
   'skills',
-  'principles',
-  'languages',
-  'freelance',
+  'approach',
+  'background',
   'contact',
 ] as const
 
 export type SectionId = (typeof SECTION_IDS)[number]
 
-/** Sections that appear in the navigation (everything except the hero). */
+/**
+ * Sections that appear in the navigation. Deliberately shorter than
+ * SECTION_IDS: a recruiter scans four labels, not seven.
+ */
 export const NAV_SECTION_IDS = [
   'work',
   'experience',
-  'education',
   'skills',
-  'languages',
-  'freelance',
   'contact',
 ] as const
 
 export type NavSectionId = (typeof NAV_SECTION_IDS)[number]
 
-export type FocusData = {
-  lead: LocalizedString
-  /** Short status bullets: what is actually in progress right now. */
-  bullets: LocalizedString[]
-}
-
-/** A short stance on how the work gets done, shown in the "How I work" section. */
+/** A short stance on how the work gets done, shown in "How I work". */
 export type Principle = {
   title: LocalizedString
   body: LocalizedString
 }
 
-export type CaseStudyStatus = 'in-progress' | 'beta' | 'shipped' | 'current'
-
 export type CaseStudy = {
   title: string
-  status?: CaseStudyStatus
-  /** Free-form period label, e.g. "2026 — Present". */
+  /** One line of context: what the product is and whose problem it solves. */
+  context: LocalizedString
+  /** Short status pill, e.g. "Deployed" / "5 years". Omit when there is none. */
+  badge?: LocalizedString
+  /** Free-form period label, e.g. "2021 — 2025 · five years". */
   period?: LocalizedString
-  problem: LocalizedString
-  approach: LocalizedString
+  /** What exactly was mine — the question a recruiter is actually asking. */
+  role: LocalizedString
+  /**
+   * 2–3 sentences on the architecture and the decisions behind it. Omitted
+   * where publication scope does not allow describing the system.
+   */
+  system?: LocalizedString
+  /** Short verified facts. Every one must be defensible in an interview. */
+  evidence?: LocalizedString[]
   stack: string[]
-  outcome: LocalizedString
   links?: {
     live?: string
     repo?: string
@@ -63,11 +61,15 @@ export type CaseStudy = {
 export type HeroData = {
   name: LocalizedString
   role: LocalizedString
+  /** Stack line under the role. */
+  stack: LocalizedString
   /** 2–3 line elevator pitch. */
   pitch: LocalizedString
   location?: LocalizedString
-  /** One-line availability signal (roles, remote, contracts). */
+  /** One-line availability signal (work authorisation, remote, relocation). */
   availability?: LocalizedString
+  /** Compact proof strip below the hero — verified facts only, no counters. */
+  proof: LocalizedString[]
   /** Path/URL to the avatar image. Omit to hide the avatar. */
   avatar?: string
 }
@@ -98,13 +100,11 @@ export type SkillCategory = {
   category: LocalizedString
   /** Plain tech names stay as strings; translatable terms use LocalizedString. */
   items: (string | LocalizedString)[]
-  /** Newer / in-progress skills — rendered muted, never claimed as mastered. */
-  upcoming?: boolean
 }
 
 export type LanguageItem = {
   name: LocalizedString
-  /** Proficiency description, e.g. "Upper-Intermediate". */
+  /** Proficiency description, e.g. "Professional working proficiency". */
   level: LocalizedString
   /** Short badge, e.g. "B2" or "Native". */
   levelCode?: string
@@ -126,25 +126,4 @@ export type ContactLink = {
 export type ContactData = {
   email: string
   links: ContactLink[]
-}
-
-export type FreelanceOffer = {
-  title: LocalizedString
-  description: LocalizedString
-}
-
-export type FreelanceFaq = {
-  q: LocalizedString
-  a: LocalizedString
-}
-
-export type FreelanceData = {
-  intro: LocalizedString
-  /** One-line "who I work with" tagline shown under the intro. */
-  whoIWorkWith?: LocalizedString
-  offers: FreelanceOffer[]
-  process: LocalizedString[]
-  faq: FreelanceFaq[]
-  /** Optional booking link (Cal.com/Calendly). Omit to show only email. */
-  bookingUrl?: string
 }

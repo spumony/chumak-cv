@@ -1,59 +1,48 @@
 {
   "meta": {
-    "title": "Alexandr Chumak — Senior Frontend Engineer (React, TypeScript, Next.js)",
-    "description": "Senior Frontend Engineer. 6+ years building for production with React, TypeScript and Next.js. Open to senior frontend and AI product roles, remote for EU teams."
+    "title": "Alexandr Chumak — Senior Frontend / Product Engineer",
+    "description": "Senior Frontend / Product Engineer with 6+ years in React, TypeScript and Next.js. Production CRM and logistics experience, React Native, and end-to-end AI products."
   },
   "nav": {
     "work": "Work",
     "experience": "Experience",
-    "education": "Education",
     "skills": "Skills",
-    "languages": "Languages",
-    "freelance": "Freelance",
     "contact": "Contact"
   },
-  "freelance": {
-    "title": "Freelance work",
-    "whoIWorkWith": "Who I work with",
-    "offersTitle": "What I help with",
-    "processTitle": "Process",
-    "faqTitle": "FAQ",
-    "emailCta": "Email me about your project",
-    "bookCta": "Book a 20-min intro call"
-  },
   "hero": {
-    "viewWork": "View experience",
-    "getInTouch": "Get in touch",
+    "viewWork": "View selected work",
+    "downloadCv": "Download CV",
+    "getInTouch": "Contact",
     "openToWork": "Open to work"
   },
   "experience": {
+    "title": "Experience",
     "current": "Now",
     "downloadCv": "Download CV"
   },
-  "focus": {
-    "title": "What I'm working on",
-    "inProgress": "In progress",
-    "live": "Live demo",
-    "repo": "Source"
-  },
-  "principles": {
+  "approach": {
     "title": "How I work"
   },
+  "background": {
+    "title": "Education & languages",
+    "education": "Education",
+    "languages": "Languages"
+  },
+  "skills": {
+    "title": "Core skills"
+  },
   "work": {
-    "title": "Selected Work",
-    "problem": "Problem",
-    "approach": "Approach",
+    "title": "Selected work",
+    "role": "Role",
+    "system": "System",
+    "evidence": "Evidence",
     "stack": "Stack",
-    "outcome": "Outcome",
-    "status": {
-      "inProgress": "In progress",
-      "beta": "Beta",
-      "shipped": "Completed",
-      "current": "Ongoing"
-    }
+    "live": "Live",
+    "repo": "Source",
+    "writeup": "Write-up"
   },
   "contact": {
-    "lead": "Hiring for a senior frontend or AI product role? Email is the fastest way to reach me.",
+    "lead": "Open to senior frontend and product-engineering roles across the EU. Email is the fastest way to reach me.",
     "copyEmail": "Copy email",
     "copied": "Copied",
     "openPhoto": "Open photo",

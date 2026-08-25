@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Alexandr Chumak — Senior Frontend Engineer (React, TypeScript, Next.js)
+      Alexandr Chumak — Senior Product Engineer (React, TypeScript, Next.js,
+      Applied AI)
     </title>
     <link rel="stylesheet" href="cv.css" />
   </head>
@@ -11,7 +12,8 @@
     <header>
       <h1>Alexandr Chumak</h1>
       <p class="role-line">
-        Senior Frontend Engineer &middot; React, TypeScript, Next.js
+        Senior Product Engineer &middot; React, TypeScript, Next.js &middot;
+        Applied AI
       </p>
       <p class="contact">
         Chi&#537;in&#259;u, Moldova (UTC+2) &middot;
@@ -29,15 +31,71 @@
 
     <h2>Summary</h2>
     <p class="summary">
-      Senior Frontend Engineer with 6+ years building production web and mobile
-      products in React, TypeScript, Next.js and React Native. Currently owns
-      frontend architecture and delivery for a restaurant CRM as the sole
-      frontend engineer, after five years on EVCARGO&rsquo;s production
-      logistics platform building and maintaining the design system and the
-      client-side data architecture. Also builds and runs products end to end:
-      Rivella, a multi-tenant AI booking assistant, is deployed and running in
-      production and is mine from the schema through to the deployment pipeline.
+      Senior Product Engineer with 6+ years in production React, TypeScript and
+      Next.js, working from the interface down through the API, the data model
+      and the deployment pipeline. Built and deployed Rivella on my own: a
+      multi-tenant AI booking assistant running in production, where an agent
+      holds a tool-calling conversation, retrieves from each tenant&rsquo;s
+      knowledge base and writes real appointments into a third-party booking
+      system. In commercial work I own frontend architecture and delivery for a
+      restaurant CRM as the sole frontend engineer, after five years on
+      EVCARGO&rsquo;s production logistics platform.
     </p>
+
+    <h2>AI &amp; Product Engineering</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role"
+          >Rivella &mdash; multi-tenant AI booking assistant</span
+        >
+        <span class="period"
+          ><a href="https://rivella.app">rivella.app</a></span
+        >
+      </div>
+      <div class="company">
+        Next.js &middot; TypeScript &middot; NestJS &middot; Prisma &middot;
+        PostgreSQL 16 &middot; Docker &middot; GitHub Actions &middot; Telegram
+        Bot API &middot; YClients API
+      </div>
+      <ul>
+        <li>
+          Built and deployed the product solo &mdash; a Next.js/TypeScript admin
+          panel, a NestJS/Prisma API and PostgreSQL 16 &mdash; and run it in
+          production on a VPS.
+        </li>
+        <li>
+          The assistant runs a bounded agent loop over 15 tools, capped at 8
+          iterations and 120 seconds per turn with a per-call timeout, an output
+          validator in front of every reply, and a per-conversation lock so a
+          second message cannot start a second run.
+        </li>
+        <li>
+          Retrieval is PostgreSQL full-text search over a knowledge base scoped
+          to the tenant, with a keyword-scorer fallback &mdash; deliberately not
+          a vector store, because the corpus is small, per-tenant and edited by
+          hand.
+        </li>
+        <li>
+          Designed a tenant-scoped data model with non-null tenant keys across
+          all 12 tenant-scoped tables, one bot process per tenant behind
+          per-slug webhook routing, and a separate superadmin authentication
+          strategy with its own table.
+        </li>
+        <li>
+          Integrated Telegram and YClients for availability, creation,
+          rescheduling and cancellation &mdash; with a manager confirmation step
+          and a fallback for the provider&rsquo;s booking race &mdash; plus five
+          scheduled jobs for reminders, follow-ups, no-show detection,
+          re-engagement and a daily digest.
+        </li>
+        <li>
+          Ships continuously: GitHub Actions builds Docker images into GHCR and
+          the VPS recreates the containers. 138 API tests pass across 12 suites,
+          behind a 46-path OpenAPI spec.
+        </li>
+      </ul>
+    </div>
 
     <h2>Experience</h2>
 
@@ -59,11 +117,8 @@
         </li>
         <li>
           Build data-heavy product flows: dense tables, filtering, validation
-          and long forms backed by REST APIs.
-        </li>
-        <li>
-          Translate product requirements into technical plans and ship features
-          through release with the wider product and backend team.
+          and long forms backed by REST APIs, and take requirements through to
+          release with the product and backend team.
         </li>
       </ul>
     </div>
@@ -90,10 +145,9 @@
           handling.
         </li>
         <li>
-          Contributed to the React Native app and cross-platform releases,
-          including Android SDK upgrades and iOS release validation.
+          Contributed to the React Native app and cross-platform releases, and
+          introduced Playwright coverage for critical user flows.
         </li>
-        <li>Introduced Playwright coverage for critical user flows.</li>
         <li>
           Ran frontend code review and contributed to estimation, technical
           planning and release coordination.
@@ -115,52 +169,6 @@
       </ul>
     </div>
 
-    <div class="entry compact">
-      <div class="entry-head">
-        <span class="role"
-          >Web Designer &mdash; Exterior Security Systems,
-          Chi&#537;in&#259;u</span
-        >
-        <span class="period">Oct 2018 &ndash; Mar 2019</span>
-      </div>
-    </div>
-
-    <h2>Selected Projects</h2>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="role"
-          >Rivella &mdash; multi-tenant AI booking assistant</span
-        >
-        <span class="period"
-          ><a href="https://rivella.app">rivella.app</a></span
-        >
-      </div>
-      <div class="company">
-        Next.js &middot; TypeScript &middot; NestJS &middot; Prisma &middot;
-        PostgreSQL 16 &middot; Docker &middot; GitHub Actions &middot; Telegram
-        Bot API &middot; YClients API
-      </div>
-      <ul>
-        <li>
-          Built and deployed the product solo: a Next.js/TypeScript admin panel
-          over a NestJS/Prisma API on PostgreSQL 16, shipped as Docker images
-          built in GitHub Actions and running in production on a VPS.
-        </li>
-        <li>
-          Built the admin frontend &mdash; dashboard, analytics, conversations,
-          CRM, bookings, subscriptions and knowledge base &mdash; bilingual in
-          Russian and English.
-        </li>
-        <li>
-          Designed a tenant-scoped data model with non-null tenant keys across
-          all 12 tenant-scoped tables, and integrated Telegram and YClients so
-          the assistant reads availability and creates appointments behind a
-          manager confirmation step.
-        </li>
-      </ul>
-    </div>
-
     <h2>Skills</h2>
     <div class="group">
       <p>
@@ -169,13 +177,9 @@
         Query, Zod
       </p>
       <p>
-        <span class="label">Frontend architecture:</span> Design systems,
-        component libraries, client/server state, REST integration, auth flows,
-        accessibility
-      </p>
-      <p>
-        <span class="label">Quality:</span> Playwright, Jest, code review, CI/CD
-        (GitHub Actions)
+        <span class="label">Applied AI:</span> Tool-calling agents, agent loop
+        design, LLM integrations, prompt design, Anthropic / OpenAI SDKs, AI
+        product UX
       </p>
       <p>
         <span class="label">Backend &amp; data:</span> Node.js, NestJS,
@@ -183,9 +187,9 @@
         REST API design
       </p>
       <p>
-        <span class="label">Applied AI:</span> Tool-calling agents, agent loop
-        design, LLM integrations, prompt design, Anthropic / OpenAI SDKs, AI
-        product UX
+        <span class="label">Architecture &amp; quality:</span> Design systems,
+        component libraries, auth flows, Playwright, Jest, CI/CD (GitHub
+        Actions), code review
       </p>
     </div>
 

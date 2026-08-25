@@ -25,3 +25,6 @@ dist-ssr
 
 # Claude Code session artefacts
 .claude/scheduled_tasks.lock
+
+# Internal working notes — never published (see docs/private/README)
+docs/private/

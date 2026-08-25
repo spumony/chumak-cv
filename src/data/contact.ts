@@ -1,5 +1,6 @@
 import type { ContactData } from '../types'
 
+// One primary action. Email first, LinkedIn second, GitHub as the quiet third.
 export const contact: ContactData = {
   email: 'ciumac.dev@gmail.com',
   links: [
@@ -12,11 +13,6 @@ export const contact: ContactData = {
       kind: 'linkedin',
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/spumony',
-    },
-    {
-      kind: 'telegram',
-      label: 'Telegram',
-      href: 'https://t.me/spumony',
     },
     {
       kind: 'github',

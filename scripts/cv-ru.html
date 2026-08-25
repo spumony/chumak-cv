@@ -3,175 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Александр Чумак — Senior frontend-инженер (React, TypeScript, Next.js)
+      Александр Чумак — Senior Frontend-инженер (React, TypeScript, Next.js)
     </title>
-    <style>
-      @page {
-        size: A4;
-        margin: 12mm 14mm;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 10.5pt;
-        line-height: 1.4;
-        color: #111;
-        margin: 0;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 16pt;
-      }
-      h1 {
-        font-size: 20pt;
-        margin: 0;
-      }
-      .role-line {
-        font-size: 11pt;
-        font-weight: bold;
-        margin: 2pt 0 0;
-      }
-      .personal p {
-        font-size: 9.5pt;
-        color: #333;
-        margin: 1pt 0;
-      }
-      .photo {
-        width: 28mm;
-        height: 36mm;
-        object-fit: cover;
-        flex-shrink: 0;
-        border: 1px solid #ccc;
-      }
-      h2 {
-        font-size: 12.5pt;
-        text-transform: uppercase;
-        letter-spacing: 0.5pt;
-        border-bottom: 1px solid #999;
-        padding-bottom: 2pt;
-        margin: 10pt 0 5pt;
-      }
-      .entry,
-      .group {
-        break-inside: avoid;
-      }
-      .entry {
-        margin: 0 0 7pt;
-      }
-      .entry-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 12pt;
-      }
-      .role {
-        font-weight: bold;
-      }
-      .period {
-        white-space: nowrap;
-        color: #333;
-      }
-      .company {
-        font-size: 10pt;
-        color: #333;
-        margin: 1pt 0 3pt;
-      }
-      ul {
-        margin: 3pt 0 0;
-        padding-left: 16pt;
-      }
-      li {
-        margin: 0 0 2pt;
-      }
-      .group p,
-      .langs p,
-      .tech p {
-        margin: 0 0 3pt;
-      }
-      .label {
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="cv.css" />
   </head>
   <body>
-    <div class="header">
-      <div class="personal">
-        <h1>Александр Чумак</h1>
-        <p class="role-line">
-          Senior frontend-инженер &middot; React, TypeScript, Next.js
-        </p>
-        <p><strong>Гражданство ЕС — спонсорство не требуется</strong></p>
-        <p>Город: Кишинёв, Молдова (UTC+2)</p>
-        <p>Telegram: @spumony &middot; Email: ciumac.dev@gmail.com</p>
-        <p>
-          LinkedIn: linkedin.com/in/spumony &middot; GitHub: github.com/spumony
-        </p>
-      </div>
-      <img class="photo" src="../public/avatar.jpg" alt="Александр Чумак" />
-    </div>
-
-    <h2>Коротко</h2>
-    <div class="tech">
-      <p>
-        Гражданство ЕС. Senior frontend-инженер, 6+ лет коммерческой разработки
-        на React, TypeScript и Next.js. Сейчас ведущий frontend-разработчик в
-        Multisoft, делаю клиентскую часть CRM для ресторанов. До этого пять лет
-        в EVCARGO: дизайн-система, библиотека компонентов, клиентская
-        архитектура. Сам собрал два AI-продукта: Prosvetum, iOS-приложение с
-        саммари книг и RAG-ментором, уже в TestFlight, и Rivella, AI-ассистент
-        для записи клиентов. Открыт к senior-позициям во фронтенде и
-        AI-продуктах в ЕС. Удалённо, UTC+2.
+    <header>
+      <h1>Александр Чумак</h1>
+      <p class="role-line">
+        Senior Frontend-инженер &middot; React, TypeScript, Next.js
       </p>
-    </div>
-
-    <h2>Технологии</h2>
-    <div class="tech">
-      <p>
-        React, TypeScript, Next.js (App Router), Tailwind CSS, TanStack Query,
-        Zod, React Native / Expo, Node.js, PostgreSQL, Supabase, RAG + pgvector,
-        Claude
+      <p class="contact">
+        Кишинёв, Молдова (UTC+2) &middot;
+        <strong
+          >Гражданство ЕС &mdash; спонсорство для работы в ЕС не
+          требуется</strong
+        ><br />
+        <a href="mailto:ciumac.dev@gmail.com">ciumac.dev@gmail.com</a> &middot;
+        <a href="https://www.linkedin.com/in/spumony"
+          >linkedin.com/in/spumony</a
+        >
+        &middot;
+        <a href="https://github.com/spumony">github.com/spumony</a> &middot;
+        <a href="https://chumak.is-a.dev">chumak.is-a.dev</a>
       </p>
-    </div>
+    </header>
 
-    <h2>Образование</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="role">Магистр информационных технологий</span>
-        <span class="period">09.2018 &ndash; 06.2020</span>
-      </div>
-      <div class="company">Технический университет Молдовы</div>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="role">Бакалавр информационных технологий</span>
-        <span class="period">09.2015 &ndash; 06.2018</span>
-      </div>
-      <div class="company">Технический университет Молдовы</div>
-    </div>
+    <h2>О себе</h2>
+    <p class="summary">
+      Senior frontend-инженер, 6+ лет коммерческой разработки веб- и мобильных
+      продуктов на React, TypeScript, Next.js и React Native. Сейчас
+      единственный фронтенд-инженер CRM для ресторанов: отвечаю за архитектуру
+      фронтенда и выпуск. До этого пять лет на продакшн-платформе логистики
+      EVCARGO, где собирал и поддерживал дизайн-систему и клиентскую архитектуру
+      данных. Параллельно собираю продукты целиком: Rivella, мультитенантный
+      AI-ассистент записи, развёрнут и работает в продакшене — от схемы данных
+      до пайплайна деплоя это моя работа.
+    </p>
 
     <h2>Опыт работы</h2>
 
     <div class="entry">
       <div class="entry-head">
         <span class="role">Ведущий Frontend-разработчик</span>
-        <span class="period">01.2026 &ndash; настоящее время</span>
+        <span class="period">01.2026 &mdash; наст. время</span>
       </div>
-      <div class="company">Multisoft, Румыния (удалённо)</div>
+      <div class="company">Multisoft &mdash; Румыния / удалённо</div>
       <ul>
         <li>
-          Единственный фронтенд-разработчик CRM-платформы для ресторанов.
-          Клиентскую часть начинал с нуля в январе 2026 года.
+          Отвечаю за архитектуру фронтенда и выпуск CRM для ресторанов как
+          единственный фронтенд-инженер: клиент на Next.js и TypeScript начинал
+          с нуля.
         </li>
         <li>
-          Взял на себя архитектуру и систему компонентов на Next.js и
-          TypeScript, зафиксировал роутинг и фронтенд-стандарты.
+          Спроектировал систему компонентов, структуру роутинга и
+          фронтенд-стандарты, по которым работают модули заказов, меню и
+          отчётности.
         </li>
         <li>
-          Делаю модули заказов, меню и отчётности на одном наборе компонентов:
-          плотные таблицы, фильтры, длинные формы.
+          Делаю экраны с плотными данными: большие таблицы, фильтры, валидация и
+          длинные формы поверх REST API.
+        </li>
+        <li>
+          Перевожу продуктовые требования в технические планы и довожу фичи до
+          релиза вместе с продуктовой и бэкенд-командой.
         </li>
       </ul>
     </div>
@@ -179,107 +74,93 @@
     <div class="entry">
       <div class="entry-head">
         <span class="role">Frontend-разработчик</span>
-        <span class="period">01.2021 &ndash; 12.2025</span>
+        <span class="period">01.2021 &mdash; 12.2025</span>
       </div>
-      <div class="company">TeamArt &mdash; EVCARGO (удалённо)</div>
+      <div class="company">TeamArt &mdash; EVCARGO &middot; удалённо</div>
       <ul>
         <li>
-          Развивал фронтенд продакшн-платформы для логистики электротранспорта в
-          кросс-функциональной Scrum-команде.
+          Пять лет на продакшн-платформе логистики электротранспорта, фичи вёл
+          от постановки до релиза в кросс-функциональной Scrum-команде.
         </li>
         <li>
           Собрал и поддерживал общую дизайн-систему и библиотеку компонентов,
-          вокруг них выстроил клиентскую архитектуру.
+          вокруг них выстроил клиентскую архитектуру с едиными паттернами
+          интерфейса и данных.
         </li>
         <li>
-          Интегрировал REST API через React Query: кэширование и инвалидация
-          работали одинаково на всех экранах.
+          Спроектировал работу с REST через React Query и Axios: обновление
+          токенов, кэширование, пагинация, фильтрация, инвалидация и обработка
+          ошибок.
         </li>
-        <li>Вёл code review и техническое планирование по фронтенду.</li>
+        <li>
+          Участвовал в разработке мобильного приложения на React Native и в
+          кросс-платформенных релизах, включая обновления Android SDK и проверку
+          сборок iOS.
+        </li>
+        <li>
+          Внедрил тесты Playwright на критичные пользовательские сценарии.
+        </li>
+        <li>
+          Вёл code review по фронтенду, участвовал в оценке, техническом
+          планировании и координации релизов.
+        </li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
         <span class="role">Web-разработчик</span>
-        <span class="period">08.2019 &ndash; 12.2020</span>
+        <span class="period">08.2019 &mdash; 12.2020</span>
       </div>
-      <div class="company">Фриланс (удалённо)</div>
+      <div class="company">Фриланс &middot; удалённо</div>
       <ul>
         <li>
-          Разрабатывал веб-приложения для клиентов и дорабатывал существующие;
-          рефакторил легаси-интерфейсы на JavaScript и React.
+          Разрабатывал и модернизировал клиентские веб-приложения на JavaScript
+          и React, включая рефакторинг легаси-интерфейсов.
         </li>
       </ul>
     </div>
 
-    <div class="entry">
+    <div class="entry compact">
       <div class="entry-head">
-        <span class="role">Web-дизайнер</span>
-        <span class="period">10.2018 &ndash; 03.2019</span>
+        <span class="role"
+          >Web-дизайнер &mdash; Exterior Security Systems, Кишинёв</span
+        >
+        <span class="period">10.2018 &mdash; 03.2019</span>
       </div>
-      <div class="company">Exterior Security Systems, Кишинёв, Молдова</div>
-      <ul>
-        <li>
-          Рисовал страницы сайтов и маркетинговые материалы в Figma, правил
-          вёрстку в HTML и CSS.
-        </li>
-      </ul>
     </div>
 
     <h2>Проекты</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="role"
-          >Prosvetum &mdash; саммари книг с AI-наставником (iOS)</span
-        >
-        <span class="period">v1.0.0, TestFlight</span>
-      </div>
-      <div class="company">
-        Expo SDK 56, React Native 0.85, TypeScript, Supabase (Postgres, RLS,
-        Edge Functions), pgvector, Claude, Voyage AI
-      </div>
-      <ul>
-        <li>
-          Собрал продукт целиком один: iOS-клиент, базу, Edge Functions и
-          конвейер контента. В каталоге 39 саммари. Сборка v1.0.0 живёт в
-          TestFlight, публикация в App Store ещё впереди.
-        </li>
-        <li>
-          RAG-ментор: эмбеддинги Voyage на 1024 измерения в pgvector под
-          HNSW-индексом, ответы Claude стримом по SSE, квоты на AI считаются на
-          сервере.
-        </li>
-        <li>
-          Postgres с политиками доступа на 20 миграций, поэтому платный контент
-          выдаёт сама база. Свой набор тестов покрывает 43 правила доступа,
-          проходят все.
-        </li>
-      </ul>
-    </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="role">Rivella &mdash; AI-ассистент для продаж (SaaS)</span>
-        <span class="period">rivella.app</span>
+        <span class="role"
+          >Rivella &mdash; мультитенантный AI-ассистент записи</span
+        >
+        <span class="period"
+          ><a href="https://rivella.app">rivella.app</a></span
+        >
       </div>
       <div class="company">
-        Next.js (App Router), TypeScript, LLM, Telegram Bot API, YClients API
+        Next.js &middot; TypeScript &middot; NestJS &middot; Prisma &middot;
+        PostgreSQL 16 &middot; Docker &middot; GitHub Actions &middot; Telegram
+        Bot API &middot; YClients API
       </div>
       <ul>
         <li>
-          Собрал продукт целиком один: слой LLM (промпты, сценарии диалога, RAG
-          по базе знаний, своей у каждого клиента, отработка возражений),
-          бэкенд, схема данных, мультитенантность и аутентификация.
+          Собрал и развернул продукт один: админка на Next.js и TypeScript
+          поверх API на NestJS и Prisma с PostgreSQL 16, Docker-образы собирает
+          GitHub Actions, работает в продакшене на VPS.
         </li>
         <li>
-          Интеграции с YClients и Telegram — ассистент читает свободные слоты и
-          создаёт записи; админка с воронкой, аналитикой и тарифами; двуязычный
-          интерфейс RU/EN.
+          Сделал фронтенд админки — дашборд, аналитика, диалоги, CRM, записи,
+          подписки и база знаний — на русском и английском.
         </li>
         <li>
-          Развёрнут и работает на rivella.app. Платящих клиентов пока нет,
-          подключаю первых.
+          Спроектировал модель данных с разделением по арендаторам: ненулевой
+          ключ арендатора на всех 12 таблицах. Интеграции Telegram и YClients:
+          ассистент читает свободные слоты и создаёт записи, бронь подтверждает
+          менеджер.
         </li>
       </ul>
     </div>
@@ -287,33 +168,56 @@
     <h2>Навыки</h2>
     <div class="group">
       <p>
-        <span class="label">Frontend:</span> React, TypeScript, Next.js (App
-        Router), React Native / Expo, Tailwind CSS, TanStack Query, Zod, Vitest,
-        Playwright
+        <span class="label">Frontend:</span> React, TypeScript, JavaScript,
+        Next.js (App Router), React Native, HTML, CSS, Tailwind CSS, TanStack
+        Query, Zod
       </p>
       <p>
-        <span class="label">Fullstack:</span> Node.js, PostgreSQL, Supabase
-        (RLS, Edge Functions), Drizzle ORM, Server Components / Actions,
-        Session-аутентификация (bcrypt), Дизайн REST API, Inngest, Sentry,
-        Vercel
+        <span class="label">Архитектура фронтенда:</span> дизайн-системы,
+        библиотеки компонентов, клиентское и серверное состояние, интеграция
+        REST, сценарии аутентификации, доступность
       </p>
       <p>
-        <span class="label">AI:</span> RAG, Embeddings + pgvector, векторный
-        поиск (HNSW), Anthropic / OpenAI SDK, Voyage AI, Streaming UX (SSE),
-        промптинг и сценарии диалога
+        <span class="label">Качество:</span> Playwright, Jest, code review,
+        CI/CD (GitHub Actions)
       </p>
       <p>
-        <span class="label">Практики:</span> Дизайн-системы,
-        кросс-функциональная работа, менторство, асинхронная работа в переписке,
-        продуктовый / UI-дизайн (Figma)
+        <span class="label">Бэкенд и данные:</span> Node.js, NestJS, PostgreSQL,
+        Prisma, полнотекстовый поиск PostgreSQL, Docker, мультитенантность,
+        дизайн REST API
       </p>
+      <p>
+        <span class="label">Прикладной AI:</span> агенты с вызовом инструментов,
+        проектирование агентного цикла, интеграция LLM, проектирование промптов,
+        Anthropic / OpenAI SDK, UX AI-продуктов
+      </p>
+    </div>
+
+    <h2>Образование</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="role"
+          >Магистр информационных технологий &mdash; Технический университет
+          Молдовы</span
+        >
+        <span class="period">2018 &mdash; 2020</span>
+      </div>
+    </div>
+    <div class="entry compact">
+      <div class="entry-head">
+        <span class="role"
+          >Бакалавр информационных технологий &mdash; Технический университет
+          Молдовы</span
+        >
+        <span class="period">2015 &mdash; 2018</span>
+      </div>
     </div>
 
     <h2>Языки</h2>
     <div class="langs">
       <p>
-        Русский / Украинский (родной) &middot; Английский (C1) &middot;
-        Румынский (C1)
+        Русский &mdash; родной &middot; Английский &mdash; B2, рабочий уровень
+        &middot; Румынский &mdash; B2 &middot; Украинский &mdash; B2
       </p>
     </div>
   </body>
