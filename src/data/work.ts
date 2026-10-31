@@ -3,8 +3,8 @@ import type { CaseStudy } from '../types'
 /**
  * Order is deliberate: Rivella is the strongest public technical proof — it is
  * deployed, it is verifiable, and nothing about it depends on a private
- * repository. Prosvetum is the published mobile proof. EVCARGO is the
- * long-running commercial evidence.
+ * repository. Prosvetum is the published mobile proof, Profit Controller the
+ * private one. EVCARGO is the long-running commercial evidence.
  *
  * Multisoft lives in Experience as a TeamArt project, not as a case study.
  * Every line in `evidence` is governed by docs/candidate-evidence.md.
@@ -98,6 +98,43 @@ export const work: CaseStudy[] = [
       'EAS',
     ],
     links: { live: 'https://apps.apple.com/app/id6787093203' },
+  },
+  {
+    title: 'Profit Controller — restaurant analytics',
+    period: { ru: '2026', en: '2026' },
+    context: {
+      ru: 'Аналитика для ресторанов: превращает данные POS-системы iiko в ранжированный список находок с оценкой в деньгах и обоснованием по каждой.',
+      en: 'Restaurant analytics: turns data from the iiko POS system into ranked findings, each quantified in money and backed by evidence.',
+    },
+    role: {
+      ru: 'Собрал один: коннектор к iiko, расчёт метрик, интерфейс, ассистент и деплой.',
+      en: 'Built solo: the iiko connector, the metrics engine, the interface, the assistant and the deployment.',
+    },
+    system: {
+      ru: 'Next.js (App Router), TypeScript, Drizzle ORM и PostgreSQL, аутентификация на better-auth. Ассистент на Claude API объясняет рассчитанные метрики.',
+      en: 'Next.js (App Router), TypeScript, Drizzle ORM and PostgreSQL, with better-auth for authentication. An assistant on the Claude API explains the computed metrics.',
+    },
+    evidence: [
+      {
+        ru: '600+ тестов на Vitest, интеграционные тесты и e2e-тесты на Playwright в GitHub Actions.',
+        en: '600+ Vitest tests, plus integration tests and Playwright end-to-end tests, run in GitHub Actions.',
+      },
+      {
+        ru: 'Деплой через Docker и Caddy.',
+        en: 'Deployed with Docker and Caddy.',
+      },
+    ],
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'Drizzle ORM',
+      'PostgreSQL',
+      'better-auth',
+      'Claude API',
+      'Vitest',
+      'Playwright',
+      'Docker',
+    ],
   },
   {
     title: 'EVCARGO — logistics and transport CRM',

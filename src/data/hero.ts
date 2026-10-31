@@ -17,8 +17,8 @@ export const hero: HeroData = {
   },
   location: { ru: 'Кишинёв, Молдова · UTC+2', en: 'Chișinău, Moldova · UTC+2' },
   availability: {
-    ru: 'Гражданство ЕС · спонсорство для работы в ЕС не требуется · удалённо по ЕС или релокация',
-    en: 'EU citizen · No sponsorship required for EU roles · Remote EU or relocation',
+    ru: 'Гражданство ЕС · спонсорство для работы в ЕС не требуется · удалённо, офис в Кишинёве или релокация по ЕС · готов приступить сразу',
+    en: 'EU citizen · No sponsorship required for EU roles · Remote, on-site in Chișinău, or relocation within the EU · Available immediately',
   },
   proof: [
     { ru: '6+ лет в продакшене', en: '6+ years in production' },

@@ -3,7 +3,8 @@ import type { SkillCategory } from '../types'
 /**
  * Frontend first, always — it is the strongest match and the primary track.
  *
- * Every entry needs public evidence: commercial work, Rivella or Prosvetum.
+ * Every entry needs public evidence: commercial work, Rivella, Prosvetum or
+ * Profit Controller.
  * Do not add a skill without it — see docs/candidate-evidence.md.
  */
 export const skills: SkillCategory[] = [
@@ -20,6 +21,8 @@ export const skills: SkillCategory[] = [
       'CSS',
       'Tailwind CSS',
       'TanStack Query',
+      'Axios',
+      'NativeWind',
       'Zod',
       {
         ru: 'Продуктовый / UI-дизайн (Figma)',
@@ -40,6 +43,7 @@ export const skills: SkillCategory[] = [
       { ru: 'Доступность', en: 'Accessibility' },
       'Playwright',
       'Jest',
+      'Vitest',
       'CI/CD (GitHub Actions)',
       'EAS',
       'Sentry',
@@ -53,6 +57,7 @@ export const skills: SkillCategory[] = [
       'NestJS',
       'PostgreSQL',
       'Prisma',
+      'Drizzle ORM',
       {
         ru: 'Полнотекстовый поиск PostgreSQL',
         en: 'PostgreSQL full-text search',
@@ -61,6 +66,8 @@ export const skills: SkillCategory[] = [
       'pgvector',
       'Docker',
       { ru: 'Дизайн REST API', en: 'REST API design' },
+      'OpenAPI / Swagger',
+      'JWT',
       { ru: 'Мультитенантность', en: 'Multi-tenancy' },
     ],
   },
@@ -71,7 +78,8 @@ export const skills: SkillCategory[] = [
       { ru: 'Проектирование агентного цикла', en: 'Agent loop design' },
       { ru: 'Интеграция LLM', en: 'LLM integrations' },
       { ru: 'Проектирование промптов', en: 'Prompt design' },
-      'Anthropic / OpenAI SDK',
+      'Anthropic Claude API',
+      { ru: 'Эмбеддинги и pgvector', en: 'Embeddings with pgvector' },
       { ru: 'UX AI-продуктов', en: 'AI product UX' },
     ],
   },

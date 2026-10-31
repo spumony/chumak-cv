@@ -77,10 +77,10 @@ export const experience: ExperienceItem[] = [
     },
     period: { ru: '08.2019 — 12.2020', en: 'Aug 2019 — Dec 2020' },
     description: {
-      ru: 'Разрабатывал и модернизировал клиентские веб-приложения на JavaScript и React, включая рефакторинг легаси-интерфейсов.',
-      en: 'Built and modernised client web applications in JavaScript and React, including legacy UI refactoring and end-to-end feature delivery.',
+      ru: 'Разрабатывал и поддерживал веб-приложения на JavaScript, React и WordPress для малого бизнеса, переписывал устаревшие интерфейсы.',
+      en: 'Built and maintained web applications in JavaScript, React and WordPress for small businesses; refactored legacy interfaces.',
     },
-    technologies: ['React', 'JavaScript', 'CSS'],
+    technologies: ['React', 'JavaScript', 'WordPress'],
   },
   {
     company: {

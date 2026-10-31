@@ -5,8 +5,8 @@ export const principles: Principle[] = [
   {
     title: { ru: 'Отвечаю за весь путь', en: 'End-to-end ownership' },
     body: {
-      ru: 'Веду работу от требований и контрактов API до архитектуры фронтенда, реализации, тестов и релиза. На текущем продукте я единственный фронтенд-инженер, а Rivella собрал и развернул один целиком.',
-      en: 'I take product work from requirements and API contracts through frontend architecture, implementation, testing and release. I am the sole frontend engineer on the current product, and I built and deployed Rivella end to end alone.',
+      ru: 'Веду работу от требований и контрактов API до архитектуры фронтенда, реализации, тестов и релиза. В CRM для ресторанов был единственным фронтенд-разработчиком, а Rivella собрал и развернул один целиком.',
+      en: 'I take product work from requirements and API contracts through frontend architecture, implementation, testing and release. I was the only frontend engineer on a restaurant CRM, and I built and deployed Rivella end to end alone.',
     },
   },
   {
