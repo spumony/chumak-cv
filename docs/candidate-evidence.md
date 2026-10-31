@@ -35,6 +35,7 @@ Change a fact here first, then propagate it to `src/data/*` and to the CV HTML i
 | Commercial experience     | 6+ years since Aug 2019                                                                                                                                                                                                                                                                                                                                                                                          |
 | Availability              | Looking for work, available immediately. Everything at TeamArt is written in the past tense                                                                                                                                                                                                                                                                                                                      |
 | Work authorisation        | EU citizen — no sponsorship required for EU roles                                                                                                                                                                                                                                                                                                                                                                |
+| Phone                     | +373 6993 6993 — in the CV PDFs only, not on the site                                                                                                                                                                                                                                                                                                                                                            |
 
 **Not published:** team sizes, module counts, customer or user numbers, and any
 performance or reliability figure. None was measured, and an invented one is the
@@ -93,6 +94,22 @@ published on the App Store and may appear on the site, in the CVs and in
 user-facing feature — vector search is used only inside the AI mentor. Any claim
 that the database enforces paid access — that is in the backlog, not built. No
 user, download, revenue or rating figures.
+
+## Published — Profit Controller
+
+Added on 2026-10-31 at the candidate's request. The repository is private, so the
+CVs carry the name and the facts below but no link.
+
+| Claim     | Value                                                                                                                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ownership | Built solo, 2026                                                                                                                                                                                          |
+| Product   | Restaurant analytics: turns iiko POS data into ranked findings, each quantified in money and backed by evidence                                                                                           |
+| Stack     | Next.js (App Router), TypeScript, Drizzle ORM, PostgreSQL, better-auth; an assistant on the Claude API explains the computed metrics                                                                      |
+| Tests     | 600+ Vitest tests (642 passing on 2026-10-31: `pnpm exec vitest run --project unit --project connectors --project golden`), plus integration tests and Playwright end-to-end tests, run in GitHub Actions |
+| Delivery  | Docker and Caddy                                                                                                                                                                                          |
+
+**Barred for Profit Controller:** customer, restaurant or revenue figures, and any
+claim that it runs for a paying client. None is evidenced here.
 
 ## Published — education and languages
 
