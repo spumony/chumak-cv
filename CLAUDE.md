@@ -20,9 +20,9 @@
 --border: #262626
 --text-primary: #f5f5f5
 --text-secondary: #a3a3a3
---text-muted: #737373
---accent: #8b5cf6
---accent-hover: #a78bfa
+--text-muted: #808080
+--accent: #a78bfa
+--accent-hover: #c4b5fd
 ```
 
 Токены заданы через Tailwind v4 `@theme` в `src/index.css` (как `--color-bg`,
