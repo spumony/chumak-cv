@@ -12,8 +12,8 @@ export const hero: HeroData = {
     en: 'React · TypeScript · Next.js · React Native',
   },
   pitch: {
-    ru: '6+ лет в продакшене, веб и мобильные продукты. Веду архитектуру и выпуск фронтенда CRM для ресторанов как единственный фронтенд-инженер, до этого пять лет на логистической платформе EVCARGO. Параллельно собираю продукты целиком: Rivella, мультитенантный AI-ассистент записи, работает в продакшене — от схемы данных до пайплайна деплоя это моя работа.',
-    en: '6+ years shipping production web and mobile software. I own frontend architecture and delivery for a restaurant CRM as the sole frontend engineer, after five years on the EVCARGO logistics platform. Alongside that I build and run products end to end — Rivella, a multi-tenant AI booking assistant, is live in production and mine from the schema to the deploy pipeline.',
+    ru: '6+ лет в продакшене, веб и мобильные продукты. Пять лет фронтенда на CRM для логистики EVCARGO, затем единственный фронтенд-разработчик CRM для ресторанов. Свои продукты собираю целиком и довожу до релиза: Rivella, мультитенантный AI-ассистент записи, работает в продакшене, Prosvetum, iOS-приложение с саммари книг, опубликовано в App Store.',
+    en: '6+ years shipping production web and mobile software. Five years of frontend on the EVCARGO logistics CRM, then the only frontend engineer on a restaurant CRM. I also build my own products end to end and ship them: Rivella, a multi-tenant AI booking assistant, runs in production, and Prosvetum, an iOS book-summary app, is on the App Store.',
   },
   location: { ru: 'Кишинёв, Молдова · UTC+2', en: 'Chișinău, Moldova · UTC+2' },
   availability: {

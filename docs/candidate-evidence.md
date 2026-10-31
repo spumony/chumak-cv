@@ -21,18 +21,20 @@ Change a fact here first, then propagate it to `src/data/*` and to the CV HTML i
 
 ## Published — commercial experience
 
-| Claim                     | Value                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Current role              | Lead Frontend Developer, Multisoft (Romania / Remote), Jan 2026 to present                                                                                                                                                                                                                                                                                                       |
-| Multisoft scope           | Sole frontend engineer; built the Next.js/TypeScript client from zero; component system, routing structure and frontend conventions; order, menu and reporting modules; dense tables, filtering, validation, long forms over REST APIs                                                                                                                                           |
-| EVCARGO tenure            | TeamArt — EVCARGO, Frontend Developer, Remote, Jan 2021 – Dec 2025 (five years)                                                                                                                                                                                                                                                                                                  |
-| EVCARGO scope             | Production e-mobility logistics platform in a cross-functional Scrum team; built and maintained the shared design system and component library; client-side architecture around them; REST data layer on React Query and Axios covering auth refresh, caching, pagination, filtering, invalidation and error handling; frontend code review, estimation and release coordination |
-| EVCARGO mobile            | Contributed to the React Native app and cross-platform releases, including Android SDK upgrades and iOS release validation                                                                                                                                                                                                                                                       |
-| EVCARGO testing           | Introduced Playwright coverage for critical user flows                                                                                                                                                                                                                                                                                                                           |
-| Freelance                 | Web Developer, Remote, Aug 2019 – Dec 2020 — client web apps in JavaScript/React, legacy UI refactoring                                                                                                                                                                                                                                                                          |
-| Exterior Security Systems | Web Designer, Chișinău, Oct 2018 – Mar 2019 — one line, no bullets                                                                                                                                                                                                                                                                                                               |
-| Commercial experience     | 6+ years, Aug 2019 to present, continuous                                                                                                                                                                                                                                                                                                                                        |
-| Work authorisation        | EU citizen — no sponsorship required for EU roles                                                                                                                                                                                                                                                                                                                                |
+| Claim                     | Value                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TeamArt overall           | TeamArt Outsourcing (outsourcing company, Chișinău / Bucharest), Frontend Developer, Remote, Feb 2021 – Aug 2026                                                                                                                                                                                                                                                                                                 |
+| EVCARGO tenure            | TeamArt — EVCARGO, Frontend Developer, Remote, Feb 2021 – Dec 2025 (five years)                                                                                                                                                                                                                                                                                                                                  |
+| EVCARGO scope             | Logistics and transport CRM for a UK logistics operator, web and mobile, in a cross-functional Scrum team; built and maintained the shared design system and component library; client-side architecture around them; REST data layer on React Query and Axios covering auth refresh, caching, pagination, filtering, invalidation and error handling; frontend code review, estimation and release coordination |
+| EVCARGO mobile            | Contributed to the React Native app and cross-platform releases, including Android SDK upgrades and iOS release validation                                                                                                                                                                                                                                                                                       |
+| EVCARGO testing           | Introduced Playwright coverage for critical user flows                                                                                                                                                                                                                                                                                                                                                           |
+| Multisoft tenure          | TeamArt — Multisoft, Frontend Developer, Remote, Jan 2026 – Aug 2026. A TeamArt client project, not a separate employer                                                                                                                                                                                                                                                                                          |
+| Multisoft scope           | Restaurant CRM for a Romanian HoReCa software vendor: interfaces for administrators, kitchen staff and waiters. Only frontend engineer on the project; built the Next.js/TypeScript client from zero; designed and documented the component system, routing structure and frontend conventions; dense tables, filtering, validation and long forms over REST APIs                                                |
+| Freelance                 | Web Developer, Remote, Aug 2019 – Dec 2020 — client web apps in JavaScript/React, legacy UI refactoring                                                                                                                                                                                                                                                                                                          |
+| Exterior Security Systems | Web Designer, Chișinău, Oct 2018 – Mar 2019 — one line, no bullets                                                                                                                                                                                                                                                                                                                                               |
+| Commercial experience     | 6+ years since Aug 2019                                                                                                                                                                                                                                                                                                                                                                                          |
+| Availability              | Looking for work, available immediately. Everything at TeamArt is written in the past tense                                                                                                                                                                                                                                                                                                                      |
+| Work authorisation        | EU citizen — no sponsorship required for EU roles                                                                                                                                                                                                                                                                                                                                                                |
 
 **Not published:** team sizes, module counts, customer or user numbers, and any
 performance or reliability figure. None was measured, and an invented one is the
@@ -68,15 +70,29 @@ Also barred: "tenant isolation enforced in the schema", which overstates what is
 verified — say the data model is tenant-scoped with non-null tenant keys. No user,
 traffic, revenue or latency figures; none were measured.
 
-## Not published — the personal iOS project
+## Published — Prosvetum
 
-One personal project has a publication policy of **the product name only**. It is
-therefore absent from the CVs, from Selected Work, from `llms.txt` and from the OG
-image, and no technology drawn solely from it appears in any skills list.
+The publication policy for this project was widened on 2026-10-31: it is
+published on the App Store and may appear on the site, in the CVs and in
+`llms.txt`, within the facts below.
 
-Do not reintroduce it, in whole or in part, without an explicit widening of that
-policy. That includes indirect reintroduction: a skills entry, a stack tag or an OG
-pill that only that project could support is a disclosure by another route.
+| Claim     | Value                                                                                         |
+| --------- | --------------------------------------------------------------------------------------------- |
+| Ownership | Built solo, 2026                                                                              |
+| Status    | Published on the App Store on 18 Sep 2026, version 1.0, seller Alexandr Ciumac                |
+| Link      | `https://apps.apple.com/app/id6787093203`                                                     |
+| Product   | iOS app with book summaries: audio, quizzes, spaced-repetition flashcards and an AI mentor    |
+| App       | React Native (Expo), TypeScript, NativeWind                                                   |
+| Backend   | Supabase: PostgreSQL with row-level security, Edge Functions `chat`, `recommend`, `audio-url` |
+| AI mentor | Answers grounded in vector search over Voyage embeddings in pgvector                          |
+| Offline   | The TanStack Query cache is persisted to AsyncStorage                                         |
+| Delivery  | Sentry for error monitoring; builds and App Store submission through EAS                      |
+
+**Barred for Prosvetum:** "TestFlight" and "beta" — the app is on the App Store.
+"Full offline mode" — only the query cache is persisted. Semantic search as a
+user-facing feature — vector search is used only inside the AI mentor. Any claim
+that the database enforces paid access — that is in the backlog, not built. No
+user, download, revenue or rating figures.
 
 ## Published — education and languages
 
@@ -99,6 +115,13 @@ No evidence supports them and a technical screen would expose them: AWS · Azure
 GCP · Kubernetes · GraphQL · Kafka · microservices · distributed systems ·
 high-scale · millions of users · principal architecture · any revenue, conversion,
 traffic or Core Web Vitals figure.
+
+Also barred, because they contradict the CV: "Lead" or "Ведущий" as a title;
+"Present", "настоящее время", "currently", "Now" or a current-role badge for
+TeamArt or Multisoft; Multisoft as a separate employer or "Romania / Remote" as a
+place of work; "e-mobility" or "электротранспорт"; "Jan 2021" or "01.2021";
+"order, menu and reporting modules" for Multisoft — say "interfaces for
+administrators, kitchen staff and waiters".
 
 Docker, GitHub Actions CI/CD and VPS deployment **are** supported — by Rivella, and
 only at the scale Rivella actually runs at.

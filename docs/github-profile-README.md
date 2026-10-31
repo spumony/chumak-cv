@@ -15,9 +15,9 @@ Copy everything between the rules.
 React · TypeScript · Next.js · React Native
 
 - 6+ years building production web and mobile products
-- Lead Frontend Developer at Multisoft — sole frontend engineer on a restaurant CRM
-- Five years before that on EVCARGO, an e-mobility logistics platform
+- Frontend Developer at TeamArt, 2021–2026: five years on EVCARGO, a logistics and transport CRM, then the only frontend engineer on a restaurant CRM
 - Built and run [Rivella](https://rivella.app), a multi-tenant AI booking assistant, solo — Next.js, NestJS, PostgreSQL, Docker
+- Built and published [Prosvetum](https://apps.apple.com/app/id6787093203), an iOS book-summary app, solo — React Native (Expo), Supabase
 - EU citizen, open to senior roles across Europe
 
 **Portfolio:** [chumak.is-a.dev](https://chumak.is-a.dev) · **CV:** [PDF](https://chumak.is-a.dev/Alexandr-Chumak-Senior-Frontend-Engineer.pdf) · **LinkedIn:** [in/spumony](https://www.linkedin.com/in/spumony)

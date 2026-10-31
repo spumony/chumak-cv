@@ -4,30 +4,25 @@ import type { ExperienceItem } from '../types'
 // Facts are governed by docs/candidate-evidence.md.
 export const experience: ExperienceItem[] = [
   {
-    company: { ru: 'Multisoft', en: 'Multisoft' },
-    location: { ru: 'Румыния · удалённо', en: 'Romania · Remote' },
+    company: { ru: 'TeamArt — Multisoft', en: 'TeamArt — Multisoft' },
+    location: { ru: 'Удалённо', en: 'Remote' },
     role: {
-      ru: 'Ведущий Frontend-разработчик',
-      en: 'Lead Frontend Developer',
+      ru: 'Frontend-разработчик',
+      en: 'Frontend Developer',
     },
-    period: { ru: '01.2026 — настоящее время', en: 'Jan 2026 — Present' },
-    current: true,
+    period: { ru: '01.2026 — 08.2026', en: 'Jan 2026 — Aug 2026' },
     description: {
-      ru: 'Единственный фронтенд-инженер CRM для ресторанов: архитектура фронтенда и выпуск — на мне.',
-      en: 'Sole frontend engineer on a restaurant CRM: frontend architecture and delivery are mine.',
+      ru: 'CRM для ресторана у румынского разработчика ПО для HoReCa: интерфейсы для администратора, кухни и официантов. Был единственным фронтенд-разработчиком на проекте.',
+      en: 'Restaurant CRM for a Romanian HoReCa software vendor: interfaces for administrators, kitchen staff and waiters. I was the only frontend engineer on the project.',
     },
     bullets: [
       {
-        ru: 'Клиент на Next.js и TypeScript начинал с нуля; систему компонентов, структуру роутинга и фронтенд-стандарты спроектировал и записал.',
-        en: 'Built the Next.js/TypeScript client from zero, and designed the component system, routing structure and frontend conventions written down on it.',
+        ru: 'Собрал клиент на Next.js и TypeScript с нуля; спроектировал систему компонентов, структуру роутинга и фронтенд-конвенции и задокументировал их.',
+        en: 'Built the Next.js/TypeScript client from scratch, and designed and documented the component system, routing structure and frontend conventions.',
       },
       {
-        ru: 'Модули заказов, меню и отчётности работают на одном наборе компонентов: плотные таблицы, фильтры, валидация и длинные формы поверх REST API.',
-        en: 'Order, menu and reporting modules run on one shared component set: dense tables, filtering, validation and long forms over REST APIs.',
-      },
-      {
-        ru: 'Перевожу продуктовые требования в технические планы и довожу фичи до релиза вместе с продуктовой и бэкенд-командой.',
-        en: 'Take product requirements through technical planning to release with the product and backend team.',
+        ru: 'Сделал плотные таблицы, фильтры, валидацию и длинные формы поверх REST API на одном общем наборе компонентов.',
+        en: 'Implemented dense tables, filtering, validation and long forms over REST APIs on one shared component set.',
       },
     ],
     technologies: [
@@ -45,10 +40,10 @@ export const experience: ExperienceItem[] = [
       ru: 'Frontend-разработчик',
       en: 'Frontend Developer',
     },
-    period: { ru: '01.2021 — 12.2025', en: 'Jan 2021 — Dec 2025' },
+    period: { ru: '02.2021 — 12.2025', en: 'Feb 2021 — Dec 2025' },
     description: {
-      ru: 'Пять лет на продакшн-платформе логистики электротранспорта, в кросс-функциональной Scrum-команде.',
-      en: 'Five years on a production e-mobility logistics platform, in a cross-functional Scrum team.',
+      ru: 'Пять лет на CRM для логистики и перевозок британского оператора, веб и мобильное приложение, в кросс-функциональной Scrum-команде.',
+      en: 'Five years on a logistics and transport CRM for a UK logistics operator, web and mobile, in a cross-functional Scrum team.',
     },
     bullets: [
       {

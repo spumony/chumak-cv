@@ -3,10 +3,8 @@ import type { SkillCategory } from '../types'
 /**
  * Frontend first, always — it is the strongest match and the primary track.
  *
- * Every entry needs public evidence outside a project whose publication policy
- * allows the product name only. Several technologies were removed for exactly
- * that reason; naming them here would disclose by another route, so the list
- * lives in the internal notes. Do not re-add a skill without public evidence.
+ * Every entry needs public evidence: commercial work, Rivella or Prosvetum.
+ * Do not add a skill without it — see docs/candidate-evidence.md.
  */
 export const skills: SkillCategory[] = [
   {
@@ -17,6 +15,7 @@ export const skills: SkillCategory[] = [
       'JavaScript',
       'Next.js (App Router)',
       'React Native',
+      'Expo',
       'HTML',
       'CSS',
       'Tailwind CSS',
@@ -42,6 +41,8 @@ export const skills: SkillCategory[] = [
       'Playwright',
       'Jest',
       'CI/CD (GitHub Actions)',
+      'EAS',
+      'Sentry',
       { ru: 'Code review', en: 'Code review' },
     ],
   },
@@ -56,6 +57,8 @@ export const skills: SkillCategory[] = [
         ru: 'Полнотекстовый поиск PostgreSQL',
         en: 'PostgreSQL full-text search',
       },
+      'Supabase',
+      'pgvector',
       'Docker',
       { ru: 'Дизайн REST API', en: 'REST API design' },
       { ru: 'Мультитенантность', en: 'Multi-tenancy' },

@@ -78,7 +78,7 @@ export type ExperienceItem = {
   company: LocalizedString
   location: LocalizedString
   role: LocalizedString
-  /** Free-form period label, e.g. "2022 — Present" / "2022 — наст. время". */
+  /** Free-form period label, e.g. "Feb 2021 — Dec 2025" / "02.2021 — 12.2025". */
   period: LocalizedString
   description: LocalizedString
   bullets?: LocalizedString[]

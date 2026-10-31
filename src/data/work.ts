@@ -3,14 +3,11 @@ import type { CaseStudy } from '../types'
 /**
  * Order is deliberate: Rivella is the strongest public technical proof — it is
  * deployed, it is verifiable, and nothing about it depends on a private
- * repository. EVCARGO is the long-running commercial evidence.
+ * repository. Prosvetum is the published mobile proof. EVCARGO is the
+ * long-running commercial evidence.
  *
- * Multisoft lives in Experience, where it is already prominent as the current role.
+ * Multisoft lives in Experience as a TeamArt project, not as a case study.
  * Every line in `evidence` is governed by docs/candidate-evidence.md.
- *
- * A third personal project is deliberately absent: its publication policy allows
- * the product name and nothing else, and a card carrying only a name is not a
- * portfolio entry. Do not add it back without an explicit widening of that policy.
  */
 export const work: CaseStudy[] = [
   {
@@ -64,12 +61,51 @@ export const work: CaseStudy[] = [
     links: { live: 'https://rivella.app' },
   },
   {
-    title: 'EVCARGO — e-mobility logistics platform',
-    badge: { ru: '5 лет', en: '5 years' },
-    period: { ru: '01.2021 — 12.2025', en: 'Jan 2021 — Dec 2025' },
+    title: 'Prosvetum — book summaries with an AI mentor (iOS)',
+    badge: { ru: 'В App Store', en: 'App Store' },
+    period: { ru: '2026', en: '2026' },
     context: {
-      ru: 'Продакшн-платформа логистики для электротранспорта. Несколько продуктовых направлений, и один интерфейс, который должен был оставаться единым во всех.',
-      en: 'A production logistics platform in e-mobility. Several product areas, and one interface that had to hold together across all of them.',
+      ru: 'iOS-приложение с саммари книг: текст и аудио, квизы и карточки для повторения, чтобы идеи удерживались, и AI-ментор, который отвечает на вопросы по книге.',
+      en: 'An iOS app with book summaries: text and audio, quizzes and spaced-repetition flashcards so the ideas stick, and an AI mentor that answers questions about the book.',
+    },
+    role: {
+      ru: 'Собрал один и опубликовал в App Store в сентябре 2026: приложение, бэкенд на Supabase, AI-ментор, сборки и релиз.',
+      en: 'Built solo and published on the App Store in September 2026: the app, the Supabase backend, the AI mentor, the builds and the release.',
+    },
+    system: {
+      ru: 'Приложение на React Native (Expo), TypeScript и NativeWind. Бэкенд на Supabase: PostgreSQL с row-level security и Edge Functions для чата, рекомендаций и выдачи аудио. AI-ментор отвечает с опорой на векторный поиск по эмбеддингам Voyage в pgvector. Кэш TanStack Query сохраняется в AsyncStorage.',
+      en: 'The app is React Native (Expo), TypeScript and NativeWind. The backend is Supabase: PostgreSQL with row-level security and Edge Functions for chat, recommendations and audio delivery. The AI mentor grounds its answers in vector search over Voyage embeddings in pgvector. The TanStack Query cache is persisted to AsyncStorage.',
+    },
+    evidence: [
+      {
+        ru: 'Опубликовано в App Store 18 сентября 2026 года, версия 1.0.',
+        en: 'Published on the App Store on 18 September 2026, version 1.0.',
+      },
+      {
+        ru: 'Мониторинг ошибок в Sentry, сборки и отправка в App Store через EAS.',
+        en: 'Error monitoring in Sentry; builds and App Store submission through EAS.',
+      },
+    ],
+    stack: [
+      'React Native',
+      'Expo',
+      'TypeScript',
+      'NativeWind',
+      'TanStack Query',
+      'Supabase',
+      'pgvector',
+      'Sentry',
+      'EAS',
+    ],
+    links: { live: 'https://apps.apple.com/app/id6787093203' },
+  },
+  {
+    title: 'EVCARGO — logistics and transport CRM',
+    badge: { ru: '5 лет', en: '5 years' },
+    period: { ru: '02.2021 — 12.2025', en: 'Feb 2021 — Dec 2025' },
+    context: {
+      ru: 'CRM для логистики и перевозок британского логистического оператора: веб-приложение и мобильное приложение. Несколько продуктовых направлений, и один интерфейс, который должен был оставаться единым во всех.',
+      en: 'A logistics and transport CRM for a UK logistics operator, with a web app and a mobile app. Several product areas, and one interface that had to hold together across all of them.',
     },
     role: {
       ru: 'Фронтенд платформы: дизайн-система и библиотека компонентов, клиентская архитектура, code review по фронтенду.',
