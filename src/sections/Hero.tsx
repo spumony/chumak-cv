@@ -87,10 +87,7 @@ export function Hero() {
       <FadeIn delay={0.05}>
         <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-border pt-4 sm:grid-cols-4">
           {hero.proof.map((item, index) => (
-            <li
-              key={index}
-              className="font-mono text-xs text-text-secondary sm:text-sm"
-            >
+            <li key={index} className="font-mono text-sm text-text-secondary">
               {pick(item)}
             </li>
           ))}

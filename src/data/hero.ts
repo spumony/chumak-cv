@@ -8,8 +8,8 @@ export const hero: HeroData = {
     en: 'Senior Frontend / Product Engineer',
   },
   stack: {
-    ru: 'React · TypeScript · Next.js · React Native',
-    en: 'React · TypeScript · Next.js · React Native',
+    ru: 'React · TypeScript · Next.js · React\u00a0Native',
+    en: 'React · TypeScript · Next.js · React\u00a0Native',
   },
   pitch: {
     ru: '6+ лет в продакшене, веб и мобильные продукты. Пять лет фронтенда на CRM для логистики EVCARGO, затем единственный фронтенд-разработчик CRM для ресторанов. Свои продукты собираю целиком и довожу до релиза: Rivella, мультитенантный AI-ассистент записи, работает в продакшене, Prosvetum, iOS-приложение с саммари книг, опубликовано в App Store.',
@@ -18,7 +18,7 @@ export const hero: HeroData = {
   location: { ru: 'Кишинёв, Молдова · UTC+2', en: 'Chișinău, Moldova · UTC+2' },
   availability: {
     ru: 'Гражданство ЕС · спонсорство для работы в ЕС не требуется · удалённо, офис в Кишинёве или релокация по ЕС · готов приступить сразу',
-    en: 'EU citizen · No sponsorship required for EU roles · Remote, on-site in Chișinău, or relocation within the EU · Available immediately',
+    en: 'EU citizen · No sponsorship required for EU roles · Remote, on\u2011site in Chișinău, or relocation within the EU · Available immediately',
   },
   proof: [
     { ru: '6+ лет в продакшене', en: '6+ years in production' },

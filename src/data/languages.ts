@@ -5,7 +5,6 @@ export const languages: LanguageItem[] = [
   {
     name: { ru: 'Русский', en: 'Russian' },
     level: { ru: 'Родной', en: 'Native' },
-    levelCode: 'Native',
   },
   {
     name: { ru: 'Английский', en: 'English' },

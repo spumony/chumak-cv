@@ -25,7 +25,7 @@ export function Header() {
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-5 sm:h-16 sm:px-6 md:px-8">
           <a
             href="#hero"
-            className="min-w-0 truncate font-mono text-sm font-medium text-text-primary"
+            className="min-w-0 truncate py-3 font-mono text-sm font-medium text-text-primary"
           >
             {pick(hero.name)}
           </a>

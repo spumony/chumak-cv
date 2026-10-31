@@ -49,9 +49,11 @@ export function Background() {
                   <span className="font-medium text-text-primary">
                     {pick(language.name)}
                   </span>
-                  <span className="font-mono text-sm text-accent">
-                    {language.levelCode}
-                  </span>
+                  {language.levelCode && (
+                    <span className="font-mono text-sm text-accent">
+                      {language.levelCode}
+                    </span>
+                  )}
                   <span className="text-sm text-text-muted">
                     {pick(language.level)}
                   </span>
