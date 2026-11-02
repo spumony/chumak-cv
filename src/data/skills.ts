@@ -74,13 +74,10 @@ export const skills: SkillCategory[] = [
   {
     category: { ru: 'Прикладной AI', en: 'Applied AI' },
     items: [
-      { ru: 'Агенты с вызовом инструментов', en: 'Tool-calling agents' },
-      { ru: 'Проектирование агентного цикла', en: 'Agent loop design' },
-      { ru: 'Интеграция LLM', en: 'LLM integrations' },
-      { ru: 'Проектирование промптов', en: 'Prompt design' },
       'Anthropic Claude API',
+      { ru: 'Агенты с вызовом инструментов', en: 'Tool-calling agents' },
+      { ru: 'Проверка ответов LLM', en: 'LLM output validation' },
       { ru: 'Эмбеддинги и pgvector', en: 'Embeddings with pgvector' },
-      { ru: 'UX AI-продуктов', en: 'AI product UX' },
     ],
   },
 ]

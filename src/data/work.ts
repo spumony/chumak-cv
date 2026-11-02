@@ -29,13 +29,13 @@ export const work: CaseStudy[] = [
       en: 'Built and deployed solo: the admin panel, API, data model, assistant and deployment.',
     },
     system: {
-      ru: 'Next.js и TypeScript на админке, NestJS и Prisma на API, PostgreSQL 16 в кластере. Модель данных с разделением по арендаторам: ненулевой ключ арендатора на всех 12 таблицах, у каждого свой процесс бота за вебхуком по слагу, у суперадмина отдельная стратегия аутентификации и своя таблица. Ассистент крутит ограниченный цикл с вызовом инструментов — 15 инструментов, не больше 8 итераций и 120 секунд на диалог — с полнотекстовым поиском PostgreSQL (tsvector) по базе знаний арендатора и валидатором ответа перед отправкой. YClients: слоты, создание, перенос и отмена записей, бронь подтверждает менеджер, гонка на стороне провайдера обработана. Пять фоновых задач: напоминания, follow-up после визита, неявки, брошенные заявки, ежедневный дайджест.',
+      ru: 'Next.js и TypeScript на админке, NestJS и Prisma на API, PostgreSQL 16 в кластере. Модель данных с разделением по тенантам: ненулевой ключ тенанта на всех 12 таблицах, у каждого тенанта свой процесс бота за вебхуком по слагу, у суперадмина отдельная стратегия аутентификации и своя таблица. Ассистент работает в ограниченном цикле с вызовом инструментов — 15 инструментов, не больше 8 итераций и 120 секунд на диалог — с полнотекстовым поиском PostgreSQL (tsvector) по базе знаний тенанта и валидатором ответа перед отправкой. YClients: слоты, создание, перенос и отмена записей, бронь подтверждает менеджер, гонка на стороне провайдера обработана. Пять фоновых задач: напоминания, follow-up после визита, неявки, брошенные заявки, ежедневный дайджест.',
       en: 'Next.js and TypeScript on the admin, NestJS and Prisma on the API, PostgreSQL 16 in the cluster. A tenant-scoped data model with non-null tenant keys across all 12 tenant-scoped tables, each tenant running its own bot process behind a per-slug webhook, and the superadmin on a separate auth strategy with its own table. The assistant runs a bounded tool-calling loop — 15 tools, capped at 8 iterations and 120 seconds per turn — with PostgreSQL full-text search (tsvector) over that tenant’s knowledge base and an output validator in front of every reply. YClients: availability, creating, rescheduling and cancelling appointments, a manager confirms the booking, and the provider’s booking race is handled. Five scheduled jobs: reminders, post-visit follow-ups, no-show detection, abandoned-booking recovery and a daily digest.',
     },
     evidence: [
       {
-        ru: 'Работает в продакшене: GitHub Actions собирает Docker-образы, VPS их разворачивает.',
-        en: 'Running in production: GitHub Actions builds Docker images and a VPS deploys them.',
+        ru: 'Работает в продакшене у нескольких бизнесов: GitHub Actions собирает Docker-образы, VPS их разворачивает.',
+        en: 'Running in production for several businesses: GitHub Actions builds Docker images and a VPS deploys them.',
       },
       {
         ru: 'Ассистент на Claude API: 15 инструментов, проверка каждого ответа перед отправкой, поиск по базе знаний клиента.',
@@ -80,12 +80,12 @@ export const work: CaseStudy[] = [
     },
     evidence: [
       {
-        ru: 'В App Store с 18 сентября 2026 года, версия 1.0.',
-        en: 'On the App Store since 18 September 2026, version 1.0.',
+        ru: 'В App Store с 18 сентября 2026 года, на английском и русском.',
+        en: 'On the App Store since 18 September 2026, in English and Russian.',
       },
       {
-        ru: 'Ошибки в Sentry, сборки и отправка в App Store через EAS.',
-        en: 'Errors tracked in Sentry; builds and App Store submission through EAS.',
+        ru: 'Мониторинг ошибок в Sentry, сборки и отправка в App Store через EAS.',
+        en: 'Error monitoring in Sentry; builds and App Store submission through EAS.',
       },
     ],
     stack: [
@@ -149,8 +149,8 @@ export const work: CaseStudy[] = [
     badge: { ru: 'TeamArt', en: 'TeamArt' },
     period: { ru: '01.2026 — 08.2026', en: 'Jan 2026 — Aug 2026' },
     context: {
-      ru: 'CRM для ресторанов у румынского разработчика ПО для HoReCa: три отдельных приложения для администратора, кухни и официантов.',
-      en: 'A restaurant CRM for a Romanian HoReCa software vendor: three separate apps for administrators, kitchen staff and waiters.',
+      ru: 'CRM для ресторанов у румынского разработчика ПО для HoReCa, на рынке с 1991 года: три отдельных приложения для администратора, кухни и официантов.',
+      en: 'A restaurant CRM for a Romanian HoReCa software vendor in business since 1991: three separate apps for administrators, kitchen staff and waiters.',
     },
     role: {
       ru: 'Единственный фронтенд-разработчик на проекте: все три приложения на Next.js и TypeScript с нуля.',
@@ -158,11 +158,11 @@ export const work: CaseStudy[] = [
     },
     evidence: [
       {
-        ru: 'Спроектировал систему компонентов, структуру роутинга и фронтенд-конвенции, описал их в документации.',
+        ru: 'Спроектировал систему компонентов, структуру роутинга и фронтенд-стандарты, описал их в документации.',
         en: 'Designed and documented the component system, routing structure and frontend conventions.',
       },
       {
-        ru: 'Плотные таблицы, фильтры, валидация и длинные формы поверх REST API.',
+        ru: 'Таблицы с большим объёмом данных, фильтры, валидация и длинные формы поверх REST API.',
         en: 'Dense tables, filtering, validation and long forms over REST APIs.',
       },
     ],
@@ -176,15 +176,15 @@ export const work: CaseStudy[] = [
     badge: { ru: '5 лет', en: '5 years' },
     period: { ru: '02.2021 — 12.2025', en: 'Feb 2021 — Dec 2025' },
     context: {
-      ru: 'CRM для логистики и перевозок британского оператора: веб и мобильное приложение.',
-      en: 'A logistics and transport CRM for a UK logistics operator: a web app and a mobile app.',
+      ru: 'CRM для логистики и перевозок британского оператора примерно на 3 000 сотрудников: веб и мобильное приложение.',
+      en: 'A logistics and transport CRM for a UK logistics operator of around 3,000 staff: a web app and a mobile app.',
     },
     role: {
       ru: 'Фронтенд платформы в Scrum-команде: дизайн-система, библиотека компонентов, клиентская архитектура, code review.',
       en: 'Frontend across the platform in a Scrum team: the design system, component library, client architecture and code review.',
     },
     system: {
-      ru: 'Сначала общая дизайн-система и библиотека компонентов, затем клиентская архитектура вокруг них — новые экраны наследовали консистентность, а не собирали её заново. Данные из REST шли через React Query и Axios в одном месте, поэтому обновление токенов, кэширование, пагинация, фильтрация, инвалидация и обработка ошибок работали одинаково на всех экранах. В мобильном приложении — обновления Android SDK и проверка сборок iOS. Ещё оценка задач и координация релизов.',
+      ru: 'Сначала общая дизайн-система и библиотека компонентов, затем клиентская архитектура вокруг них — поэтому новые экраны сразу выглядели и работали единообразно. Данные из REST шли через React Query и Axios в одном месте, поэтому обновление токенов, кэширование, пагинация, фильтрация, инвалидация и обработка ошибок работали одинаково на всех экранах. В мобильном приложении — обновления Android SDK и проверка сборок iOS. Ещё оценка задач и координация релизов.',
       en: 'The shared design system and component library came first, then the client architecture around them, so new screens inherited consistency instead of re-deriving it. REST data went through React Query and Axios in one place, so auth refresh, caching, pagination, filtering, invalidation and error handling behaved identically everywhere. On mobile, Android SDK upgrades and iOS release validation. Also estimation and release coordination.',
     },
     evidence: [
