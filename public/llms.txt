@@ -8,7 +8,7 @@ At TeamArt, from Feb 2021 to Dec 2025 on EVCARGO, a logistics and transport CRM 
 
 - [LinkedIn](https://www.linkedin.com/in/spumony): professional profile and updates
 - [GitHub](https://github.com/spumony): code
-- [Email](mailto:ciumac.dev@gmail.com): direct contact
+- [Email](mailto:chumak.aleksandr96@gmail.com): direct contact
 - [Rivella](https://rivella.app): deployed multi-tenant AI booking assistant
 - [Prosvetum](https://apps.apple.com/app/id6787093203): iOS book-summary app on the App Store
 - [CV (PDF)](https://chumak.is-a.dev/Aleksandr-Chumak-Senior-Frontend-Engineer.pdf): ATS-friendly CV

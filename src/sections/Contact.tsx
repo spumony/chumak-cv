@@ -17,7 +17,7 @@ const ICONS: Record<ContactKind, ComponentType<{ className?: string }>> = {
 }
 
 const baseLink =
-  'inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 py-3 font-medium transition-colors'
+  'inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-3 py-3 font-medium transition-colors min-[360px]:px-5'
 const primaryLink = `${baseLink} bg-accent text-bg hover:bg-accent-hover`
 const secondaryLink = `${baseLink} border border-border text-text-primary hover:border-accent/50`
 
@@ -46,7 +46,14 @@ export function Contact() {
                   className={index === 0 ? primaryLink : secondaryLink}
                   {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
                 >
-                  <Icon className="h-4 w-4" />
+                  {/* Below 360px the address alone fills the button; the icon goes. */}
+                  <Icon
+                    className={
+                      link.kind === 'email'
+                        ? 'hidden h-4 w-4 min-[360px]:block'
+                        : 'h-4 w-4'
+                    }
+                  />
                   {link.label}
                 </a>
                 {link.kind === 'email' && (
