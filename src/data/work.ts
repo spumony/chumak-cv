@@ -6,7 +6,8 @@ import type { CaseStudy } from '../types'
  * repository. Prosvetum is the published mobile proof, Profit Controller the
  * private one. EVCARGO is the long-running commercial evidence.
  *
- * Multisoft lives in Experience as a TeamArt project, not as a case study.
+ * Multisoft is a TeamArt client project: it sits with EVCARGO as commercial
+ * evidence, not as an own product.
  * Every line in `evidence` is governed by docs/candidate-evidence.md.
  */
 export const work: CaseStudy[] = [
@@ -135,6 +136,34 @@ export const work: CaseStudy[] = [
       'Playwright',
       'Docker',
     ],
+  },
+  {
+    title: 'Multisoft — restaurant CRM: admin, kitchen and waiter apps',
+    badge: { ru: 'TeamArt', en: 'TeamArt' },
+    period: { ru: '01.2026 — 08.2026', en: 'Jan 2026 — Aug 2026' },
+    context: {
+      ru: 'CRM для ресторанов у румынского разработчика ПО для HoReCa. Три отдельных приложения под три роли: администратор, кухня и официанты.',
+      en: 'A restaurant CRM for a Romanian HoReCa software vendor. Three separate apps for three roles: administrators, kitchen staff and waiters.',
+    },
+    role: {
+      ru: 'Единственный фронтенд-разработчик на проекте: фронтенд всех трёх приложений на Next.js и TypeScript с нуля.',
+      en: 'The only frontend engineer on the project: the frontend of all three apps, built from scratch in Next.js and TypeScript.',
+    },
+    system: {
+      ru: 'Сначала система компонентов, структура роутинга и фронтенд-конвенции, записанные в документации, затем экраны. Плотные таблицы, фильтры, валидация и длинные формы поверх REST API собраны на одном общем наборе компонентов.',
+      en: 'The component system, routing structure and frontend conventions came first and were written down, then the screens. Dense tables, filtering, validation and long forms over REST APIs run on one shared component set.',
+    },
+    evidence: [
+      {
+        ru: 'Три приложения под разные роли: администратор, кухня, официанты.',
+        en: 'Three apps for different roles: administrators, kitchen staff, waiters.',
+      },
+      {
+        ru: 'Восемь месяцев единственным фронтенд-разработчиком на проекте.',
+        en: 'Eight months as the only frontend engineer on the project.',
+      },
+    ],
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'REST API'],
   },
   {
     title: 'EVCARGO — logistics and transport CRM',
