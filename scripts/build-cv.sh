@@ -50,15 +50,15 @@ render() {
 }
 
 # Each variant is a separate application target — see docs/tailor-cv.md.
-render scripts/cv.html    public/Alexandr-Chumak-Senior-Frontend-Engineer.pdf
-render scripts/cv-ai.html public/Alexandr-Chumak-Senior-Product-Engineer-AI.pdf
-render scripts/cv-ru.html public/Alexandr-Chumak-Senior-Frontend-Engineer-RU.pdf
+render scripts/cv.html    public/Aleksandr-Chumak-Senior-Frontend-Engineer.pdf
+render scripts/cv-ai.html public/Aleksandr-Chumak-Senior-Product-Engineer-AI.pdf
+render scripts/cv-ru.html public/Aleksandr-Chumak-Senior-Frontend-Engineer-RU.pdf
 
 echo
 echo "Validation"
 command -v pdftotext >/dev/null || { echo "  (skipped — install poppler)"; exit 0; }
 
-for pdf in public/Alexandr-Chumak-*.pdf; do
+for pdf in public/Aleksandr-Chumak-*.pdf; do
   pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
   text=$(pdftotext "$pdf" - 2>/dev/null)
   words=$(printf '%s' "$text" | wc -w | tr -d ' ')

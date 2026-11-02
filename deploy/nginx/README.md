@@ -37,7 +37,7 @@ The reason this config is worth keeping. Verified live on 2026-08-25:
 | ------------------------------------------------------ | -------------------------------------- |
 | `index.html` and every SPA fallback route              | `no-cache, max-age=0, must-revalidate` |
 | `/assets/*` — fingerprinted, including hashed `.woff2` | `public, max-age=31536000, immutable`  |
-| `/og.png`, `/llms.txt`, `Alexandr-Chumak-*.pdf`        | `no-cache, max-age=0, must-revalidate` |
+| `/og.png`, `/llms.txt`, `Aleksandr-Chumak-*.pdf`       | `no-cache, max-age=0, must-revalidate` |
 | other static                                           | `public, max-age=86400`                |
 
 `index.html` must revalidate: nginx previously sent it with no `Cache-Control` at

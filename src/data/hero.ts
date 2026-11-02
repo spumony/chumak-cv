@@ -2,7 +2,7 @@ import type { HeroData } from '../types'
 
 // Facts here are governed by docs/candidate-evidence.md. Change that first.
 export const hero: HeroData = {
-  name: { ru: 'Александр Чумак', en: 'Alexandr Chumak' },
+  name: { ru: 'Александр Чумак', en: 'Aleksandr Chumak' },
   role: {
     ru: 'Senior Frontend / Product-инженер',
     en: 'Senior Frontend / Product Engineer',

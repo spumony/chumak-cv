@@ -9,7 +9,7 @@ Copy everything between the rules.
 
 ---
 
-# Alexandr Chumak
+# Aleksandr Chumak
 
 **Senior Frontend / Product Engineer**
 React · TypeScript · Next.js · React Native
@@ -20,7 +20,7 @@ React · TypeScript · Next.js · React Native
 - Built and published [Prosvetum](https://apps.apple.com/app/id6787093203), an iOS book-summary app, solo — React Native (Expo), Supabase
 - EU citizen, open to senior roles across Europe
 
-**Portfolio:** [chumak.is-a.dev](https://chumak.is-a.dev) · **CV:** [PDF](https://chumak.is-a.dev/Alexandr-Chumak-Senior-Frontend-Engineer.pdf) · **LinkedIn:** [in/spumony](https://www.linkedin.com/in/spumony)
+**Portfolio:** [chumak.is-a.dev](https://chumak.is-a.dev) · **CV:** [PDF](https://chumak.is-a.dev/Aleksandr-Chumak-Senior-Frontend-Engineer.pdf) · **LinkedIn:** [in/spumony](https://www.linkedin.com/in/spumony)
 
 ---
 

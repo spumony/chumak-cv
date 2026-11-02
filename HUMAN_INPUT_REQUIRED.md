@@ -51,6 +51,6 @@ That is a separate repository, so nothing has been pushed to it.
 
 ### 9. Old CV filenames — is anything linking to them?
 
-The PDFs were renamed to `Alexandr-Chumak-Senior-Frontend-Engineer.pdf` and
-`Alexandr-Chumak-Senior-Product-Engineer-AI.pdf`. If an application or a signature
-already links the previous filename, a copy can be left at the old path.
+The PDFs are now `Aleksandr-Chumak-*.pdf` (renamed from `Alexandr-Chumak-*.pdf` on
+2026-11-02). nginx answers the old `Alexandr-Chumak-*.pdf` addresses with a 301 to
+the new names, so links already sent out keep working.

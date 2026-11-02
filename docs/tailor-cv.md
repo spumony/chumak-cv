@@ -3,11 +3,11 @@
 Two variants exist. Do not create a third — every extra variant is another place
 for the facts to drift.
 
-| Variant    | Source               | Output                                            | Headline                                                          |
-| ---------- | -------------------- | ------------------------------------------------- | ----------------------------------------------------------------- |
-| Core       | `scripts/cv.html`    | `Alexandr-Chumak-Senior-Frontend-Engineer.pdf`    | Senior Frontend Engineer · React, TypeScript, Next.js             |
-| AI Product | `scripts/cv-ai.html` | `Alexandr-Chumak-Senior-Product-Engineer-AI.pdf`  | Senior Product Engineer · React, TypeScript, Next.js · Applied AI |
-| Russian    | `scripts/cv-ru.html` | `Alexandr-Chumak-Senior-Frontend-Engineer-RU.pdf` | Senior Frontend-инженер · React, TypeScript, Next.js              |
+| Variant    | Source               | Output                                             | Headline                                                          |
+| ---------- | -------------------- | -------------------------------------------------- | ----------------------------------------------------------------- |
+| Core       | `scripts/cv.html`    | `Aleksandr-Chumak-Senior-Frontend-Engineer.pdf`    | Senior Frontend Engineer · React, TypeScript, Next.js             |
+| AI Product | `scripts/cv-ai.html` | `Aleksandr-Chumak-Senior-Product-Engineer-AI.pdf`  | Senior Product Engineer · React, TypeScript, Next.js · Applied AI |
+| Russian    | `scripts/cv-ru.html` | `Aleksandr-Chumak-Senior-Frontend-Engineer-RU.pdf` | Senior Frontend-инженер · React, TypeScript, Next.js              |
 
 The Core variant weights commercial frontend first and treats AI as the
 differentiator. The AI Product variant leads with the two shipped AI products and
@@ -35,7 +35,7 @@ the numbers — is identical on purpose.
    ```
 
 10. Export under a per-application name if the portal needs one:
-    `Alexandr-Chumak-<Role>-<Company>.pdf`.
+    `Aleksandr-Chumak-<Role>-<Company>.pdf`.
 
 ## Rules that do not bend
 

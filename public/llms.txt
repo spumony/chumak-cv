@@ -1,4 +1,4 @@
-# Alexandr Chumak
+# Aleksandr Chumak
 
 > EU citizen, no sponsorship required for EU roles. Senior Frontend / Product Engineer with 6+ years building production web and mobile software in React, TypeScript and Next.js. Frontend Developer at TeamArt Outsourcing from Feb 2021 to Aug 2026. Open to senior frontend and product-engineering roles across the EU, available immediately.
 
@@ -11,5 +11,5 @@ At TeamArt, from Feb 2021 to Dec 2025 on EVCARGO, a logistics and transport CRM 
 - [Email](mailto:ciumac.dev@gmail.com): direct contact
 - [Rivella](https://rivella.app): deployed multi-tenant AI booking assistant
 - [Prosvetum](https://apps.apple.com/app/id6787093203): iOS book-summary app on the App Store
-- [CV (PDF)](https://chumak.is-a.dev/Alexandr-Chumak-Senior-Frontend-Engineer.pdf): ATS-friendly CV
-- [CV, Russian (PDF)](https://chumak.is-a.dev/Alexandr-Chumak-Senior-Frontend-Engineer-RU.pdf): Russian-language CV
+- [CV (PDF)](https://chumak.is-a.dev/Aleksandr-Chumak-Senior-Frontend-Engineer.pdf): ATS-friendly CV
+- [CV, Russian (PDF)](https://chumak.is-a.dev/Aleksandr-Chumak-Senior-Frontend-Engineer-RU.pdf): Russian-language CV
