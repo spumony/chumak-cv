@@ -1,6 +1,7 @@
 import type { ExperienceItem } from '../types'
 
-// One sentence of scope, then bullets for ownership, architecture and evidence.
+// One sentence of scope per role. The TeamArt projects have no bullets on
+// purpose: their detail lives in the Selected work cards.
 // Facts are governed by docs/candidate-evidence.md.
 export const experience: ExperienceItem[] = [
   {
@@ -12,19 +13,9 @@ export const experience: ExperienceItem[] = [
     },
     period: { ru: '01.2026 — 08.2026', en: 'Jan 2026 — Aug 2026' },
     description: {
-      ru: 'CRM для ресторана у румынского разработчика ПО для HoReCa: интерфейсы для администратора, кухни и официантов. Был единственным фронтенд-разработчиком на проекте.',
-      en: 'Restaurant CRM for a Romanian HoReCa software vendor: interfaces for administrators, kitchen staff and waiters. I was the only frontend engineer on the project.',
+      ru: 'CRM для ресторанов у румынского разработчика ПО для HoReCa: три отдельных приложения для администратора, кухни и официантов. Единственный фронтенд-разработчик на проекте.',
+      en: 'Restaurant CRM for a Romanian HoReCa software vendor: three separate apps for administrators, kitchen staff and waiters. The only frontend engineer on the project.',
     },
-    bullets: [
-      {
-        ru: 'Собрал клиент на Next.js и TypeScript с нуля; спроектировал систему компонентов, структуру роутинга и фронтенд-конвенции и задокументировал их.',
-        en: 'Built the Next.js/TypeScript client from scratch, and designed and documented the component system, routing structure and frontend conventions.',
-      },
-      {
-        ru: 'Сделал плотные таблицы, фильтры, валидацию и длинные формы поверх REST API на одном общем наборе компонентов.',
-        en: 'Implemented dense tables, filtering, validation and long forms over REST APIs on one shared component set.',
-      },
-    ],
     technologies: [
       'Next.js',
       'React',
@@ -45,20 +36,6 @@ export const experience: ExperienceItem[] = [
       ru: 'Пять лет на CRM для логистики и перевозок британского оператора, веб и мобильное приложение, в кросс-функциональной Scrum-команде.',
       en: 'Five years on a logistics and transport CRM for a UK logistics operator, web and mobile, in a cross-functional Scrum team.',
     },
-    bullets: [
-      {
-        ru: 'Собирал и поддерживал общую дизайн-систему и библиотеку компонентов, вокруг них выстроил клиентскую архитектуру.',
-        en: 'Built and maintained the shared design system and component library, and structured the client-side architecture around them.',
-      },
-      {
-        ru: 'Собрал слой данных на React Query и Axios: обновление токенов, кэширование, пагинация, фильтрация, инвалидация и обработка ошибок.',
-        en: 'Built the REST data layer on React Query and Axios: auth refresh, caching, pagination, filtering, invalidation and error handling.',
-      },
-      {
-        ru: 'Участвовал в мобильном приложении на React Native и кросс-платформенных релизах, внедрил тесты Playwright на критичные сценарии и вёл code review по фронтенду.',
-        en: 'Contributed to the React Native app and cross-platform releases, introduced Playwright coverage for critical flows, and ran frontend code review.',
-      },
-    ],
     technologies: [
       'React',
       'TypeScript',

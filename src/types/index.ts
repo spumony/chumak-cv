@@ -34,7 +34,7 @@ export type Principle = {
 }
 
 export type CaseStudy = {
-  title: string
+  title: LocalizedString
   /** One line of context: what the product is and whose problem it solves. */
   context: LocalizedString
   /** Short status pill, e.g. "Deployed" / "5 years". Omit when there is none. */
@@ -44,8 +44,8 @@ export type CaseStudy = {
   /** What exactly was mine — the question a recruiter is actually asking. */
   role: LocalizedString
   /**
-   * 2–3 sentences on the architecture and the decisions behind it. Omitted
-   * where publication scope does not allow describing the system.
+   * The architecture and the decisions behind it. Renders collapsed, so it
+   * can carry the detail the visible lines leave out.
    */
   system?: LocalizedString
   /** Short verified facts. Every one must be defensible in an interview. */
@@ -83,8 +83,6 @@ export type ExperienceItem = {
   description: LocalizedString
   bullets?: LocalizedString[]
   technologies: string[]
-  /** Marks the current role — shows a live "Now" badge. */
-  current?: boolean
   logo?: string
 }
 

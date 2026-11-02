@@ -38,6 +38,22 @@ export function Hero() {
           </p>
         </div>
 
+        {/* Above the pitch card so the buttons fit the first phone screen. */}
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <a href="#work" className={primaryCta}>
+            {t('hero.viewWork')}
+            <ArrowRight aria-hidden className="h-4 w-4" />
+          </a>
+          <a href={resumeUrl[lang]} download className={secondaryCta}>
+            {t('hero.downloadCv')}
+            <Download aria-hidden className="h-4 w-4" />
+          </a>
+          <a href="#contact" className={secondaryCta}>
+            {t('hero.getInTouch')}
+            <Mail aria-hidden className="h-4 w-4" />
+          </a>
+        </div>
+
         <div className="flex w-full flex-col gap-4 rounded-2xl border border-border bg-bg-elevated p-5 sm:flex-row sm:items-start sm:gap-6">
           {hero.avatar && (
             <AvatarLightbox src={hero.avatar} alt={pick(hero.name)} />
@@ -65,22 +81,6 @@ export function Hero() {
               </div>
             )}
           </div>
-        </div>
-
-        {/* Proof before contact: a recruiter wants evidence first. */}
-        <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <a href="#work" className={primaryCta}>
-            {t('hero.viewWork')}
-            <ArrowRight aria-hidden className="h-4 w-4" />
-          </a>
-          <a href={resumeUrl[lang]} download className={secondaryCta}>
-            {t('hero.downloadCv')}
-            <Download aria-hidden className="h-4 w-4" />
-          </a>
-          <a href="#contact" className={secondaryCta}>
-            {t('hero.getInTouch')}
-            <Mail aria-hidden className="h-4 w-4" />
-          </a>
         </div>
       </FadeIn>
 

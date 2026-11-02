@@ -1,4 +1,4 @@
-import { ArrowUpRight, BookOpen } from 'lucide-react'
+import { ArrowUpRight, BookOpen, ChevronDown } from 'lucide-react'
 import { Badge } from '../components/ui/Badge'
 import { Card } from '../components/ui/Card'
 import { FadeIn } from '../components/ui/FadeIn'
@@ -25,12 +25,12 @@ export function Work() {
 
       <div className="mt-8 flex flex-col gap-6 sm:mt-10 sm:gap-8">
         {work.map((caseStudy, index) => (
-          <FadeIn key={caseStudy.title} delay={index * 0.05}>
+          <FadeIn key={caseStudy.title.en} delay={index * 0.05}>
             <Card>
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex min-w-0 flex-col gap-1">
                   <h3 className="text-lg font-semibold text-text-primary sm:text-xl">
-                    {caseStudy.title}
+                    {pick(caseStudy.title)}
                   </h3>
                   {caseStudy.period && (
                     <p className="font-mono text-sm text-text-muted">
@@ -56,14 +56,6 @@ export function Work() {
                     {pick(caseStudy.role)}
                   </p>
                 </div>
-                {caseStudy.system && (
-                  <div>
-                    <h4 className={subheading}>{t('work.system')}</h4>
-                    <p className="mt-1.5 text-text-secondary">
-                      {pick(caseStudy.system)}
-                    </p>
-                  </div>
-                )}
                 {caseStudy.evidence && caseStudy.evidence.length > 0 && (
                   <div>
                     <h4 className={subheading}>{t('work.evidence')}</h4>
@@ -93,6 +85,23 @@ export function Work() {
                     ))}
                   </div>
                 </div>
+                {/* Native disclosure: the detail is there for whoever wants it. */}
+                {caseStudy.system && (
+                  <details className="group">
+                    <summary
+                      className={`${subheading} inline-flex min-h-11 cursor-pointer list-none items-center gap-1.5 transition-colors hover:text-accent [&::-webkit-details-marker]:hidden`}
+                    >
+                      {t('work.system')}
+                      <ChevronDown
+                        aria-hidden
+                        className="h-4 w-4 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                      />
+                    </summary>
+                    <p className="mt-1.5 text-text-secondary">
+                      {pick(caseStudy.system)}
+                    </p>
+                  </details>
+                )}
               </div>
 
               {(caseStudy.links?.live ||

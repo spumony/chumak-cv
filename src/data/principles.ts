@@ -5,8 +5,8 @@ export const principles: Principle[] = [
   {
     title: { ru: 'Отвечаю за весь путь', en: 'End-to-end ownership' },
     body: {
-      ru: 'Веду работу от требований и контрактов API до архитектуры фронтенда, реализации, тестов и релиза. В CRM для ресторанов был единственным фронтенд-разработчиком, а Rivella собрал и развернул один целиком.',
-      en: 'I take product work from requirements and API contracts through frontend architecture, implementation, testing and release. I was the only frontend engineer on a restaurant CRM, and I built and deployed Rivella end to end alone.',
+      ru: 'Веду работу от требований и контрактов API до архитектуры фронтенда, реализации, тестов и релиза.',
+      en: 'I take product work from requirements and API contracts through frontend architecture, implementation, testing and release.',
     },
   },
   {
@@ -22,8 +22,8 @@ export const principles: Principle[] = [
       en: 'Evidence over claims',
     },
     body: {
-      ru: 'Решения записываю, границы, которые важны, покрываю тестами, а каждое число держу привязанным к команде, которая его выдаёт. Число без источника — это не доказательство.',
-      en: 'I write decisions down, test the boundaries that matter, and keep every number tied to the command that produced it. A number without a source is not evidence.',
+      ru: 'Решения записываю, важные границы покрываю тестами. Каждое число на этом сайте можно проверить.',
+      en: 'I write decisions down and test the boundaries that matter. Every number on this site can be checked.',
     },
   },
 ]

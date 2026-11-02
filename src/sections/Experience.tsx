@@ -3,7 +3,6 @@ import { Badge } from '../components/ui/Badge'
 import { Card } from '../components/ui/Card'
 import { FadeIn } from '../components/ui/FadeIn'
 import { SectionTitle } from '../components/ui/SectionTitle'
-import { StatusDot } from '../components/ui/StatusDot'
 import { experience } from '../data/experience'
 import { resumeUrl } from '../data/resume'
 import { useT } from '../i18n/useT'
@@ -33,24 +32,12 @@ export function Experience() {
       <div className="mt-8 flex flex-col gap-8 sm:mt-12 sm:gap-10">
         {experience.map((item, index) => (
           <FadeIn key={index} delay={index * 0.05}>
-            <Card
-              className={item.current ? 'ring-1 ring-accent/20' : undefined}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-lg font-semibold text-text-primary sm:text-xl">
-                    {pick(item.role)}
-                  </h3>
-                  <p className="font-medium text-accent">
-                    {pick(item.company)}
-                  </p>
-                </div>
-                {item.current && (
-                  <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-success/30 bg-success/10 px-2.5 py-1 font-mono text-xs font-medium text-success">
-                    <StatusDot tone="success" />
-                    {t('experience.current')}
-                  </span>
-                )}
+            <Card>
+              <div className="flex flex-col gap-1">
+                <h3 className="text-lg font-semibold text-text-primary sm:text-xl">
+                  {pick(item.role)}
+                </h3>
+                <p className="font-medium text-accent">{pick(item.company)}</p>
               </div>
 
               <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-sm text-text-muted">

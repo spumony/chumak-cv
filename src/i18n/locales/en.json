@@ -17,7 +17,6 @@
   },
   "experience": {
     "title": "Experience",
-    "current": "Now",
     "downloadCv": "Download CV"
   },
   "approach": {
@@ -34,7 +33,7 @@
   "work": {
     "title": "Selected work",
     "role": "Role",
-    "system": "System",
+    "system": "How it's built",
     "evidence": "Evidence",
     "stack": "Stack",
     "live": "Live",

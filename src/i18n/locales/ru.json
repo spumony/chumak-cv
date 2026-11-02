@@ -17,7 +17,6 @@
   },
   "experience": {
     "title": "Опыт",
-    "current": "Сейчас",
     "downloadCv": "Скачать CV"
   },
   "approach": {
@@ -34,7 +33,7 @@
   "work": {
     "title": "Избранные работы",
     "role": "Роль",
-    "system": "Система",
+    "system": "Как устроено",
     "evidence": "Факты",
     "stack": "Стек",
     "live": "Открыть",
