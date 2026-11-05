@@ -11,14 +11,14 @@
 #   3. --delete removes stale hashed assets so the directory doesn't bloat
 #
 # Requires:
-#   - SSH access to root@204.168.196.101 via the local id_ed25519 key
+#   - DEPLOY_SERVER=user@host in the environment, with SSH access via the local key
 #   - nginx already serving /var/www/chumak-cv/dist/ for chumak.is-a.dev
 #     (set up by /etc/nginx/sites-available/chumak-cv.conf)
 #
 
 set -euo pipefail
 
-SERVER="root@204.168.196.101"
+SERVER="${DEPLOY_SERVER:?Set DEPLOY_SERVER=user@host}"
 REMOTE_PATH="/var/www/chumak-cv/dist/"
 URL="https://chumak.is-a.dev/"
 

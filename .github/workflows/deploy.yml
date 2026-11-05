@@ -20,13 +20,13 @@ jobs:
     timeout-minutes: 10
 
     env:
-      DEPLOY_HOST: 204.168.196.101
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
       DEPLOY_USER: deploy
       DEPLOY_PATH: /var/www/chumak-cv/dist/
       DEPLOY_URL: https://chumak.is-a.dev/
-      # Server SSH host key fingerprint — pinned to prevent MITM.
+      # Server SSH host key — pinned to prevent MITM. The host itself is a secret.
       # Regenerate with: ssh-keyscan -t ed25519 <host>
-      SERVER_HOST_KEY: '204.168.196.101 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHeVRYjJXyG7vapHN0FifL3GJEkNpBDwcRhkp4MkfmkB'
+      SERVER_HOST_KEY: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHeVRYjJXyG7vapHN0FifL3GJEkNpBDwcRhkp4MkfmkB'
 
     steps:
       - name: Checkout
@@ -60,7 +60,7 @@ jobs:
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
           printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          printf '%s\n' "$SERVER_HOST_KEY" >> ~/.ssh/known_hosts
+          printf '%s %s\n' "$DEPLOY_HOST" "$SERVER_HOST_KEY" >> ~/.ssh/known_hosts
 
       - name: Deploy via rsync
         run: |
