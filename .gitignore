@@ -28,3 +28,8 @@ dist-ssr
 
 # Internal working notes — never published (see docs/private/README)
 docs/private/
+
+# Local agent config, kept out of the public repo
+CLAUDE.md
+.mcp.json
+.claude/
