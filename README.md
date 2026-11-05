@@ -1,8 +1,10 @@
 # chumak-cv
 
-Minimal, bilingual (RU/EN) personal CV / portfolio — a static single-page
-site with smooth scroll navigation, light/dark themes and subtle scroll
-animations. Mobile-first.
+Source of my CV site, **[chumak.is-a.dev](https://chumak.is-a.dev)**. It's a
+bilingual (EN/RU) static single page with light and dark themes, smooth scroll
+navigation and subtle scroll animations, built mobile-first.
+
+![chumak.is-a.dev on desktop](docs/screenshot.png)
 
 ## Tech stack
 
@@ -26,15 +28,6 @@ pnpm format     # Prettier --write
 ```
 
 ## Editing content
-
-### Facts come first
-
-`docs/candidate-evidence.md` is the publication policy for every factual claim on
-the site, in the CV PDFs and in `public/llms.txt`: what may be published, what may
-not, and which wordings are barred. Change a fact there first, then propagate it.
-
-`HUMAN_INPUT_REQUIRED.md` lists the open questions. This repository is public, so
-neither file carries anything a project's own publication policy disallows.
 
 ### 1. Section data — `src/data/`
 
@@ -71,7 +64,7 @@ Never edit a PDF.
 
 It renders all three variants through headless Chrome and then checks each one:
 page count, extractable name, core keyword, and whether the last page is a blank
-tail. See `docs/tailor-cv.md` for which variant to send where.
+tail.
 
 ## Design tokens & theming
 

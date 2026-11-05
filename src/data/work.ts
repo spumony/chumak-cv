@@ -11,7 +11,7 @@ import type { CaseStudy } from '../types'
  *
  * Visible text stays short: one line of context, one of role, 2–3 facts. The
  * architecture detail lives in `system`, which renders collapsed.
- * Every line in `evidence` is governed by docs/candidate-evidence.md.
+ * Every line in `evidence` is governed by docs/private/candidate-evidence.md.
  */
 export const work: CaseStudy[] = [
   {

@@ -2,7 +2,7 @@ import type { ExperienceItem } from '../types'
 
 // One sentence of scope per role. The TeamArt projects have no bullets on
 // purpose: their detail lives in the Selected work cards.
-// Facts are governed by docs/candidate-evidence.md.
+// Facts are governed by docs/private/candidate-evidence.md.
 export const experience: ExperienceItem[] = [
   {
     company: { ru: 'TeamArt — Multisoft', en: 'TeamArt — Multisoft' },

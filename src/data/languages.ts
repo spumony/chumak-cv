@@ -1,6 +1,6 @@
 import type { LanguageItem } from '../types'
 
-// Levels are the ones defensible on a first call — see docs/candidate-evidence.md.
+// Levels are the ones defensible on a first call — see docs/private/candidate-evidence.md.
 export const languages: LanguageItem[] = [
   {
     name: { ru: 'Русский', en: 'Russian' },

@@ -5,7 +5,7 @@ import type { SkillCategory } from '../types'
  *
  * Every entry needs public evidence: commercial work, Rivella, Prosvetum or
  * Profit Controller.
- * Do not add a skill without it — see docs/candidate-evidence.md.
+ * Do not add a skill without it — see docs/private/candidate-evidence.md.
  */
 export const skills: SkillCategory[] = [
   {

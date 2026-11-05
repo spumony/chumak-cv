@@ -1,6 +1,6 @@
 import type { HeroData } from '../types'
 
-// Facts here are governed by docs/candidate-evidence.md. Change that first.
+// Facts here are governed by docs/private/candidate-evidence.md. Change that first.
 export const hero: HeroData = {
   name: { ru: 'Александр Чумак', en: 'Aleksandr Chumak' },
   role: {

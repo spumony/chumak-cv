@@ -6,7 +6,7 @@
 #   ./scripts/build-cv.sh
 #
 # The HTML is the source; the PDFs are build output. Never edit a PDF — edit the
-# HTML, run this, and commit both. Facts come from docs/candidate-evidence.md.
+# HTML, run this, and commit both. Facts come from docs/private/candidate-evidence.md.
 #
 # Requires: Google Chrome (headless print-to-PDF, same engine that produced the
 # previous PDFs) and poppler's pdftotext/pdfinfo for the validation pass
@@ -49,7 +49,7 @@ render() {
   [ -s "$PWD/$out" ] || { echo "  ✗ nothing rendered" >&2; exit 1; }
 }
 
-# Each variant is a separate application target — see docs/tailor-cv.md.
+# Each variant is a separate application target — see docs/private/tailor-cv.md.
 render scripts/cv.html    public/Aleksandr-Chumak-Senior-Frontend-Engineer.pdf
 render scripts/cv-ai.html public/Aleksandr-Chumak-Senior-Product-Engineer-AI.pdf
 render scripts/cv-ru.html public/Aleksandr-Chumak-Senior-Frontend-Engineer-RU.pdf
