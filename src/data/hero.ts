@@ -4,17 +4,17 @@ import type { HeroData } from '../types'
 export const hero: HeroData = {
   name: { ru: 'Александр Чумак', en: 'Aleksandr Chumak' },
   role: {
-    ru: 'Senior Frontend / Product-инженер',
-    en: 'Senior Frontend / Product Engineer',
+    ru: 'Senior Full-Stack инженер',
+    en: 'Senior Full-Stack Engineer',
   },
   stack: {
-    ru: 'React · TypeScript · Next.js · React Native',
-    en: 'React · TypeScript · Next.js · React Native',
+    ru: 'React · TypeScript · Next.js · Node · React Native',
+    en: 'React · TypeScript · Next.js · Node · React Native',
   },
   // Two sentences: the cards below carry the detail.
   pitch: {
-    ru: '6+ лет в продакшене: веб и мобильные продукты на React и React Native. Свои продукты довожу до релиза: Rivella работает в продакшене, Prosvetum опубликован в App Store.',
-    en: '6+ years shipping production web and mobile software in React and React Native. I take my own products all the way to release: Rivella runs in production and Prosvetum is on the App Store.',
+    ru: '7+ лет в продакшене: веб и мобильные продукты на React и React Native. Свои продукты довожу до релиза: Rivella работает в продакшене, Prosvetum опубликован в App Store.',
+    en: '7+ years shipping production web and mobile software in React and React Native. I take my own products all the way to release: Rivella runs in production and Prosvetum is on the App Store.',
   },
   location: {
     ru: 'Кишинёв, Молдова · UTC+2/+3',
@@ -26,7 +26,7 @@ export const hero: HeroData = {
     en: 'Remote, on‑site in Chișinău, or relocation within the EU · Available immediately',
   },
   proof: [
-    { ru: '6+ лет в продакшене', en: '6+ years in production' },
+    { ru: '7+ лет в продакшене', en: '7+ years in production' },
     { ru: '5 лет на EVCARGO', en: '5 years on EVCARGO' },
     { ru: 'AI-продукт в продакшене', en: 'AI product in production' },
     {
