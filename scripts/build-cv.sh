@@ -50,9 +50,9 @@ render() {
 }
 
 # Each variant is a separate application target — see docs/private/tailor-cv.md.
-render scripts/cv.html    public/Aleksandr-Chumak-Senior-Full-Stack-Engineer.pdf
+render scripts/cv.html    public/Aleksandr-Chumak-CV.pdf
 render scripts/cv-ai.html public/Aleksandr-Chumak-Senior-Product-Engineer-AI.pdf
-render scripts/cv-ru.html public/Aleksandr-Chumak-Senior-Full-Stack-Engineer-RU.pdf
+render scripts/cv-ru.html public/Aleksandr-Chumak-CV-RU.pdf
 
 echo
 echo "Validation"
