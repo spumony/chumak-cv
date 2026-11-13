@@ -33,7 +33,7 @@ export function useDocumentMeta() {
     const title = t('meta.title')
     const description = t('meta.description')
     // Absolute URLs: relative ones break in link previews on some platforms.
-    const image = `${SITE_URL}/og.png`
+    const image = `${SITE_URL}/og.png?v=2026-11-13`
 
     document.title = title
     setCanonical(SITE_URL)

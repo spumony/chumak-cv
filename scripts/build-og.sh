@@ -9,6 +9,11 @@
 # running this leaves a stale image published at /og.png — which is exactly how
 # retired technology pills survived a text-only privacy sweep once already.
 #
+# After changing the image, bump the ?v= date on the og:image and twitter:image
+# URLs in index.html and src/hooks/useDocumentMeta.ts. LinkedIn and Slack cache
+# a preview image by URL and never refetch it, so without the bump a Featured
+# card keeps showing the previous image for good.
+#
 # Requires: Google Chrome.
 
 set -euo pipefail
