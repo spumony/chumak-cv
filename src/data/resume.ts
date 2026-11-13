@@ -7,6 +7,6 @@ import type { Language } from '../i18n'
  * applications — see docs/private/tailor-cv.md.
  */
 export const resumeUrl: Record<Language, string> = {
-  en: '/Aleksandr-Chumak-Senior-Frontend-Engineer.pdf',
-  ru: '/Aleksandr-Chumak-Senior-Frontend-Engineer-RU.pdf',
+  en: '/Aleksandr-Chumak-Senior-Full-Stack-Engineer.pdf',
+  ru: '/Aleksandr-Chumak-Senior-Full-Stack-Engineer-RU.pdf',
 }
