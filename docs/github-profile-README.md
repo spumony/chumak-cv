@@ -11,10 +11,10 @@ Copy everything between the rules.
 
 # Aleksandr Chumak
 
-**Senior Frontend / Product Engineer**
+**Senior Full-Stack Engineer**
 React · TypeScript · Next.js · React Native
 
-- 6+ years building production web and mobile products
+- 7+ years building production web and mobile products
 - Frontend Developer at TeamArt, 2021–2026: five years on EVCARGO, a logistics and transport CRM, then the only frontend engineer on a restaurant CRM
 - Built and run [Rivella](https://rivella.app), a multi-tenant AI booking assistant, solo — Next.js, NestJS, PostgreSQL, Docker
 - Built and published [Prosvetum](https://apps.apple.com/app/id6787093203), an iOS book-summary app, solo — React Native (Expo), Supabase

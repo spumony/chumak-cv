@@ -8,8 +8,8 @@ export const experience: ExperienceItem[] = [
     company: { ru: 'TeamArt — Multisoft', en: 'TeamArt — Multisoft' },
     location: { ru: 'Удалённо', en: 'Remote' },
     role: {
-      ru: 'Frontend-разработчик',
-      en: 'Frontend Developer',
+      ru: 'Senior Frontend-разработчик',
+      en: 'Senior Frontend Developer',
     },
     period: { ru: '01.2026 — 08.2026', en: 'Jan 2026 — Aug 2026' },
     description: {
