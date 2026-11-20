@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 #
-# Renders the images of one post from scripts/post-cards/<slug>.html:
-#   public/posts/<slug>/og.png        link preview, EN (1200x627)
-#   public/posts/<slug>/og-ru.png     link preview, RU
-#   public/posts/<slug>/linkedin.png  image for the LinkedIn post (1080x1350)
+# Renders the images of one post:
+#   scripts/post-cards/<slug>.html      → public/posts/<slug>/og.png, og-ru.png
+#                                         (link previews, EN and RU, 1200x627)
+#   scripts/post-cards/<slug>-hook.html → public/posts/<slug>/linkedin.png
+#                                         (image in the LinkedIn post, 1080x1350)
 #
 # Usage: pnpm posts:cards <slug>
 #
@@ -19,12 +20,15 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 [ -x "$CHROME" ] || { echo "Google Chrome not found at $CHROME" >&2; exit 1; }
 
 cd "$(dirname "$0")/.."
-SRC="scripts/post-cards/$SLUG.html"
-[ -f "$SRC" ] || { echo "No $SRC" >&2; exit 1; }
+for src in "scripts/post-cards/$SLUG.html" "scripts/post-cards/$SLUG-hook.html"; do
+  [ -f "$src" ] || { echo "No $src" >&2; exit 1; }
+done
 OUT_DIR="public/posts/$SLUG"
 mkdir -p "$OUT_DIR"
 
-render() { # <query> <WxH> <file>
+render() { # <src> <query> <WxH> <file>
+  local SRC="$1"
+  shift
   local out="$OUT_DIR/$3" profile
   profile="$(mktemp -d)"
   rm -f "$out"
@@ -46,6 +50,6 @@ render() { # <query> <WxH> <file>
   echo "  $out  $(file -b "$out" | cut -d, -f2)"
 }
 
-render "size=og&lang=en" 1200,627 og.png
-render "size=og&lang=ru" 1200,627 og-ru.png
-render "size=post&lang=en" 1080,1350 linkedin.png
+render "scripts/post-cards/$SLUG.html" "size=og&lang=en" 1200,627 og.png
+render "scripts/post-cards/$SLUG.html" "size=og&lang=ru" 1200,627 og-ru.png
+render "scripts/post-cards/$SLUG-hook.html" "" 1080,1350 linkedin.png
