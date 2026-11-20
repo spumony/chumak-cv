@@ -11,7 +11,8 @@
     "format:check": "prettier --check .",
     "preview": "vite preview",
     "posts:pages": "node scripts/build-post-pages.mjs",
-    "posts:cards": "./scripts/build-post-cards.sh"
+    "posts:cards": "./scripts/build-post-cards.sh",
+    "posts:new-card": "./scripts/new-post-card.sh"
   },
   "dependencies": {
     "@fontsource/geist-mono": "^5.2.8",

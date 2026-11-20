@@ -1,0 +1,62 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "__SLUG__" (1080x1350).
+  Made by `pnpm posts:new-card __SLUG__`. Edit the text, delete blocks you don't need.
+  Rendered by scripts/build-post-cards.sh → public/posts/__SLUG__/linkedin.png
+  Shared look: card.css (dark by default, ?theme=light for an A/B test).
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post h1 {
+        font-size: 104px;
+        letter-spacing: -3px;
+        line-height: 1.02;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>ChatGPT · Claude</span>
+      <span>AI at work</span>
+    </div>
+
+    <h1>The hook,<br /><em>the accent line.</em></h1>
+
+    <!-- Two columns (card.css: .cols, section, section.hard, h2, ul/li). -->
+    <div class="cols">
+      <section>
+        <h2>Before <span>· the habit</span></h2>
+        <ul>
+          <li>First point</li>
+          <li>Second point</li>
+          <li>Third point</li>
+        </ul>
+      </section>
+      <section class="hard">
+        <h2>After <span>· what to do</span></h2>
+        <ul>
+          <li>First point</li>
+          <li>Second point</li>
+          <li>Third point</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- One takeaway line; <b> is the accent color. -->
+    <p class="rule"><b>The takeaway</b> in one line.</p>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>
