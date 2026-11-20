@@ -4,11 +4,13 @@
     "date": "2026-11-24",
     "en": {
       "title": "CLAUDE.md is a suggestion. Hooks are rules.",
-      "description": "What belongs in CLAUDE.md, what belongs in a Claude Code hook, and a short PreToolUse hook that blocks rm -rf and force pushes."
+      "description": "What belongs in CLAUDE.md, what belongs in a Claude Code hook, and a short PreToolUse hook that blocks rm -rf and force pushes.",
+      "imageAlt": "Card titled \"CLAUDE.md asks. A hook blocks.\" A yellow sticky note labeled CLAUDE.md says \"Please never run rm -rf.\" Next to it a red panel labeled PreToolUse hook says \"DENY. rm -rf is blocked.\""
     },
     "ru": {
       "title": "CLAUDE.md только советует. Hooks задают правила.",
-      "description": "Что держать в CLAUDE.md, что выносить в hook Claude Code, и короткий PreToolUse hook, который блокирует rm -rf и force push."
+      "description": "Что держать в CLAUDE.md, что выносить в hook Claude Code, и короткий PreToolUse hook, который блокирует rm -rf и force push.",
+      "imageAlt": "Карточка «CLAUDE.md asks. A hook blocks.»: жёлтый стикер CLAUDE.md с надписью «Please never run rm -rf.», рядом красная панель PreToolUse hook с надписью «DENY. rm -rf is blocked.»"
     }
   }
 ]

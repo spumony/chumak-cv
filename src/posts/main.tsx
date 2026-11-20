@@ -9,6 +9,7 @@ import { ThemeProvider } from '../theme/ThemeProvider'
 import { NoteLayout } from './NoteLayout'
 import { NotesIndex } from './NotesIndex'
 import { notes } from './notes'
+import { PostImage } from './PostImage'
 
 // One entry for every post page:
 // /posts/ and /posts/ru/ list posts, /posts/<slug>/ and /posts/<slug>/ru/ show one.
@@ -26,6 +27,11 @@ createRoot(document.getElementById('root')!).render(
       <NoteLayout lang={lang} slug={note?.slug}>
         {note && Body ? (
           <article className="note">
+            <PostImage
+              note={note}
+              lang={lang}
+              className="mb-8 h-auto w-full max-w-sm"
+            />
             <p className="font-mono text-xs text-text-muted">{note.date}</p>
             <h1>{note[lang].title}</h1>
             <Body />

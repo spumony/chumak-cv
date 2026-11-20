@@ -19,3 +19,7 @@ export const notes: Note[] = meta.map((m) => ({ ...m, Body: bodies[m.slug] }))
 
 export const postPath = (lang: Language, slug?: string) =>
   `/posts/${slug ? `${slug}/` : ''}${lang === 'ru' ? 'ru/' : ''}`
+
+// The LinkedIn image of a post (pnpm posts:cards). ?v= busts the 1-day png cache.
+export const postImage = (note: Note) =>
+  `/posts/${note.slug}/linkedin.png?v=${note.date}`

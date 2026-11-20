@@ -39,6 +39,17 @@
   --accent: #a78bfa;
   --success: #34d399;
 }
+/* Light editorial palette: ?theme=light (see theme.js). */
+body.light {
+  --bg: #f6f1e7;
+  --bg-elevated: #ffffff;
+  --border: #e2d9c6;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #78716c;
+  --accent: #6d28d9;
+  --success: #059669;
+}
 * {
   box-sizing: border-box;
 }
