@@ -11,14 +11,22 @@ export function NoteLayout({ lang, slug, children }: Props) {
   return (
     <>
       <header className="pt-safe border-b border-border">
-        <div className="mx-auto flex h-14 max-w-3xl items-center justify-between gap-3 px-5 sm:h-16 sm:px-6">
+        <div className="mx-auto flex h-14 max-w-3xl items-center justify-end gap-3 px-5 sm:h-16 sm:justify-between sm:px-6">
+          {/* ponytail: hidden on phones, where "About me" links to the same page. */}
           <a
             href="/"
-            className="min-w-0 truncate py-3 font-mono text-sm font-medium text-text-primary"
+            className="hidden min-w-0 truncate py-3 font-mono text-sm font-medium text-text-primary sm:block"
           >
             {hero.name[lang]}
           </a>
           <nav className="flex shrink-0 items-center gap-3">
+            {/* The CV opens in this language: the page saved it to i18n above. */}
+            <a
+              href="/"
+              className="text-sm text-text-secondary hover:text-text-primary"
+            >
+              {lang === 'ru' ? 'Обо мне' : 'About me'}
+            </a>
             <a
               href={postPath(lang)}
               className="text-sm text-text-secondary hover:text-text-primary"

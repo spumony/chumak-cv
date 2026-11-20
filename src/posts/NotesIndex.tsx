@@ -31,7 +31,7 @@ export function NotesIndex({ lang }: { lang: Language }) {
               <PostImage
                 note={n}
                 lang={lang}
-                className="h-auto w-20 shrink-0 self-start sm:w-28"
+                className="hidden h-auto w-28 shrink-0 self-start sm:block"
               />
               <div className="min-w-0">
                 <p className="font-mono text-xs text-text-muted">{n.date}</p>
