@@ -20,9 +20,8 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 [ -x "$CHROME" ] || { echo "Google Chrome not found at $CHROME" >&2; exit 1; }
 
 cd "$(dirname "$0")/.."
-for src in "scripts/post-cards/$SLUG.html" "scripts/post-cards/$SLUG-hook.html"; do
-  [ -f "$src" ] || { echo "No $src" >&2; exit 1; }
-done
+HOOK="scripts/post-cards/$SLUG-hook.html"
+[ -f "$HOOK" ] || { echo "No $HOOK" >&2; exit 1; }
 OUT_DIR="public/posts/$SLUG"
 mkdir -p "$OUT_DIR"
 
@@ -50,6 +49,9 @@ render() { # <src> <query> <WxH> <file>
   echo "  $out  $(file -b "$out" | cut -d, -f2)"
 }
 
-render "scripts/post-cards/$SLUG.html" "size=og&lang=en" 1200,627 og.png
-render "scripts/post-cards/$SLUG.html" "size=og&lang=ru" 1200,627 og-ru.png
-render "scripts/post-cards/$SLUG-hook.html" "" 1080,1350 linkedin.png
+# Link previews only for posts that have a page on the site.
+if [ -f "scripts/post-cards/$SLUG.html" ]; then
+  render "scripts/post-cards/$SLUG.html" "size=og&lang=en" 1200,627 og.png
+  render "scripts/post-cards/$SLUG.html" "size=og&lang=ru" 1200,627 og-ru.png
+fi
+render "$HOOK" "" 1080,1350 linkedin.png

@@ -1,0 +1,104 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Paste an example" (1080x1350).
+  Rendered by scripts/build-post-cards.sh → public/posts/<slug>/linkedin.png
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post h1 {
+        font-size: 96px;
+        letter-spacing: -3px;
+        line-height: 1.04;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .duel {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 48px;
+        align-items: center;
+        margin-top: 16px;
+      }
+      .words {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      .words span {
+        align-self: flex-start;
+        padding: 14px 26px;
+        border: 2px solid var(--border);
+        border-radius: 999px;
+        font-size: 38px;
+        color: var(--text-muted);
+        text-decoration: line-through 4px #f87171;
+      }
+      .doc {
+        padding: 40px 40px 48px;
+        border-radius: 12px;
+        background: #fafafa;
+        color: #27272a;
+        transform: rotate(3deg);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      }
+      .doc .name {
+        font-family: 'Geist Mono', monospace;
+        font-size: 24px;
+        color: #71717a;
+      }
+      .doc p {
+        margin: 24px 0 0;
+        font-size: 30px;
+        line-height: 1.4;
+      }
+      .doc i {
+        display: block;
+        height: 18px;
+        margin-top: 18px;
+        border-radius: 9px;
+        background: #e4e4e7;
+      }
+      .rule {
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>ChatGPT · Claude</span>
+      <span>Prompting tip</span>
+    </div>
+
+    <h1>Your style is in<br />your old emails.<br /><em>Paste them.</em></h1>
+
+    <div class="duel">
+      <div class="words">
+        <span>professional</span>
+        <span>but friendly</span>
+        <span>short</span>
+        <span>sound like me</span>
+      </div>
+      <div class="doc">
+        <div class="name">weekly-update.txt</div>
+        <p>Hi Anna, quick update before Friday.</p>
+        <i style="width: 92%"></i>
+        <i style="width: 78%"></i>
+        <i style="width: 85%"></i>
+        <i style="width: 55%"></i>
+      </div>
+    </div>
+
+    <p class="rule">Paste 3–5 examples. <b>Then ask for a new one.</b></p>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+  </body>
+</html>

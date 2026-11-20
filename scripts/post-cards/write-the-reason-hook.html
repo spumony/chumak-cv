@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Tell it why" (1080x1350).
+  Rendered by scripts/build-post-cards.sh → public/posts/<slug>/linkedin.png
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post h1 {
+        font-size: 104px;
+        letter-spacing: -3px;
+        line-height: 1.02;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .card {
+        position: relative;
+        padding: 36px 40px;
+        border-radius: 24px;
+      }
+      .label {
+        font-family: 'Geist Mono', monospace;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .order {
+        border: 3px solid #f87171;
+        background: rgba(248, 113, 113, 0.08);
+      }
+      .order .label {
+        color: #f87171;
+      }
+      .order p {
+        margin: 16px 0 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 60px;
+        font-weight: 400;
+        color: #fecaca;
+        text-decoration: line-through 5px #f87171;
+      }
+      .arrow {
+        margin: -28px 0;
+        text-align: center;
+        font-size: 64px;
+        color: var(--text-muted);
+      }
+      .reason {
+        background: #ecfdf5;
+        color: #064e3b;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      }
+      .reason .label {
+        color: #047857;
+      }
+      .reason p {
+        margin: 16px 0 0;
+        font-size: 46px;
+        line-height: 1.25;
+      }
+      .bottom {
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>ChatGPT · Claude</span>
+      <span>Prompting tip</span>
+    </div>
+
+    <h1>Stop shouting<br />at AI.<br /><em>Tell it why.</em></h1>
+
+    <div class="card order">
+      <span class="label">✕ Order</span>
+      <p>NEVER USE JARGON!!!</p>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="card reason">
+      <span class="label">✓ Reason</span>
+      <p>
+        This email goes to a client who runs a bakery. She doesn't know our
+        internal terms.
+      </p>
+    </div>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+  </body>
+</html>
