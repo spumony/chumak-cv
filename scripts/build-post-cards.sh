@@ -5,6 +5,8 @@
 #                                         (link previews, EN and RU, 1200x627)
 #   scripts/post-cards/<slug>-hook.html → public/posts/<slug>/linkedin.png
 #                                         (image in the LinkedIn post, 1080x1350)
+#   scripts/post-cards/<slug>-carousel.html → public/posts/<slug>/carousel.pdf
+#                                         (LinkedIn document post, one 1080x1350 page per slide)
 #
 # Usage: pnpm posts:cards <slug>
 #
@@ -21,7 +23,8 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 cd "$(dirname "$0")/.."
 HOOK="scripts/post-cards/$SLUG-hook.html"
-[ -f "$HOOK" ] || { echo "No $HOOK" >&2; exit 1; }
+CAROUSEL="scripts/post-cards/$SLUG-carousel.html"
+[ -f "$HOOK" ] || [ -f "$CAROUSEL" ] || { echo "No $HOOK or $CAROUSEL" >&2; exit 1; }
 OUT_DIR="public/posts/$SLUG"
 mkdir -p "$OUT_DIR"
 
@@ -31,9 +34,11 @@ render() { # <src> <query> <WxH> <file>
   local out="$OUT_DIR/$3" profile
   profile="$(mktemp -d)"
   rm -f "$out"
+  local target=(--screenshot="$PWD/$out")
+  [[ "$out" == *.pdf ]] && target=(--print-to-pdf="$PWD/$out" --no-pdf-header-footer)
   "$CHROME" --headless=new --disable-gpu --hide-scrollbars \
     --user-data-dir="$profile" --window-size="$2" \
-    --screenshot="$PWD/$out" "file://$PWD/$SRC?$1" >/dev/null 2>&1 &
+    "${target[@]}" "file://$PWD/$SRC?$1" >/dev/null 2>&1 &
   local pid=$! prev=-1 size
   # Chrome does not always exit after writing; stop it once the file settles.
   for _ in $(seq 1 60); do
@@ -54,4 +59,6 @@ if [ -f "scripts/post-cards/$SLUG.html" ]; then
   render "scripts/post-cards/$SLUG.html" "size=og&lang=en" 1200,627 og.png
   render "scripts/post-cards/$SLUG.html" "size=og&lang=ru" 1200,627 og-ru.png
 fi
-render "$HOOK" "" 1080,1350 linkedin.png
+[ -f "$HOOK" ] && render "$HOOK" "" 1080,1350 linkedin.png
+[ -f "$CAROUSEL" ] && render "$CAROUSEL" "" 1080,1350 carousel.pdf
+exit 0

@@ -1,0 +1,208 @@
+<!doctype html>
+<!--
+  PDF carousel for the LinkedIn post "Stop pasting the same context" (6 pages, 1080x1350).
+  Facts: help.openai.com (custom instructions, projects, memory) and support.claude.com
+  (personalization, memory), checked 2026-11-20. Check the menu names again before posting.
+  Rendered by scripts/build-post-cards.sh → public/posts/same-context/carousel.pdf
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      @page {
+        size: 1080px 1350px;
+        margin: 0;
+      }
+      html,
+      body {
+        display: block;
+        overflow: visible;
+        width: 1080px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .slide {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 1080px;
+        height: 1350px;
+        padding: 88px 80px;
+        background: var(--bg);
+        break-after: page;
+      }
+      .slide:last-child {
+        break-after: auto;
+      }
+      .slide h1 {
+        font-size: 96px;
+        letter-spacing: -3px;
+        line-height: 1.04;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .num {
+        font-family: 'Geist Mono', monospace;
+        font-size: 30px;
+        color: var(--accent);
+      }
+      .lead {
+        margin: -12px 0 0;
+        font-size: 40px;
+        line-height: 1.3;
+        color: var(--text-secondary);
+      }
+      .app {
+        padding: 30px 34px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: var(--bg-elevated);
+      }
+      .app h2 {
+        font-size: 34px;
+      }
+      .app p {
+        margin: 14px 0 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 28px;
+        line-height: 1.4;
+        color: var(--text-primary);
+      }
+      .app small {
+        display: block;
+        margin-top: 10px;
+        font-family: 'Inter', sans-serif;
+        font-size: 26px;
+        color: var(--text-muted);
+      }
+      .prompt {
+        padding: 36px 40px;
+        border-radius: 22px;
+        background: #ecfdf5;
+        color: #064e3b;
+        font-size: 38px;
+        line-height: 1.4;
+      }
+      .rows {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      .row {
+        display: flex;
+        gap: 24px;
+        align-items: baseline;
+        font-size: 40px;
+        line-height: 1.25;
+      }
+      .row b {
+        color: var(--accent);
+        white-space: nowrap;
+      }
+      .swipe {
+        margin-top: auto;
+        font-family: 'Geist Mono', monospace;
+        font-size: 26px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Cover -->
+    <div class="slide">
+      <div class="glow"></div>
+      <div class="top">
+        <span><span class="dot"></span>ChatGPT · Claude</span>
+        <span>AI at work</span>
+      </div>
+      <h1>Stop pasting<br />the same context<br /><em>into every chat.</em></h1>
+      <p class="lead">Three places where ChatGPT and Claude keep it for you.</p>
+      <p class="swipe">Swipe →  where each one lives, as of Dec 2026</p>
+    </div>
+
+    <!-- 2. Instructions -->
+    <div class="slide">
+      <span class="num">1 / Instructions</span>
+      <h1>Who you are and<br /><em>how you like answers.</em></h1>
+      <p class="lead">Every new chat uses them.</p>
+      <div class="app">
+        <h2>ChatGPT</h2>
+        <p>Settings → Personalization → Custom Instructions</p>
+        <small>All plans. Free: up to 1,500 characters.</small>
+      </div>
+      <div class="app">
+        <h2>Claude</h2>
+        <p>Settings → Your Claude → Instructions</p>
+        <small>Applied to all your conversations.</small>
+      </div>
+    </div>
+
+    <!-- 3. Projects -->
+    <div class="slide">
+      <span class="num">2 / Projects</span>
+      <h1>Files and rules for<br /><em>one piece of work.</em></h1>
+      <p class="lead">A client, a report, a job search. Chats inside share the same files.</p>
+      <div class="app">
+        <h2>ChatGPT</h2>
+        <p>New project → ••• → Project settings</p>
+        <small>Depends on your plan.</small>
+      </div>
+      <div class="app">
+        <h2>Claude</h2>
+        <p>Projects → New project</p>
+        <small>Free accounts: up to 5 projects.</small>
+      </div>
+    </div>
+
+    <!-- 4. Memory -->
+    <div class="slide">
+      <span class="num">3 / Memory</span>
+      <h1>What it picks up<br /><em>from your chats.</em></h1>
+      <p class="lead">Useful, and sometimes wrong. Open it once a month and delete what's off.</p>
+      <div class="app">
+        <h2>ChatGPT</h2>
+        <p>Settings → Personalization → Memory</p>
+        <small>Varies by plan and region.</small>
+      </div>
+      <div class="app">
+        <h2>Claude</h2>
+        <p>On by default, Free plan included</p>
+        <small>Each project also keeps its own memory.</small>
+      </div>
+    </div>
+
+    <!-- 5. Example instructions -->
+    <div class="slide">
+      <span class="num">Copy this</span>
+      <h1>Instructions<br /><em>to start with.</em></h1>
+      <div class="prompt">
+        I work as a [role] at a [type of company]. Write in plain English,
+        short paragraphs. If something is unclear, ask me one question first.
+        Don't invent numbers or names.
+      </div>
+      <p class="lead">Fill in the brackets. Change one line a week, not all at once.</p>
+    </div>
+
+    <!-- 6. Rule of thumb -->
+    <div class="slide">
+      <div class="glow"></div>
+      <span class="num">Rule of thumb</span>
+      <div class="rows">
+        <div class="row"><b>Every chat →</b><span>instructions</span></div>
+        <div class="row"><b>One job →</b><span>a project</span></div>
+        <div class="row"><b>Picked up →</b><span>memory, check it monthly</span></div>
+      </div>
+      <h1 style="margin-top: auto">Save this.<br /><em>Set it up once.</em></h1>
+      <div class="bottom" style="margin-top: 0">
+        <span>Aleksandr Chumak</span>
+        <span>Senior Full-Stack Engineer</span>
+      </div>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

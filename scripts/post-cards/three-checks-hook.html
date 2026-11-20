@@ -1,0 +1,102 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Three checks before you send AI text" (1080x1350).
+  Numbers: betterup.com/workslop and betterup.com/blog/hidden-costs-workslop, checked 2026-11-20.
+  Rendered by scripts/build-post-cards.sh → public/posts/three-checks/linkedin.png
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post {
+        gap: 48px;
+      }
+      body.post h1 {
+        font-size: 96px;
+        letter-spacing: -3px;
+        line-height: 1.02;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .checks {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        padding: 26px 30px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: var(--bg-elevated);
+        font-size: 38px;
+        line-height: 1.2;
+      }
+      .check b {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 999px;
+        background: rgba(167, 139, 250, 0.15);
+        color: var(--accent);
+        font-size: 34px;
+      }
+      .check p {
+        margin: 0;
+      }
+      .check span {
+        color: var(--text-secondary);
+      }
+      .stat {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.35;
+        color: var(--text-secondary);
+      }
+      .stat b {
+        color: var(--text-primary);
+      }
+      .stat small {
+        display: block;
+        margin-top: 10px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI at work</span>
+      <span>Before you hit send</span>
+    </div>
+
+    <h1>3 checks before<br />you send <em>AI text.</em></h1>
+
+    <div class="checks">
+      <div class="check"><b>1</b><p>Every number and name <span>against the source</span></p></div>
+      <div class="check"><b>2</b><p>Every claim <span>you'd defend in a meeting</span></p></div>
+      <div class="check"><b>3</b><p>Length and tone <span>next to how you write</span></p></div>
+    </div>
+
+    <p class="stat">
+      <b>40%</b> of US desk workers say they got AI "workslop" in the last
+      month. <b>42%</b> saw the sender as less trustworthy.
+      <small>BetterUp survey, n=1,150, Sep 2025, self-reported</small>
+    </p>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>
