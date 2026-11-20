@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+#
+# Renders the images of one post from scripts/post-cards/<slug>.html:
+#   public/posts/<slug>/og.png        link preview, EN (1200x627)
+#   public/posts/<slug>/og-ru.png     link preview, RU
+#   public/posts/<slug>/linkedin.png  image for the LinkedIn post (1080x1350)
+#
+# Usage: pnpm posts:cards <slug>
+#
+# After changing an image of a published post, bump its `date` in
+# src/posts/meta.json and run `pnpm posts:pages`: LinkedIn caches previews by URL.
+#
+# Requires: Google Chrome. Same render loop as build-og.sh.
+
+set -euo pipefail
+
+SLUG="${1:?usage: build-post-cards.sh <slug>}"
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+[ -x "$CHROME" ] || { echo "Google Chrome not found at $CHROME" >&2; exit 1; }
+
+cd "$(dirname "$0")/.."
+SRC="scripts/post-cards/$SLUG.html"
+[ -f "$SRC" ] || { echo "No $SRC" >&2; exit 1; }
+OUT_DIR="public/posts/$SLUG"
+mkdir -p "$OUT_DIR"
+
+render() { # <query> <WxH> <file>
+  local out="$OUT_DIR/$3" profile
+  profile="$(mktemp -d)"
+  rm -f "$out"
+  "$CHROME" --headless=new --disable-gpu --hide-scrollbars \
+    --user-data-dir="$profile" --window-size="$2" \
+    --screenshot="$PWD/$out" "file://$PWD/$SRC?$1" >/dev/null 2>&1 &
+  local pid=$! prev=-1 size
+  # Chrome does not always exit after writing; stop it once the file settles.
+  for _ in $(seq 1 60); do
+    sleep 0.5
+    size=$(stat -f%z "$PWD/$out" 2>/dev/null || echo 0)
+    [ "$size" -gt 0 ] && [ "$size" = "$prev" ] && break
+    prev=$size
+  done
+  kill "$pid" 2>/dev/null || true
+  wait "$pid" 2>/dev/null || true
+  rm -rf "$profile"
+  [ -s "$out" ] || { echo "  ✗ $out not rendered" >&2; exit 1; }
+  echo "  $out  $(file -b "$out" | cut -d, -f2)"
+}
+
+render "size=og&lang=en" 1200,627 og.png
+render "size=og&lang=ru" 1200,627 og-ru.png
+render "size=post&lang=en" 1080,1350 linkedin.png

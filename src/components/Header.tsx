@@ -51,6 +51,12 @@ export function Header() {
                 </a>
               )
             })}
+            <a
+              href="/posts/"
+              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+            >
+              {t('nav.posts')}
+            </a>
             <ThemeToggle />
             <LanguageToggle />
           </nav>

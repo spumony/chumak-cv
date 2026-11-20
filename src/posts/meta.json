@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "claude-md-vs-hooks",
+    "date": "2026-11-24",
+    "en": {
+      "title": "CLAUDE.md is a suggestion. Hooks are rules.",
+      "description": "What belongs in CLAUDE.md, what belongs in a Claude Code hook, and a short PreToolUse hook that blocks rm -rf and force pushes."
+    },
+    "ru": {
+      "title": "CLAUDE.md только советует. Hooks задают правила.",
+      "description": "Что держать в CLAUDE.md, что выносить в hook Claude Code, и короткий PreToolUse hook, который блокирует rm -rf и force push."
+    }
+  }
+]

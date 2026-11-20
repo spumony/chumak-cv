@@ -134,6 +134,12 @@ export function MobileMenu({ open, onClose, activeId }: MobileMenuProps) {
                   </a>
                 )
               })}
+              <a
+                href="/posts/"
+                className="flex min-h-14 items-center text-2xl font-medium text-text-primary transition-colors"
+              >
+                {t('nav.posts')}
+              </a>
               <div className="mt-6 flex items-center gap-3">
                 <LanguageToggle />
                 <ThemeToggle />
