@@ -22,7 +22,12 @@ jobs:
     env:
       DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
       DEPLOY_USER: deploy
-      DEPLOY_PATH: /var/www/chumak-cv/dist/
+      # The deploy key is locked on the server to
+      #   restrict,command="/usr/bin/rrsync -wo /var/www/chumak-cv"
+      # so paths are relative to /var/www/chumak-cv and this lands in .../dist/.
+      # Keep it a relative subdir: an absolute path would nest under the rrsync
+      # root, and `./` or `/` would make --delete hit $HOME if the lock were removed.
+      DEPLOY_PATH: dist/
       DEPLOY_URL: https://chumak.is-a.dev/
       # Server SSH host key — pinned to prevent MITM. The host itself is a secret.
       # Regenerate with: ssh-keyscan -t ed25519 <host>
