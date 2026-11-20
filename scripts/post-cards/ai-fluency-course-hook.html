@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "A free AI course without code" (1080x1350).
+  Facts: academy.claude.com/courses/ai-fluency-framework-foundations, checked 2026-11-20.
+  Rendered by scripts/build-post-cards.sh → public/posts/<slug>/linkedin.png
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post h1 {
+        font-size: 104px;
+        letter-spacing: -3px;
+        line-height: 1.02;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .facts {
+        display: flex;
+        gap: 16px;
+        margin-top: -16px;
+      }
+      .facts span {
+        padding: 12px 22px;
+        border: 2px solid var(--border);
+        border-radius: 999px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 26px;
+        color: var(--text-secondary);
+      }
+      .facts .free {
+        border-color: var(--success);
+        color: var(--success);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .d {
+        padding: 30px 32px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: var(--bg-elevated);
+      }
+      .d b {
+        display: block;
+        font-size: 40px;
+        letter-spacing: -1px;
+      }
+      .d b::first-letter {
+        color: var(--accent);
+      }
+      .d p {
+        margin: 12px 0 0;
+        font-size: 30px;
+        line-height: 1.3;
+        color: var(--text-secondary);
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Claude Academy by Anthropic</span>
+      <span>AI at work</span>
+    </div>
+
+    <h1>A free AI course.<br /><em>Zero code.</em></h1>
+
+    <div class="facts">
+      <span class="free">Free</span>
+      <span>14 lessons</span>
+      <span>~4 hours</span>
+      <span>Any AI tool</span>
+    </div>
+
+    <div class="grid">
+      <div class="d">
+        <b>Delegation</b>
+        <p>What to hand to AI and what to keep</p>
+      </div>
+      <div class="d">
+        <b>Description</b>
+        <p>What you want, how to get there, how AI should behave</p>
+      </div>
+      <div class="d">
+        <b>Discernment</b>
+        <p>Check the answer before you use it</p>
+      </div>
+      <div class="d">
+        <b>Diligence</b>
+        <p>Own what you send, even if AI drafted it</p>
+      </div>
+    </div>
+
+    <p class="rule">
+      <b>Four habits</b> that work the same in ChatGPT, Copilot and Claude.
+    </p>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>academy.claude.com</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Google or ChatGPT" (1080x1350).
+  Rendered by scripts/build-post-cards.sh → public/posts/<slug>/linkedin.png
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post h1 {
+        font-size: 100px;
+        letter-spacing: -3px;
+        line-height: 1.02;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 30px;
+        border-radius: 22px;
+      }
+      .google {
+        border: 2px solid rgba(96, 165, 250, 0.6);
+        background: rgba(96, 165, 250, 0.07);
+      }
+      .chat {
+        border: 2px solid rgba(167, 139, 250, 0.6);
+        background: rgba(167, 139, 250, 0.08);
+      }
+      .col h2 {
+        font-size: 40px;
+        letter-spacing: -1px;
+      }
+      .google h2 {
+        color: #93c5fd;
+      }
+      .chat h2 {
+        color: var(--accent);
+      }
+      .col li {
+        font-size: 29px;
+      }
+      .best {
+        margin-top: auto;
+        padding-top: 22px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      .best b {
+        display: block;
+        margin-top: 8px;
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        letter-spacing: 0;
+        text-transform: none;
+        color: var(--text-primary);
+      }
+      .light .google h2 {
+        color: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Google · ChatGPT</span>
+      <span>AI at work</span>
+    </div>
+
+    <h1>Google or ChatGPT?<br /><em>Pick by the task.</em></h1>
+
+    <div class="cols">
+      <div class="col google">
+        <h2>Google first</h2>
+        <ul>
+          <li>Prices, opening hours, rates</li>
+          <li>The official page</li>
+          <li>A source to cite or forward</li>
+          <li>Today's news</li>
+        </ul>
+        <p class="best">Best for <b>Facts you must trust</b></p>
+      </div>
+      <div class="col chat">
+        <h2>ChatGPT first</h2>
+        <ul>
+          <li>A first draft of an email</li>
+          <li>A summary of your notes</li>
+          <li>A clause in plain words</li>
+          <li>Options you already have</li>
+        </ul>
+        <p class="best">Best for <b>Words you will edit</b></p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>
