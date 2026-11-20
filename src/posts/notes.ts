@@ -20,6 +20,13 @@ export const notes: Note[] = meta.map((m) => ({ ...m, Body: bodies[m.slug] }))
 export const postPath = (lang: Language, slug?: string) =>
   `/posts/${slug ? `${slug}/` : ''}${lang === 'ru' ? 'ru/' : ''}`
 
+// "24 November 2026" / "24 ноября 2026 г.". T12:00 keeps the day in any time zone.
+export const formatDate = (date: string, lang: Language) =>
+  new Date(`${date}T12:00:00`).toLocaleDateString(
+    lang === 'ru' ? 'ru-RU' : 'en-GB',
+    { day: 'numeric', month: 'long', year: 'numeric' },
+  )
+
 // The LinkedIn image of a post (pnpm posts:cards). ?v= busts the 1-day png cache.
 export const postImage = (note: Note) =>
   `/posts/${note.slug}/linkedin.png?v=${note.date}`

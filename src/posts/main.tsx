@@ -8,7 +8,8 @@ import i18n, { type Language } from '../i18n'
 import { ThemeProvider } from '../theme/ThemeProvider'
 import { NoteLayout } from './NoteLayout'
 import { NotesIndex } from './NotesIndex'
-import { notes } from './notes'
+import { hero } from '../data/hero'
+import { formatDate, notes } from './notes'
 import { PostImage } from './PostImage'
 
 // One entry for every post page:
@@ -27,13 +28,17 @@ createRoot(document.getElementById('root')!).render(
       <NoteLayout lang={lang} slug={note?.slug}>
         {note && Body ? (
           <article className="note">
+            {/* Blog order: title, lead, byline, image, then the text. */}
+            <h1>{note[lang].title}</h1>
+            <p className="text-lg">{note[lang].description}</p>
+            <p className="font-mono text-xs text-text-muted">
+              {hero.name[lang]} · {formatDate(note.date, lang)}
+            </p>
             <PostImage
               note={note}
               lang={lang}
-              className="mb-8 h-auto w-full max-w-sm"
+              className="mx-auto my-10 h-auto w-full max-w-md"
             />
-            <p className="font-mono text-xs text-text-muted">{note.date}</p>
-            <h1>{note[lang].title}</h1>
             <Body />
           </article>
         ) : (

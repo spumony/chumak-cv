@@ -1,6 +1,7 @@
 import { Mail } from 'lucide-react'
 import { LinkedinIcon } from '../components/ui/icons'
 import { contact } from '../data/contact'
+import { hero } from '../data/hero'
 import type { Language } from '../i18n'
 
 const base =
@@ -36,31 +37,54 @@ export function HiringBanner({ lang }: { lang: Language }) {
   return (
     <aside
       aria-label={t.label}
-      className="mt-14 rounded-xl border border-accent/40 bg-bg-elevated p-5 sm:p-6"
+      className="mt-14 overflow-hidden rounded-2xl border border-accent/40 bg-bg-elevated"
     >
-      <p className="font-mono text-xs tracking-wide text-accent uppercase">
-        {t.badge}
-      </p>
-      <h2 className="mt-2 text-xl font-semibold text-text-primary">
-        {t.title}
-      </h2>
-      <p className="mt-3 text-text-secondary">{t.about}</p>
-      <p className="mt-3 text-text-secondary">{t.ask}</p>
-      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-        <a
-          href={`mailto:${contact.email}`}
-          className={`${base} bg-accent text-bg hover:bg-accent-hover`}
-        >
-          <Mail aria-hidden className="h-4 w-4" />
-          {t.email}
-        </a>
-        <a href="/" className={secondary}>
-          {t.cv}
-        </a>
-        <a href="https://www.linkedin.com/in/spumony" className={secondary}>
-          <LinkedinIcon className="h-4 w-4" />
-          LinkedIn
-        </a>
+      <div className="bg-linear-to-br from-accent/15 to-transparent p-5 sm:p-7">
+        <div className="flex items-center gap-4 sm:gap-5">
+          <div className="relative shrink-0">
+            <img
+              src={hero.avatar}
+              alt={hero.name[lang]}
+              width={160}
+              height={160}
+              loading="lazy"
+              className="h-16 w-16 rounded-full object-cover ring-2 ring-accent/50 ring-offset-2 ring-offset-bg-elevated sm:h-20 sm:w-20"
+            />
+            <span
+              aria-hidden
+              className="absolute right-0.5 bottom-0.5 h-4 w-4 rounded-full border-2 border-bg-elevated bg-success"
+            />
+          </div>
+          <div className="min-w-0">
+            <p className="font-mono text-xs tracking-wide text-success uppercase">
+              {t.badge}
+            </p>
+            <h2 className="mt-1 text-xl font-semibold text-text-primary sm:text-2xl">
+              {t.title}
+            </h2>
+            <p className="mt-1 text-sm text-text-muted">
+              {hero.name[lang]} · {hero.role[lang]}
+            </p>
+          </div>
+        </div>
+        <p className="mt-5 text-text-secondary">{t.about}</p>
+        <p className="mt-3 text-text-secondary">{t.ask}</p>
+        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={`mailto:${contact.email}`}
+            className={`${base} bg-accent text-bg hover:bg-accent-hover`}
+          >
+            <Mail aria-hidden className="h-4 w-4" />
+            {t.email}
+          </a>
+          <a href="/" className={secondary}>
+            {t.cv}
+          </a>
+          <a href="https://www.linkedin.com/in/spumony" className={secondary}>
+            <LinkedinIcon className="h-4 w-4" />
+            LinkedIn
+          </a>
+        </div>
       </div>
     </aside>
   )

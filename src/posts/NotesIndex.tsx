@@ -1,5 +1,5 @@
 import type { Language } from '../i18n'
-import { notes, postPath } from './notes'
+import { formatDate, notes, postPath } from './notes'
 import { PostImage } from './PostImage'
 
 const TEXT = {
@@ -34,7 +34,9 @@ export function NotesIndex({ lang }: { lang: Language }) {
                 className="hidden h-auto w-28 shrink-0 self-start sm:block"
               />
               <div className="min-w-0">
-                <p className="font-mono text-xs text-text-muted">{n.date}</p>
+                <p className="font-mono text-xs text-text-muted">
+                  {formatDate(n.date, lang)}
+                </p>
                 <h2 className="mt-1 text-lg font-semibold sm:text-xl">
                   {n[lang].title}
                 </h2>
