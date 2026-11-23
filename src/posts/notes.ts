@@ -5,10 +5,12 @@ import {
   ClaudeMdVsHooksEn,
   ClaudeMdVsHooksRu,
 } from './articles/ClaudeMdVsHooks'
+import { WriteTheReasonEn, WriteTheReasonRu } from './articles/WriteTheReason'
 
 // Titles and descriptions live in meta.json: the page generator reads them too.
 const bodies: Record<string, Record<Language, ComponentType>> = {
   'claude-md-vs-hooks': { en: ClaudeMdVsHooksEn, ru: ClaudeMdVsHooksRu },
+  'write-the-reason': { en: WriteTheReasonEn, ru: WriteTheReasonRu },
 }
 
 export type Note = (typeof meta)[number] & {

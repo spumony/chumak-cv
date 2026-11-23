@@ -1,7 +1,21 @@
 [
   {
-    "slug": "claude-md-vs-hooks",
+    "slug": "write-the-reason",
     "date": "2026-11-24",
+    "en": {
+      "title": "Stop writing NEVER in capital letters to ChatGPT. Tell it why.",
+      "description": "Why a reason works better than an order in a prompt, three rewrites, and a four-line template for the reason.",
+      "imageAlt": "Card titled \"Stop shouting at AI. Tell it why.\" A crossed-out order, NEVER USE JARGON, is replaced by a reason: this email goes to a client who runs a bakery and doesn't know our internal terms."
+    },
+    "ru": {
+      "title": "Не пишите ChatGPT НИКОГДА капслоком. Объясните причину.",
+      "description": "Почему причина в промпте работает лучше приказа, три замены и шаблон причины из четырёх строк.",
+      "imageAlt": "Карточка «Stop shouting at AI. Tell it why.»: зачёркнутый приказ NEVER USE JARGON, под ним причина: письмо уйдёт клиентке с пекарней, наших внутренних терминов она не знает."
+    }
+  },
+  {
+    "slug": "claude-md-vs-hooks",
+    "date": "2026-11-20",
     "en": {
       "title": "CLAUDE.md is a suggestion. Hooks are rules.",
       "description": "What belongs in CLAUDE.md, what belongs in a Claude Code hook, and a short PreToolUse hook that blocks rm -rf and force pushes.",
