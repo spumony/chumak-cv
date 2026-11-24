@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+  Link previews of the post "role-in-one-line". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/role-in-one-line/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/role-in-one-line/og-ru.png
+  The image in the LinkedIn post comes from role-in-one-line-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Prompting tip</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: 'Give your AI<br />a role in one line.',
+          orderH: 'Without a role',
+          reasonH: 'With a role',
+          soft: ['generic tone', 'generic focus'],
+          hard: ['a job title', 'the task right after'],
+          rule: 'Role first. <b>Then the task.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Дайте AI роль<br />одной строкой.',
+          orderH: 'Без роли',
+          reasonH: 'С ролью',
+          soft: ['общий тон', 'общий фокус'],
+          hard: ['должность', 'сразу после неё задача'],
+          rule: 'Сначала роль. <b>Потом задача.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+  Link previews of the post "google-prompting-guide". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/google-prompting-guide/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/google-prompting-guide/og-ru.png
+  The image in the LinkedIn post comes from google-prompting-guide-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Prompting tip</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: "Google's prompting guide<br />on one card.",
+          orderH: 'Who and what',
+          reasonH: 'Where and how',
+          soft: ['Persona', 'Task'],
+          hard: ['Context', 'Format'],
+          rule: 'Use a few of the four. <b>Always include a verb.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Руководство Google<br />по промптам на одной карточке.',
+          orderH: 'Кто и что',
+          reasonH: 'Где и как',
+          soft: ['Persona (роль)', 'Task (задача)'],
+          hard: ['Context (контекст)', 'Format (формат)'],
+          rule: 'Берите несколько из четырёх. <b>Всегда добавляйте глагол.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>

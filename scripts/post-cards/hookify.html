@@ -1,0 +1,91 @@
+<!doctype html>
+<!--
+  Link previews of the post "hookify". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/<slug>/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/<slug>/og-ru.png
+  ?size=post is the full cheat sheet (1080x1350), not rendered by default:
+  the image in the LinkedIn post comes from <slug>-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Claude Code plugin</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: 'Write the rule<br />in plain English.',
+          orderH: 'You type',
+          reasonH: 'It creates',
+          soft: [
+            '/hookify and a sentence',
+            'or /hookify alone',
+            'rules warn or block',
+          ],
+          hard: [
+            'a rule file in .claude',
+            'works on the next tool use',
+            'no restart',
+          ],
+          rule: 'hookify by Anthropic. <b>Test in an empty folder first.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Напишите правило<br />обычными словами.',
+          orderH: 'Вы пишете',
+          reasonH: 'Плагин создаёт',
+          soft: [
+            '/hookify и одну фразу',
+            'или просто /hookify',
+            'правило предупреждает или блокирует',
+          ],
+          hard: [
+            'файл правила в .claude',
+            'работает со следующего вызова',
+            'без перезапуска',
+          ],
+          rule: 'hookify от Anthropic. <b>Сначала проверьте в пустой папке.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>

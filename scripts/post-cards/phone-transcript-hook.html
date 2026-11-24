@@ -1,0 +1,116 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "The transcript in your phone (tool post)" (1080x1350).
+  Facts: support.apple.com/guide/iphone/iph00953a982, support.google.com/pixelphone/answer/16267698, samsung.com/us/support/answer/ANS10000942, checked 2026-11-24.
+  Rendered by scripts/build-post-cards.sh → public/posts/phone-transcript/linkedin.png
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <style>
+      body.post {
+        gap: 48px;
+      }
+      body.post h1 {
+        font-size: 96px;
+        letter-spacing: -3px;
+        line-height: 1.02;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .checks {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        padding: 26px 30px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: var(--bg-elevated);
+        font-size: 38px;
+        line-height: 1.2;
+      }
+      .check b {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 999px;
+        background: rgba(167, 139, 250, 0.15);
+        color: var(--accent);
+        font-size: 34px;
+      }
+      .check p {
+        margin: 0;
+      }
+      .check span {
+        color: var(--text-secondary);
+      }
+      .stat {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.35;
+        color: var(--text-secondary);
+      }
+      .stat b {
+        color: var(--text-primary);
+      }
+      .stat small {
+        display: block;
+        margin-top: 10px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body class="post">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Built-in recorder</span>
+      <span>No extra app</span>
+    </div>
+
+    <h1>
+      Your phone <em>already<br />transcribes</em> meetings.
+    </h1>
+
+    <div class="checks">
+      <div class="check">
+        <b>iOS</b>
+        <p>iPhone 12 or later <span>Voice Memos</span></p>
+      </div>
+      <div class="check">
+        <b>G</b>
+        <p>Pixel 6 or later <span>Recorder</span></p>
+      </div>
+      <div class="check">
+        <b>S</b>
+        <p>Galaxy, One UI 6.1+ <span>Voice Recorder</span></p>
+      </div>
+    </div>
+
+    <p class="stat">
+      Paste the text into ChatGPT or Claude:
+      <b
+        >"Turn this transcript into a recap: decisions, tasks with owners, open
+        questions."</b
+      >
+      <small>Ask everyone before you record.</small>
+    </p>
+
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

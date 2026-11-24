@@ -1,5 +1,201 @@
 [
   {
+    "slug": "pptx-skill",
+    "date": "2026-12-31",
+    "en": {
+      "title": "Turn one page of notes into a five-slide deck.",
+      "description": "Claude's built-in PowerPoint skill makes .pptx decks. How to turn it on, a prompt for one page into five slides, and what to check before you send.",
+      "imageAlt": "Dark card titled \"One page of notes. Five slides.\" with three steps: turn on Create and edit files, paste your summary and say what each slide holds, download the .pptx and check every number. A note says the design is generic and the facts are yours to verify."
+    },
+    "ru": {
+      "title": "Превратите страницу заметок в презентацию из пяти слайдов.",
+      "description": "Встроенный скилл PowerPoint в Claude создаёт презентации .pptx. Как включить, промпт для превращения страницы в пять слайдов и что проверить перед отправкой.",
+      "imageAlt": "Тёмная карточка «Одна страница заметок. Пять слайдов.» с тремя шагами: включите Create and edit files, вставьте сводку и скажите, что в каждом слайде, скачайте .pptx и проверьте каждую цифру. Внизу пометка: дизайн типовой, факты проверяете вы."
+    }
+  },
+  {
+    "slug": "boss-gets-more",
+    "date": "2026-12-29",
+    "en": {
+      "title": "Why your boss gets more out of AI than you.",
+      "description": "Microsoft's Work Trend Index 2025 shows leaders use AI more than employees. A three-line brief template to try: Task, Who reads it, Done means.",
+      "imageAlt": "Dark card titled \"Why your boss gets more out of AI\" with a three-line prompt: Task, Who reads it, Done means, filled in for an update on a late launch. The footer says: Brief AI like you brief a person."
+    },
+    "ru": {
+      "title": "Почему у начальника с AI получается больше, чем у вас.",
+      "description": "По Work Trend Index 2025 от Microsoft руководители пользуются AI чаще сотрудников. Шаблон задачи из трёх строк: задача, кто читает, что значит «готово».",
+      "imageAlt": "Тёмная карточка «Почему у начальника с AI получается больше» с промптом из трёх строк: задача, кто читает, что значит «готово», заполненным для апдейта о задержке запуска. Внизу надпись: ставьте задачу AI как человеку."
+    }
+  },
+  {
+    "slug": "hookify",
+    "date": "2026-12-28",
+    "en": {
+      "title": "Tell Claude Code a rule once. Let hookify enforce it.",
+      "description": "hookify is Anthropic's official Claude Code plugin that turns a plain-English rule into a hook. Install, the rule file, warn vs block, and a safe test.",
+      "imageAlt": "Dark card titled \"Write the rule in plain English\" with three steps: type /hookify and describe the rule, it writes the rule file in your .claude folder, it works on the next tool use with no restart. The install command is at the bottom. Credit: plugin by Anthropic."
+    },
+    "ru": {
+      "title": "Скажите Claude Code правило один раз. hookify будет его соблюдать.",
+      "description": "hookify это официальный плагин Anthropic для Claude Code, который превращает правило из обычных слов в hook. Установка, файл правила, warn и block, безопасная проверка.",
+      "imageAlt": "Тёмная карточка «Напишите правило обычными словами» с тремя шагами: введите /hookify и опишите правило, плагин создаёт файл правила в папке .claude, правило работает со следующего вызова без перезапуска. Внизу команда установки. Плагин от Anthropic."
+    }
+  },
+  {
+    "slug": "google-prompting-guide",
+    "date": "2026-12-24",
+    "en": {
+      "title": "Google's free prompting guide, boiled down to one card.",
+      "description": "The four parts of a prompt from Google's Workspace with Gemini guide, a fill-in template and the six quick tips.",
+      "imageAlt": "Dark card titled \"Google's prompting guide on one card\" listing four parts of a prompt: persona, task, context and format, each with a one-line meaning. The footer says: Use a few of the four. Then follow up."
+    },
+    "ru": {
+      "title": "Бесплатное руководство Google по промптам на одной карточке.",
+      "description": "Четыре части промпта из руководства Google для Workspace with Gemini, шаблон и шесть быстрых советов.",
+      "imageAlt": "Тёмная карточка «Руководство Google по промптам на одной карточке» с четырьмя частями промпта: роль, задача, контекст и формат, у каждой короткое пояснение. Внизу надпись: берите несколько из четырёх, потом уточняйте."
+    }
+  },
+  {
+    "slug": "prompt-master",
+    "date": "2026-12-22",
+    "en": {
+      "title": "Let Claude write the prompt for your other AI",
+      "description": "What the prompt-master skill does, how to install it in the Claude app and Claude Code, a brief to fill in and its real limits.",
+      "imageAlt": "Dark card titled \"Let Claude write the prompt for your other AI.\" Three steps: add the skill in Customize, Skills; name the tool and the goal; answer up to 3 questions, then copy the prompt. A note says to read the prompt before pasting it. Credit: by nidhinjs."
+    },
+    "ru": {
+      "title": "Пусть Claude напишет промпт для вашего другого ИИ",
+      "description": "Что делает скилл prompt-master, как поставить его в приложение Claude и в Claude Code, бриф для заполнения и реальные ограничения.",
+      "imageAlt": "Тёмная карточка «Пусть Claude напишет промпт для вашего другого ИИ». Три шага: добавить скилл в Customize, Skills; назвать инструмент и цель; ответить максимум на 3 вопроса и скопировать промпт. Заметка советует прочитать промпт перед вставкой. Автор: nidhinjs."
+    }
+  },
+  {
+    "slug": "role-in-one-line",
+    "date": "2026-12-21",
+    "en": {
+      "title": "Give your AI a role in one line.",
+      "description": "Anthropic's guide says one sentence for a role changes the AI's tone and focus. Five role lines for office tasks and a template.",
+      "imageAlt": "Dark card titled \"Give your AI a role in one line\" with three example role lines for a customer reply, meeting notes and a spreadsheet. The footer says: Role first. Then the task."
+    },
+    "ru": {
+      "title": "Дайте AI роль одной строкой.",
+      "description": "В руководстве Anthropic сказано, что одна фраза с ролью меняет тон и фокус ответа AI. Пять строк для офисных задач и шаблон.",
+      "imageAlt": "Тёмная карточка «Дайте AI роль одной строкой» с тремя примерами ролей для ответа клиенту, заметок со встречи и таблицы. Внизу надпись: сначала роль, потом задача."
+    }
+  },
+  {
+    "slug": "gmail-drafts",
+    "date": "2026-12-17",
+    "en": {
+      "title": "Claude writes the reply. You press send.",
+      "description": "How to connect Gmail to Claude, block the sending tools and use it for reply drafts only, with a prompt to copy and the prompt injection risk.",
+      "imageAlt": "Dark card titled \"Claude writes the reply. You press send.\" Three steps: connect Gmail in Customize, Connectors; set sending tools to Blocked under Tool permissions; read every draft, then send it yourself. A note warns that hidden instructions in an email can mislead an AI."
+    },
+    "ru": {
+      "title": "Claude пишет ответ. Отправляете вы.",
+      "description": "Как подключить Gmail к Claude, заблокировать отправку и использовать его только для черновиков ответов: промпт, чек-лист и риск prompt injection.",
+      "imageAlt": "Тёмная карточка «Claude пишет ответ. Отправляете вы.» Три шага: подключить Gmail в Customize, Connectors; поставить Blocked на инструменты отправки в Tool permissions; прочитать каждый черновик и отправить самому. Заметка предупреждает, что скрытые инструкции в письме могут сбить ИИ."
+    }
+  },
+  {
+    "slug": "google-or-chatgpt",
+    "date": "2026-12-15",
+    "en": {
+      "title": "Google or ChatGPT: which one to open first, task by task.",
+      "description": "A simple split between facts you must trust and words you will edit, with a cheat sheet to copy.",
+      "imageAlt": "Dark card titled \"Google or ChatGPT? Pick by the task.\" with two columns. Google first: prices, opening hours, rates, the official page, a source to cite, today's news. ChatGPT first: a first draft of an email, a summary of your notes, a clause in plain words, options you already have."
+    },
+    "ru": {
+      "title": "Google или ChatGPT: что открыть первым, задача за задачей.",
+      "description": "Простое разделение: факты, которым нужно доверять, и текст, который вы будете править. Шпаргалка для копирования.",
+      "imageAlt": "Тёмная карточка «Google или ChatGPT? Решает задача.» с двумя колонками. Сначала Google: цены, часы работы, курсы, официальная страница, источник для цитаты, новости дня. Сначала ChatGPT: черновик письма, краткое изложение заметок, пункт договора простыми словами, варианты, которые у вас уже есть."
+    }
+  },
+  {
+    "slug": "xlsx-skill",
+    "date": "2026-12-14",
+    "en": {
+      "title": "Claude can build a spreadsheet with working formulas",
+      "description": "How to turn on file creation in Claude, a one-minute budget-sheet demo, and how to check the formulas before you send the file.",
+      "imageAlt": "Dark card titled \"Ask Claude for a spreadsheet with real formulas\". Three steps: turn on file creation in Settings, paste a messy list and ask for a sheet with formulas, download the .xlsx and click a total cell."
+    },
+    "ru": {
+      "title": "Claude умеет делать таблицу с рабочими формулами",
+      "description": "Как включить создание файлов в Claude, демо бюджета на одну минуту и как проверить формулы перед отправкой файла.",
+      "imageAlt": "Тёмная карточка «Попросите Claude таблицу с настоящими формулами». Три шага: включить создание файлов в Settings, вставить список и попросить таблицу с формулами, скачать .xlsx и кликнуть ячейку с итогом."
+    }
+  },
+  {
+    "slug": "humanizer",
+    "date": "2026-12-08",
+    "en": {
+      "title": "Run your AI draft through a free skill before you post it",
+      "description": "humanizer is a free skill by blader that removes the signs of AI writing from a draft. Install steps for Claude Code and the Claude app, and what it cannot do.",
+      "imageAlt": "Dark card titled \"Remove the AI tells before you post\". It shows a sample sentence before and after humanizer, and the command to install the skill by blader."
+    },
+    "ru": {
+      "title": "Прогоните AI-черновик через бесплатный скилл перед публикацией",
+      "description": "humanizer это бесплатный скилл от blader, который убирает из черновика признаки AI-письма. Установка в Claude Code и в приложении Claude, и что он не умеет.",
+      "imageAlt": "Тёмная карточка «Уберите признаки AI до публикации». На ней пример предложения до и после humanizer и команда установки скилла от blader."
+    }
+  },
+  {
+    "slug": "ai-fluency-course",
+    "date": "2026-12-07",
+    "en": {
+      "title": "Anthropic has a free AI course for people who don't code.",
+      "description": "AI Fluency: Framework and Foundations has 14 lessons, a quiz and a badge. The 4D framework, explained, and how to enrol.",
+      "imageAlt": "Dark card titled \"A free AI course. Zero code.\" with the facts Free, 14 lessons, about 4 hours, any AI tool, and four cards: Delegation, Description, Discernment, Diligence, each with a one-line meaning."
+    },
+    "ru": {
+      "title": "У Anthropic есть бесплатный курс по AI для тех, кто не программирует.",
+      "description": "В курсе AI Fluency 14 уроков, тест и значок. Фреймворк 4D с объяснением и как записаться.",
+      "imageAlt": "Тёмная карточка «Бесплатный курс по AI. Без кода.» с фактами: бесплатно, 14 уроков, около 4 часов, любой AI, и четыре карточки: Delegation, Description, Discernment, Diligence, у каждой короткое пояснение."
+    }
+  },
+  {
+    "slug": "same-context",
+    "date": "2026-12-03",
+    "en": {
+      "title": "Stop pasting the same context into ChatGPT every day.",
+      "description": "Where ChatGPT and Claude keep your instructions, projects and memory, with menu paths and a starter instruction to copy.",
+      "imageAlt": "Link preview: \"Stop pasting the same context every day\", with a column of repeated lines you paste and a column of three places to save them once: instructions, projects, memory."
+    },
+    "ru": {
+      "title": "Хватит вставлять один и тот же контекст в ChatGPT каждый день.",
+      "description": "Где ChatGPT и Claude хранят инструкции, проекты и память: пути в меню и стартовая инструкция для копирования.",
+      "imageAlt": "Превью ссылки: «Хватит вставлять один и тот же контекст», слева строки, которые вы вставляете каждый раз, справа три места, где их сохранить один раз: инструкции, проекты, память."
+    }
+  },
+  {
+    "slug": "three-checks",
+    "date": "2026-12-01",
+    "en": {
+      "title": "Before you send AI text, run these 3 checks",
+      "description": "What BetterUp's workslop survey found, three checks to run before you send AI-written text, and a checklist to copy.",
+      "imageAlt": "Dark card titled \"3 checks before you send AI text\". Three numbered rows: every number and name against the source, every claim you'd defend in a meeting, length and tone next to how you write. Below, BetterUp survey figures: 40% got workslop last month, 42% saw the sender as less trustworthy (n=1,150, Sep 2025, self-reported)."
+    },
+    "ru": {
+      "title": "Перед отправкой AI-текста сделайте 3 проверки",
+      "description": "Что показал опрос BetterUp о workslop, три проверки перед отправкой AI-текста и чек-лист, чтобы скопировать.",
+      "imageAlt": "Тёмная карточка «3 проверки перед отправкой AI-текста». Три строки: каждая цифра и имя против источника, каждое утверждение, которое защитите на встрече, длина и тон рядом с вашим стилем. Ниже данные опроса BetterUp: 40% получали workslop за месяц, 42% сочли отправителя менее надёжным (n=1 150, сентябрь 2025, самооценка)."
+    }
+  },
+  {
+    "slug": "phone-transcript",
+    "date": "2026-11-30",
+    "en": {
+      "title": "Your phone can already transcribe your meetings.",
+      "description": "Where the built-in recorder on iPhone, Pixel and Samsung Galaxy shows a transcript, which models and languages it covers, and a prompt that turns it into a recap.",
+      "imageAlt": "Dark card titled \"Your phone already transcribes meetings\". Three rows name the recorder apps: iPhone 12 or later with Voice Memos, Pixel 6 or later with Recorder, Galaxy with One UI 6.1+ with Voice Recorder. Below, the recap prompt for ChatGPT or Claude."
+    },
+    "ru": {
+      "title": "Ваш телефон уже умеет расшифровывать встречи.",
+      "description": "Где во встроенном диктофоне iPhone, Pixel и Samsung Galaxy смотреть расшифровку, какие модели и языки поддерживаются, и промпт, который превращает её в итоги встречи.",
+      "imageAlt": "Тёмная карточка «Ваш телефон уже расшифровывает встречи». Три строки с приложениями: iPhone 12 и новее с Voice Memos, Pixel 6 и новее с Recorder, Galaxy с One UI 6.1+ с Voice Recorder. Ниже промпт для итогов встречи в ChatGPT или Claude."
+    }
+  },
+  {
     "slug": "paste-an-example",
     "date": "2026-11-26",
     "en": {

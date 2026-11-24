@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Tell Claude Code a rule once. Let hookify enforce it.</title>
+    <meta name="description" content="hookify is Anthropic's official Claude Code plugin that turns a plain-English rule into a hook. Install, the rule file, warn vs block, and a safe test." />
+    <link rel="canonical" href="https://chumak.is-a.dev/posts/hookify/" />
+    <link rel="alternate" hreflang="en" href="https://chumak.is-a.dev/posts/hookify/" />
+    <link rel="alternate" hreflang="ru" href="https://chumak.is-a.dev/posts/hookify/ru/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chumak.is-a.dev/posts/hookify/" />
+    <meta property="og:title" content="Tell Claude Code a rule once. Let hookify enforce it." />
+    <meta property="og:description" content="hookify is Anthropic's official Claude Code plugin that turns a plain-English rule into a hook. Install, the rule file, warn vs block, and a safe test." />
+    <meta property="og:image" content="https://chumak.is-a.dev/posts/hookify/og.png?v=2026-12-28" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Same pre-paint theme script as /index.html.
+      ;(function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (t !== 'light' && t !== 'dark') t = 'light'
+          document.documentElement.dataset.theme = t
+          var m = document.querySelector('meta[name="theme-color"]')
+          if (m) m.setAttribute('content', t === 'light' ? '#ffffff' : '#0a0a0a')
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light'
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/posts/main.tsx"></script>
+  </body>
+</html>

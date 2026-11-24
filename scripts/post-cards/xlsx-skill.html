@@ -1,0 +1,79 @@
+<!doctype html>
+<!--
+  Link previews of the post "xlsx-skill". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/<slug>/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/<slug>/og-ru.png
+  ?size=post is the full cheat sheet (1080x1350), not rendered by default:
+  the image in the LinkedIn post comes from <slug>-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Claude</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: 'Ask Claude for a spreadsheet<br />with real formulas.',
+          orderH: 'Claude builds',
+          reasonH: 'You check',
+          soft: [
+            'sheets and formulas',
+            'totals and charts',
+            'a file to download',
+          ],
+          hard: ['the totals', 'the ranges', 'the data inside'],
+          rule: 'Built-in file creation. <b>Click a cell and read the formula.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Попросите Claude таблицу<br />с настоящими формулами.',
+          orderH: 'Claude делает',
+          reasonH: 'Вы проверяете',
+          soft: ['листы и формулы', 'итоги и графики', 'файл для скачивания'],
+          hard: ['итоги', 'диапазоны', 'данные внутри'],
+          rule: 'Встроенное создание файлов. <b>Кликните ячейку и прочитайте формулу.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>

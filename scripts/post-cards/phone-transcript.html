@@ -1,0 +1,83 @@
+<!doctype html>
+<!--
+  Link previews of the post "The transcript in your phone". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/<slug>/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/<slug>/og-ru.png
+  ?size=post is the full cheat sheet (1080x1350), not rendered by default:
+  the image in the LinkedIn post comes from <slug>-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Built-in recorder</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: 'Your phone already<br />transcribes meetings.',
+          orderH: 'Record on the phone',
+          reasonH: 'Get a chat recap',
+          soft: [
+            'iPhone 12+: Voice Memos',
+            'Pixel 6+: Recorder',
+            'Galaxy One UI 6.1+: Voice Recorder',
+          ],
+          hard: ['decisions', 'tasks with owners', 'open questions'],
+          rule: 'Paste the text into a chat. <b>Ask everyone before you record.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Ваш телефон уже<br />расшифровывает встречи.',
+          orderH: 'Запись на телефоне',
+          reasonH: 'Итог от чата',
+          soft: [
+            'iPhone 12+: Диктофон',
+            'Pixel 6+: Recorder',
+            'Galaxy One UI 6.1+: Voice Recorder',
+          ],
+          hard: ['решения', 'задачи с исполнителями', 'открытые вопросы'],
+          rule: 'Вставьте текст в чат. <b>Спросите согласие всех до записи.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>
