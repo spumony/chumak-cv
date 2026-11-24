@@ -159,12 +159,12 @@
     "en": {
       "title": "Stop pasting the same context into ChatGPT every day.",
       "description": "Where ChatGPT and Claude keep your instructions, projects and memory, with menu paths and a starter instruction to copy.",
-      "imageAlt": "Link preview: \"Stop pasting the same context every day\", with a column of repeated lines you paste and a column of three places to save them once: instructions, projects, memory."
+      "imageAlt": "First slide of the carousel, dark: \"Stop pasting the same context into every chat.\" Below: three places where ChatGPT and Claude keep it for you."
     },
     "ru": {
       "title": "Хватит вставлять один и тот же контекст в ChatGPT каждый день.",
       "description": "Где ChatGPT и Claude хранят инструкции, проекты и память: пути в меню и стартовая инструкция для копирования.",
-      "imageAlt": "Превью ссылки: «Хватит вставлять один и тот же контекст», слева строки, которые вы вставляете каждый раз, справа три места, где их сохранить один раз: инструкции, проекты, память."
+      "imageAlt": "Первый слайд карусели, тёмный: «Stop pasting the same context into every chat.» Ниже: три места, где ChatGPT и Claude хранят его за вас."
     }
   },
   {

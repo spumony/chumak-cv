@@ -59,6 +59,11 @@ if [ -f "scripts/post-cards/$SLUG.html" ]; then
   render "scripts/post-cards/$SLUG.html" "size=og&lang=en" 1200,627 og.png
   render "scripts/post-cards/$SLUG.html" "size=og&lang=ru" 1200,627 og-ru.png
 fi
-[ -f "$HOOK" ] && render "$HOOK" "" 1080,1350 linkedin.png
+if [ -f "$HOOK" ]; then
+  render "$HOOK" "" 1080,1350 linkedin.png
+else
+  # Carousel post: the site list shows its first slide (the window is one slide tall).
+  render "$CAROUSEL" "" 1080,1350 linkedin.png
+fi
 [ -f "$CAROUSEL" ] && render "$CAROUSEL" "" 1080,1350 carousel.pdf
 exit 0
