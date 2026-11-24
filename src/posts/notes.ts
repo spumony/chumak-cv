@@ -6,9 +6,11 @@ import {
   ClaudeMdVsHooksRu,
 } from './articles/ClaudeMdVsHooks'
 import { WriteTheReasonEn, WriteTheReasonRu } from './articles/WriteTheReason'
+import { GrillMeEn, GrillMeRu } from './articles/GrillMe'
 
 // Titles and descriptions live in meta.json: the page generator reads them too.
 const bodies: Record<string, Record<Language, ComponentType>> = {
+  'grill-me': { en: GrillMeEn, ru: GrillMeRu },
   'claude-md-vs-hooks': { en: ClaudeMdVsHooksEn, ru: ClaudeMdVsHooksRu },
   'write-the-reason': { en: WriteTheReasonEn, ru: WriteTheReasonRu },
 }

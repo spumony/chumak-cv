@@ -1,6 +1,3 @@
-// Not listed yet: register in src/posts/notes.ts and src/posts/meta.json on the
-// day the LinkedIn post goes out (rule: LinkedIn first, then the site).
-
 const promptEn = `Interview me about the plan below until we both understand it.
 Ask in rounds. In each round, ask only the questions you can ask now,
 number them, and give your recommended answer to each, worded so I can

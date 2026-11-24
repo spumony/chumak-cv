@@ -1,5 +1,19 @@
 [
   {
+    "slug": "grill-me",
+    "date": "2026-11-24",
+    "en": {
+      "title": "Before AI writes your plan, let it interview you.",
+      "description": "grill-me, a free Claude skill by Matt Pocock: how a session goes, how to get a good result, how to install it, and a prompt version for ChatGPT.",
+      "imageAlt": "Card titled \"Let AI interview you before it writes.\" Three steps: type /grill-me and describe a loose idea, answer rounds of questions with a recommended answer each, confirm and only then does it write. Below: don't answer \"agreed\" to everything, push back, and the install command."
+    },
+    "ru": {
+      "title": "Прежде чем AI напишет план, пусть задаст вам вопросы.",
+      "description": "grill-me, бесплатный скилл для Claude от Matt Pocock: как проходит сессия, как получить хороший результат, как установить и промпт для ChatGPT.",
+      "imageAlt": "Карточка «Let AI interview you before it writes.»: три шага. Наберите /grill-me и опишите сырую идею, отвечайте на раунды вопросов с рекомендуемым ответом к каждому, подтвердите, и только тогда он пишет. Ниже: не соглашайтесь со всем подряд, спорьте, и команда установки."
+    }
+  },
+  {
     "slug": "write-the-reason",
     "date": "2026-11-24",
     "en": {
