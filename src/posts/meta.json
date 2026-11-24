@@ -1,5 +1,19 @@
 [
   {
+    "slug": "paste-an-example",
+    "date": "2026-11-26",
+    "en": {
+      "title": "Paste one good email into ChatGPT before you ask for a new one.",
+      "description": "Why examples steer an AI's style better than adjectives, what Anthropic's guide says about them, and a template with example tags to copy.",
+      "imageAlt": "Card titled \"Your style is in your old emails. Paste them.\" Four style words are crossed out: professional, but friendly, short, sound like me. Next to them a note, weekly-update.txt, starts with \"Hi Anna, quick update before Friday.\" Below: paste 3 to 5 examples, then ask for a new one."
+    },
+    "ru": {
+      "title": "Вставьте в ChatGPT одно удачное письмо, прежде чем просить новое.",
+      "description": "Почему примеры задают стиль AI лучше прилагательных, что о них пишет руководство Anthropic, и шаблон с тегами example.",
+      "imageAlt": "Карточка «Your style is in your old emails. Paste them.»: зачёркнуты четыре описания стиля: professional, but friendly, short, sound like me. Рядом заметка weekly-update.txt, она начинается с «Hi Anna, quick update before Friday.» Внизу: вставьте 3–5 примеров, потом просите новый текст."
+    }
+  },
+  {
     "slug": "grill-me",
     "date": "2026-11-24",
     "en": {

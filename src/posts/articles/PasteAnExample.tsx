@@ -1,6 +1,3 @@
-// Not listed yet: register in src/posts/notes.ts and src/posts/meta.json on the
-// day the LinkedIn post goes out (rule: page ready before, listed after).
-
 const templateEn = `Here are my past weekly updates. Match their length, tone and structure.
 Use only the facts I give below, not the facts from the examples.
 
