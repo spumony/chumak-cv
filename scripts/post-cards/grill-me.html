@@ -1,0 +1,91 @@
+<!doctype html>
+<!--
+  Link previews of the post "grill-me". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/<slug>/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/<slug>/og-ru.png
+  ?size=post is the full cheat sheet (1080x1350), not rendered by default:
+  the image in the LinkedIn post comes from <slug>-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Claude skill</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: 'Let AI interview you<br />before it writes.',
+          orderH: 'Claude asks',
+          reasonH: 'You decide',
+          soft: [
+            'questions in rounds',
+            'a recommended answer each',
+            'facts it can look up',
+          ],
+          hard: [
+            'what done means',
+            'what is out of scope',
+            'when the plan is ready',
+          ],
+          rule: '/grill-me by Matt Pocock. <b>Push back when it is wrong.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Пусть AI сначала<br />задаст вопросы.',
+          orderH: 'Claude спрашивает',
+          reasonH: 'Вы решаете',
+          soft: [
+            'вопросы раундами',
+            'рекомендуемый ответ к каждому',
+            'факты ищет сам',
+          ],
+          hard: [
+            'что значит «готово»',
+            'что не входит в задачу',
+            'когда план готов',
+          ],
+          rule: '/grill-me от Matt Pocock. <b>Спорьте, если не согласны.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>
