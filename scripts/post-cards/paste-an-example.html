@@ -1,0 +1,83 @@
+<!doctype html>
+<!--
+  Link previews of the post "Paste an example". Rendered by scripts/build-post-cards.sh:
+    ?size=og&lang=en   → public/posts/<slug>/og.png     (1200x627)
+    ?size=og&lang=ru   → public/posts/<slug>/og-ru.png
+  ?size=post is the full cheat sheet (1080x1350), not rendered by default:
+  the image in the LinkedIn post comes from <slug>-hook.html.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>Prompting tip</span>
+      <span>chumak.is-a.dev/posts</span>
+    </div>
+
+    <h1 data-t="title"></h1>
+
+    <div class="cols">
+      <section>
+        <h2 data-t="orderH"></h2>
+        <ul data-list="soft"></ul>
+      </section>
+      <section class="hard">
+        <h2 data-t="reasonH"></h2>
+        <ul data-list="hard"></ul>
+      </section>
+    </div>
+
+    <p class="rule" data-t="rule"></p>
+
+    <div class="bottom">
+      <span data-t="name"></span>
+      <span data-t="role"></span>
+    </div>
+
+    <script>
+      const T = {
+        en: {
+          title: 'Your style is in<br />your old emails.',
+          orderH: 'You describe',
+          reasonH: 'You paste',
+          soft: ['professional', 'but friendly', 'sound like me'],
+          hard: [
+            '3 to 5 past emails',
+            'each in an example tag',
+            "this week's facts",
+          ],
+          rule: 'Paste 3 to 5 examples. <b>Then ask for a new one.</b>',
+          name: 'Aleksandr Chumak',
+          role: 'Senior Full-Stack Engineer',
+        },
+        ru: {
+          title: 'Ваш стиль уже есть<br />в старых письмах.',
+          orderH: 'Вы описываете',
+          reasonH: 'Вы вставляете',
+          soft: ['профессионально', 'но дружелюбно', 'как я'],
+          hard: [
+            '3–5 прошлых писем',
+            'каждое в теге example',
+            'факты за неделю',
+          ],
+          rule: 'Вставьте 3–5 примеров. <b>Потом просите новый текст.</b>',
+          name: 'Александр Чумак',
+          role: 'Senior Full-Stack инженер',
+        },
+      }
+      const q = new URLSearchParams(location.search)
+      const t = T[q.get('lang') === 'ru' ? 'ru' : 'en']
+      document.body.className = q.get('size') === 'post' ? 'post' : 'og'
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        el.innerHTML = t[el.dataset.t]
+      })
+      document.querySelectorAll('[data-list]').forEach((ul) => {
+        ul.innerHTML = t[ul.dataset.list].map((x) => `<li>${x}</li>`).join('')
+      })
+    </script>
+  </body>
+</html>
