@@ -1,4 +1,4 @@
-import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, rmSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -33,9 +33,20 @@ const meta: { slug: string; date: string }[] = JSON.parse(
 )
 const published = meta.filter((p) => p.date <= postsUntil)
 const BODIES = '\0virtual:post-bodies'
+let outDir = 'dist'
 const hideLaterPosts: Plugin = {
   name: 'hide-later-posts',
   enforce: 'pre',
+  configResolved: (config) => void (outDir = config.build.outDir),
+  // public/ is copied whole: drop the image folders of posts that are not
+  // published yet (later dates and base drafts not in meta.json).
+  closeBundle() {
+    const keep = new Set(['ru', ...published.map((p) => p.slug)])
+    const dir = resolve(root, outDir, 'posts')
+    for (const d of readdirSync(dir, { withFileTypes: true }))
+      if (d.isDirectory() && !keep.has(d.name))
+        rmSync(resolve(dir, d.name), { recursive: true })
+  },
   resolveId: (id) => (id === 'virtual:post-bodies' ? BODIES : undefined),
   load(id) {
     if (id === metaFile) return JSON.stringify(published)
