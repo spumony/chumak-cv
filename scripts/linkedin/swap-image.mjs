@@ -16,10 +16,15 @@
 //   <slug>.finish.js  alt text, Next, checks text, image and unchanged time,
 //                     presses Schedule. Returns "SAVED <slug> …" or "FAIL …".
 //
-// Several slugs write swap.install.js and swap.step.js. The install script
-// keeps the code and the queue in sessionStorage (it survives navigation on
-// linkedin.com) and opens the first post; swap.step.js is one line that runs
-// the next phase. Per post, in one browser_batch:
+// Several slugs write swap.install.json and swap.step.js. The JSON holds the
+// code and the queue for sessionStorage (it survives navigation on
+// linkedin.com); swap.step.js is one line that runs the next phase. The JSON
+// goes in through a file input, so its 6 KB never pass through a tool call:
+//   batch 1: navigate feed/?shareActive=true → wait 4 s → loader (printed
+//            below, adds input "swap loader") → find "swap loader"
+//   batch 2: file_upload swap.install.json by ref → load (printed below)
+//            → step (READY post 1) → find "hidden file input"
+// Then per post, in one browser_batch:
 //   file_upload <slug>.<ext> → step (SAVED, reloads the composer) → wait 5 s
 //   → step (READY <next slug>) → find "hidden file input"
 // A step that does not return READY/SAVED leaves the queue where it was, so
@@ -134,9 +139,17 @@ if (args.length === 1) {
 } else {
   const items = args.map(item)
   fs.writeFileSync(
-    'swap.install.js',
-    `sessionStorage.__swapLib=${J(lib + step)};\nsessionStorage.__swapQ=${J(J({ items, i: 0, phase: 'open' }))};\n${run}`,
+    'swap.install.json',
+    J({ __swapLib: lib + step, __swapQ: J({ items, i: 0, phase: 'open' }) }),
   )
   fs.writeFileSync('swap.step.js', run)
-  console.log(`wrote swap.install.js (${items.length} posts), swap.step.js:\n  ${run}`)
+  // No top-level const: the tool may keep one scope per page. No eval after
+  // an await either: LinkedIn's CSP allows it only in the tool's own sync part,
+  // so the load call only stores data and the step is a separate call.
+  const loader = `document.body.prepend(Object.assign(document.createElement('input'),{type:'file',id:'swap-loader',ariaLabel:'swap loader'}));'ok'`
+  const load = `Object.assign(sessionStorage,JSON.parse(await document.getElementById('swap-loader').files[0].text()));document.getElementById('swap-loader').remove();'loaded '+JSON.parse(sessionStorage.__swapQ).items.length`
+  console.log(
+    `wrote swap.install.json (${items.length} posts), swap.step.js\n` +
+      `upload: ${path.resolve('swap.install.json')}\nloader: ${loader}\nload:   ${load}\nstep:   ${run}`,
+  )
 }
