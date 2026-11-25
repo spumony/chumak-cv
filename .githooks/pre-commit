@@ -1,0 +1,11 @@
+#!/bin/sh
+# The deploy runs `pnpm format:check`; check the staged files the same way
+# before the commit, so a push does not fail on formatting.
+# ponytail: checks the working-tree copy, not the staged one; fine unless you
+# stage part of a file (git add -p).
+git diff --cached --name-only --diff-filter=ACMR -z |
+  xargs -0 pnpm exec prettier --check --ignore-unknown --no-error-on-unmatched-pattern ||
+  {
+    echo 'Prettier: run `pnpm exec prettier --write <files>`, git add, commit again.' >&2
+    exit 1
+  }
