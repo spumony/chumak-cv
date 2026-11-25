@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "5 places in your workday where AI can take the first pass" (1080x1350), base draft, no date yet.
+  Text: career-ops-main/output/linkedin/drafts/workday-map.md. Animated: pnpm posts:gif workday-map 5
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .day {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .day .wire {
+        position: absolute;
+        top: 60px;
+        bottom: 60px;
+        left: 0;
+        height: auto;
+        margin: 0 0 0 57px;
+      }
+      .day .wire::after {
+        display: none;
+      }
+      .day .node {
+        padding: 20px 28px;
+      }
+      .day .node p {
+        font-size: 34px;
+      }
+      .day .node p small {
+        font-size: 26px;
+      }
+      .day .node p i {
+        font-style: normal;
+        font-weight: 400;
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body class="post scheme n5">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI at work</span>
+      <span>Map · 5 places</span>
+    </div>
+    <h1>AI in a normal <em>workday.</em></h1>
+    <div class="day">
+      <i class="wire"></i>
+      <div class="node step" style="--i: 0">
+        <b>01</b>
+        <p>
+          Inbox <i>(the sorter)</i><small>sort, draft routine replies</small>
+        </p>
+      </div>
+      <div class="node step" style="--i: 1">
+        <b>02</b>
+        <p>
+          Meetings <i>(the note-taker)</i><small>recap and action items</small>
+        </p>
+      </div>
+      <div class="node step" style="--i: 2">
+        <b>03</b>
+        <p>
+          Documents <i>(the editor)</i
+          ><small>shorten, fix the tone, find gaps</small>
+        </p>
+      </div>
+      <div class="node step" style="--i: 3">
+        <b>04</b>
+        <p>
+          Spreadsheets <i>(the formula helper)</i
+          ><small>describe the column, get the formula</small>
+        </p>
+      </div>
+      <div class="node step" style="--i: 4">
+        <b>05</b>
+        <p>
+          End of day <i>(the planner)</i><small>tomorrow's 3 priorities</small>
+        </p>
+      </div>
+    </div>
+    <p class="note">AI takes the first pass. You keep the final check.</p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

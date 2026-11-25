@@ -1,0 +1,88 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Before you paste it into ChatGPT, check the light" (1080x1350), base draft, no date yet.
+  Text: career-ops-main/output/linkedin/drafts/traffic-light.md. Animated: pnpm posts:gif traffic-light 3
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .lights {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      .light {
+        align-items: flex-start;
+        padding: 30px 30px;
+      }
+      .lamp {
+        flex: none;
+        width: 64px;
+        height: 64px;
+        border-radius: 999px;
+        background: color-mix(
+          in srgb,
+          var(--c) calc(35% + var(--on) * 65%),
+          var(--bg)
+        );
+        box-shadow: 0 0 calc(var(--on) * 40px) var(--c);
+      }
+      .light h2 {
+        margin: 0 0 8px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 23px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: var(--c);
+      }
+      .light p {
+        font-size: 33px;
+      }
+    </style>
+  </head>
+  <body class="post scheme n3">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI at work</span>
+      <span>Rule of thumb</span>
+    </div>
+    <h1>What goes into <em>an AI chat?</em></h1>
+    <div class="lights">
+      <div class="node light step" style="--i: 0; --c: var(--success)">
+        <span class="lamp"></span>
+        <div>
+          <h2>GREEN · FINE TO PASTE</h2>
+          <p>Public info, your own drafts, general questions</p>
+        </div>
+      </div>
+      <div class="node light step" style="--i: 1; --c: var(--amber)">
+        <span class="lamp"></span>
+        <div>
+          <h2>YELLOW · CLEAN IT FIRST</h2>
+          <p>
+            Internal docs<small
+              >remove names, numbers and client details, or use your company's
+              approved tool</small
+            >
+          </p>
+        </div>
+      </div>
+      <div class="node light step" style="--i: 2; --c: var(--red)">
+        <span class="lamp"></span>
+        <div>
+          <h2>RED · KEEP IT OUT</h2>
+          <p>Passwords, client personal data, health or salary data, NDA</p>
+        </div>
+      </div>
+    </div>
+    <p class="note">Your company's policy comes first.</p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

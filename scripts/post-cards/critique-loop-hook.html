@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Don't send AI's first draft" (1080x1350), base draft, no date yet.
+  Text: career-ops-main/output/linkedin/drafts/critique-loop.md. Animated: pnpm posts:gif critique-loop 3
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .ring {
+        position: relative;
+        height: 560px;
+      }
+      .ring svg {
+        position: absolute;
+        inset: 0;
+      }
+      .ring polygon {
+        fill: var(--wire);
+      }
+      .ring .node {
+        position: absolute;
+        width: 380px;
+        padding: 22px 24px;
+        gap: 20px;
+      }
+      .ring .node p {
+        font-size: 32px;
+      }
+      .ring .node p small {
+        font-size: 25px;
+      }
+      .center {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 236px;
+        text-align: center;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: var(--text-muted);
+      }
+      .center b {
+        display: block;
+        margin-top: 6px;
+        font-family: 'Inter', sans-serif;
+        font-size: 44px;
+        letter-spacing: -1px;
+        color: var(--text-primary);
+      }
+      .exit {
+        align-self: flex-start;
+        padding: 18px 28px;
+        border: 1px solid rgba(52, 211, 153, 0.45);
+        border-radius: 999px;
+        background: rgba(52, 211, 153, 0.08);
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--success);
+      }
+    </style>
+  </head>
+  <body class="post scheme n3">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI at work</span>
+      <span>Loop · 3 steps</span>
+    </div>
+    <h1>Don't send AI's <em>first draft.</em></h1>
+    <div class="ring">
+      <svg viewBox="0 0 920 560">
+        <circle class="dash" cx="460" cy="290" r="220" />
+        <polygon
+          points="-11,-10 9,0 -11,10"
+          transform="translate(650.5 180) rotate(60)"
+        />
+        <polygon
+          points="-11,-10 9,0 -11,10"
+          transform="translate(460 510) rotate(180)"
+        />
+        <polygon
+          points="-11,-10 9,0 -11,10"
+          transform="translate(269.5 180) rotate(300)"
+        />
+      </svg>
+      <div class="center">LOOP<b>max 2 rounds</b></div>
+      <div class="node step" style="--i: 0; left: 270px; top: 10px">
+        <b>01</b>
+        <p>Draft<small>AI writes it</small></p>
+      </div>
+      <div class="node step" style="--i: 1; left: 520px; top: 340px">
+        <b>02</b>
+        <p>Critique<small>as your toughest reader</small></p>
+      </div>
+      <div class="node step" style="--i: 2; left: 20px; top: 340px">
+        <b>03</b>
+        <p>Fix<small>a new version</small></p>
+      </div>
+    </div>
+    <div class="exit">→ Then you read it.</div>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

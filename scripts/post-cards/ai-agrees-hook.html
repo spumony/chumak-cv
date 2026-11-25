@@ -1,0 +1,81 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Your AI chat leans toward agreeing with you" (1080x1350), base draft, no date yet.
+  Text: career-ops-main/output/linkedin/drafts/ai-agrees.md. Animated: pnpm posts:gif ai-agrees 3
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .chat {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        opacity: 0.55;
+      }
+      .bubble {
+        max-width: 560px;
+        padding: 20px 28px;
+        border-radius: 26px;
+        font-size: 32px;
+      }
+      .bubble.me {
+        align-self: flex-end;
+        border-bottom-right-radius: 8px;
+        background: #262626;
+      }
+      .bubble.ai {
+        border: 1px solid var(--border);
+        border-bottom-left-radius: 8px;
+        background: var(--card);
+      }
+      .verdict {
+        margin: -14px 0 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        letter-spacing: 2px;
+        color: var(--red);
+      }
+    </style>
+  </head>
+  <body class="post scheme n3">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI at work</span>
+      <span>Myth vs fix</span>
+    </div>
+    <h1>Ask for the <em>case against.</em></h1>
+    <div class="chat">
+      <div class="bubble me">Is my plan good?</div>
+      <div class="bubble ai">Yes! It's a great plan.</div>
+    </div>
+    <p class="verdict">A YES TELLS YOU LITTLE. INSTEAD:</p>
+    <div class="flow">
+      <div class="node step" style="--i: 0">
+        <b>01</b>
+        <p>Paste your plan<small>or the decision</small></p>
+      </div>
+      <i class="wire"></i>
+      <div class="node step" style="--i: 1">
+        <b>02</b>
+        <p>"What would make it fail?"<small>3 strongest reasons</small></p>
+      </div>
+      <i class="wire"></i>
+      <div class="node step" style="--i: 2">
+        <b>03</b>
+        <p>"What would a sceptic say?"<small>then you decide</small></p>
+      </div>
+    </div>
+    <p class="src">
+      OpenAI rolled back a GPT-4o update in Apr 2025:<br />it was "overly
+      flattering or agreeable".
+    </p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

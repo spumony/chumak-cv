@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Don't ask AI for the answer. Ask for 3 options." (1080x1350), base draft, no date yet.
+  Text: career-ops-main/output/linkedin/drafts/three-options.md. Animated: pnpm posts:gif three-options 3
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .pairs {
+        display: grid;
+        grid-template-columns: 1fr 76px 1.3fr;
+        row-gap: 22px;
+      }
+      .pairs h2 {
+        margin: 0 0 -8px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: var(--text-muted);
+      }
+      .pairs h2.new {
+        grid-column: 3;
+        color: var(--accent);
+      }
+      .old {
+        align-self: center;
+        padding: 22px 24px;
+        border: 1px dashed var(--border);
+        border-radius: 20px;
+        font-size: 28px;
+        line-height: 1.25;
+        color: var(--text-muted);
+      }
+      .pairs .hwire {
+        margin-left: 10px;
+      }
+      .pairs .node {
+        padding: 22px 24px;
+      }
+      .pairs .node p {
+        font-size: 31px;
+      }
+      .pairs .node p small {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body class="post scheme n3">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI at work</span>
+      <span>Old → new</span>
+    </div>
+    <h1>Ask for <em>3 options,</em> then pick one.</h1>
+    <div class="pairs">
+      <h2>OLD</h2>
+      <h2 class="new">NEW</h2>
+      <div class="old">"Write a reply to this client."</div>
+      <i class="hwire"></i>
+      <div class="node step" style="--i: 0">
+        <p>3 replies<small>short, warm, firm + when each fits</small></p>
+      </div>
+      <div class="old">"A title for this report."</div>
+      <i class="hwire"></i>
+      <div class="node step" style="--i: 1">
+        <p>5 titles<small>plain to bold + its pick and why</small></p>
+      </div>
+      <div class="old">"Plan my week."</div>
+      <i class="hwire"></i>
+      <div class="node step" style="--i: 2">
+        <p>2 plans<small>hard task first or last + the risks</small></p>
+      </div>
+    </div>
+    <p class="note">Skip it for facts: there is one right answer.</p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>
