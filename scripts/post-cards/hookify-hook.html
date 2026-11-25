@@ -24,7 +24,67 @@
       .checks {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+      }
+      /* Dashed link between steps; it runs and the steps light up in turn
+         only in the animated version (?anim, scripts/build-post-gif.mjs). */
+      .link {
+        width: 6px;
+        height: 40px;
+        margin-left: 60px;
+        border-radius: 3px;
+        background: repeating-linear-gradient(
+          to bottom,
+          var(--accent) 0 8px,
+          transparent 8px 16px
+        );
+      }
+      .anim .link {
+        animation: flow 1s linear infinite;
+      }
+      @keyframes flow {
+        to {
+          background-position-y: 16px;
+        }
+      }
+      .anim .check {
+        animation: step 3s linear infinite;
+      }
+      .anim .check b {
+        animation: num 3s linear infinite;
+      }
+      .anim .check:nth-of-type(2),
+      .anim .check:nth-of-type(2) b {
+        animation-delay: -2s;
+      }
+      .anim .check:nth-of-type(3),
+      .anim .check:nth-of-type(3) b {
+        animation-delay: -1s;
+      }
+      @keyframes num {
+        0%,
+        36%,
+        100% {
+          background: rgba(167, 139, 250, 0.15);
+          color: var(--accent);
+        }
+        6%,
+        30% {
+          background: var(--accent);
+          color: var(--bg);
+        }
+      }
+      @keyframes step {
+        0%,
+        36%,
+        100% {
+          border-color: var(--border);
+          background: var(--bg-elevated);
+        }
+        6%,
+        30% {
+          border-color: var(--accent);
+          background: #1d1830;
+        }
       }
       .check {
         display: flex;
@@ -86,10 +146,12 @@
         <b>1</b>
         <p>Type /hookify <span>and the rule</span></p>
       </div>
+      <i class="link"></i>
       <div class="check">
         <b>2</b>
         <p>It writes the rule file</p>
       </div>
+      <i class="link"></i>
       <div class="check">
         <b>3</b>
         <p>Works on the next tool use</p>
