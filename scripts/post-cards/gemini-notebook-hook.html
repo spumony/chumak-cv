@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Gemini Notebook answers questions from the files you give it" (1080x1350).
+  Text and sources: career-ops-main/output/linkedin/drafts/gemini-notebook.md. Static: pnpm posts:cards gemini-notebook
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .credit {
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .credit code {
+        display: block;
+        margin-top: 10px;
+        font-size: 22px;
+        color: var(--text-primary);
+      }
+      .free {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .free div {
+        padding: 22px 24px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: var(--card);
+        font-size: 26px;
+        color: var(--text-secondary);
+      }
+      .free b {
+        display: block;
+        font-size: 48px;
+        letter-spacing: -1px;
+        color: var(--text-primary);
+      }
+    </style>
+  </head>
+  <body class="post scheme">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI tool</span>
+      <span>Gemini Notebook · ex NotebookLM</span>
+    </div>
+    <h1>Ask questions of <em>your own files.</em></h1>
+    <div class="flow">
+      <div class="node">
+        <b>01</b>
+        <p>Create a notebook</p>
+      </div>
+      <i class="wire"></i>
+      <div class="node">
+        <b>02</b>
+        <p>Add sources<small>PDFs, docs, links, notes</small></p>
+      </div>
+      <i class="wire"></i>
+      <div class="node" style="--on: 1">
+        <b>03</b>
+        <p>
+          Ask, then check the source<small>before you repeat the answer</small>
+        </p>
+      </div>
+    </div>
+    <div class="free">
+      <div><b>$0</b>with a Gmail account</div>
+      <div><b>100</b>notebooks</div>
+      <div><b>50</b>sources each</div>
+    </div>
+    <p class="credit">
+      By Google · free-plan limits per Google Help, subject to change
+    </p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "handoff packs a long AI chat into one file for whoever continues" (1080x1350).
+  Text and sources: career-ops-main/output/linkedin/drafts/handoff.md. Static: pnpm posts:cards handoff
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .credit {
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .credit code {
+        display: block;
+        margin-top: 10px;
+        font-size: 22px;
+        color: var(--text-primary);
+      }
+      .pack {
+        display: grid;
+        grid-template-columns: 1fr 150px 1fr;
+        align-items: center;
+      }
+      .chat {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .chat i {
+        height: 30px;
+        border-radius: 15px;
+        background: #1c1c1c;
+      }
+      .chat i:nth-child(odd) {
+        width: 80%;
+      }
+      .chat i:nth-child(even) {
+        width: 60%;
+        align-self: flex-end;
+        background: #262626;
+      }
+      .cmd {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--accent);
+      }
+      .cmd .hwire {
+        width: 100px;
+        margin: 0 12px 0 0;
+      }
+      .file {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .file p {
+        font-family: 'Geist Mono', monospace;
+        font-weight: 400;
+        font-size: 30px;
+      }
+      .when {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .when div {
+        padding: 22px 24px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: var(--card);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .when div span {
+        display: block;
+        margin-bottom: 8px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--text-muted);
+      }
+      .label {
+        margin: 0 0 -18px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body class="post scheme">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI tool</span>
+      <span>Skill · handoff</span>
+    </div>
+    <h1>Your long chat, <em>as one file.</em></h1>
+    <div class="pack">
+      <div class="chat"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="cmd">/handoff<i class="hwire"></i></div>
+      <div class="node file" style="--on: 1">
+        <p>handoff.md</p>
+        <small style="font-size: 26px; color: var(--text-secondary)"
+          >state of the work, no passwords</small
+        >
+      </div>
+    </div>
+    <p class="label">WHEN YOU NEED IT</p>
+    <div class="when">
+      <div><span>01</span>Another AI tool</div>
+      <div><span>02</span>Another folder or project</div>
+      <div><span>03</span>A colleague takes over</div>
+      <div><span>04</span>A side task splits off</div>
+    </div>
+    <p class="credit">
+      Skill by Matt Pocock · MIT<code
+        >claude plugin install mattpocock-skills@claude-plugins-official</code
+      >
+    </p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

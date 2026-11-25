@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Turn a week of messy notes into a Progress, Plans, Problems update" (1080x1350).
+  Text and sources: career-ops-main/output/linkedin/drafts/internal-comms.md. Static: pnpm posts:cards internal-comms
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .credit {
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .credit code {
+        display: block;
+        margin-top: 10px;
+        font-size: 22px;
+        color: var(--text-primary);
+      }
+      .conv {
+        display: grid;
+        grid-template-columns: 300px 110px 1fr;
+        align-items: center;
+      }
+      .notes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .notes span {
+        padding: 10px 16px;
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+        font-size: 24px;
+        color: var(--text-muted);
+      }
+      .notes span:nth-child(2n) {
+        transform: rotate(-2deg);
+      }
+      .notes span:nth-child(3n) {
+        transform: rotate(2deg);
+      }
+      .conv .hwire {
+        margin: 0 22px 0 10px;
+      }
+      .ppp {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .ppp .node {
+        padding: 22px 24px;
+        gap: 20px;
+      }
+      .ppp .node p {
+        font-size: 32px;
+      }
+      .ppp .node p small {
+        font-size: 25px;
+      }
+      .also {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.35;
+        color: var(--text-secondary);
+      }
+    </style>
+  </head>
+  <body class="post scheme">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI tool</span>
+      <span>Skill · internal-comms</span>
+    </div>
+    <h1>Notes in, <em>3P update</em> out.</h1>
+    <div class="conv">
+      <div class="notes">
+        <span>call w/ vendor</span><span>bug #12 fixed</span
+        ><span>Q1 deck?</span><span>hiring: 2 CVs</span
+        ><span>blocked on legal</span><span>demo Fri</span>
+      </div>
+      <i class="hwire"></i>
+      <div class="ppp">
+        <div class="node" style="--on: 1">
+          <b>P</b>
+          <p>Progress<small>what got done</small></p>
+        </div>
+        <div class="node" style="--on: 1; --c: var(--success)">
+          <b>P</b>
+          <p>Plans<small>what's next</small></p>
+        </div>
+        <div class="node" style="--on: 1; --c: var(--amber)">
+          <b>P</b>
+          <p>Problems<small>what's stuck</small></p>
+        </div>
+      </div>
+    </div>
+    <p class="also">
+      Also: status reports, newsletters, FAQs, incident reports. Paste your
+      company's template if you have one.
+    </p>
+    <p class="credit">Skill by Anthropic · Customize → Skills</p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

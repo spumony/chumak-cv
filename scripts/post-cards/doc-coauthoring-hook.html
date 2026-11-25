@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "doc-coauthoring has a fresh Claude read your doc before your boss does" (1080x1350).
+  Text and sources: career-ops-main/output/linkedin/drafts/doc-coauthoring.md. Animated: pnpm posts:gif doc-coauthoring 3
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .credit {
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .credit code {
+        display: block;
+        margin-top: 10px;
+        font-size: 22px;
+        color: var(--text-primary);
+      }
+    </style>
+  </head>
+  <body class="post scheme n3">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI tool</span>
+      <span>Skill · doc-coauthoring</span>
+    </div>
+    <h1>3 stages of a doc. The last one <em>is a test.</em></h1>
+    <div class="flow">
+      <div class="node step" style="--i: 0">
+        <b>01</b>
+        <p>Context<small>you share, Claude asks questions</small></p>
+        <span class="tag you">YOU + AI</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node step" style="--i: 1">
+        <b>02</b>
+        <p>Structure<small>section by section</small></p>
+        <span class="tag you">YOU + AI</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node step" style="--i: 2">
+        <b>03</b>
+        <p>
+          Reader test<small>a fresh Claude, no context, finds the gaps</small>
+        </p>
+        <span class="tag ai">NEW AI</span>
+      </div>
+    </div>
+    <p class="note">For proposals, decision docs and specs.</p>
+    <p class="credit">
+      Skill by Anthropic<code
+        >/plugin install example-skills@anthropic-agent-skills</code
+      >
+    </p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

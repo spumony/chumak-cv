@@ -72,6 +72,14 @@ try {
   const evaluate = (expression) =>
     send('Runtime.evaluate', { expression, awaitPromise: true })
 
+  // --window-size includes the headless window frame (the page got 1080x1263),
+  // so pin the viewport to the card size.
+  await send('Emulation.setDeviceMetricsOverride', {
+    width: 1080,
+    height: 1350,
+    deviceScaleFactor: 1,
+    mobile: false,
+  })
   await evaluate(
     'document.fonts.ready.then(() => document.getAnimations().length)',
   )

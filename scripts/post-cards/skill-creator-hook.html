@@ -1,0 +1,72 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Explain a weekly task to Claude once, with skill-creator" (1080x1350).
+  Text and sources: career-ops-main/output/linkedin/drafts/skill-creator.md. Static: pnpm posts:cards skill-creator
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .credit {
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .credit code {
+        display: block;
+        margin-top: 10px;
+        font-size: 22px;
+        color: var(--text-primary);
+      }
+      .flow .node {
+        padding: 24px 28px;
+      }
+    </style>
+  </head>
+  <body class="post scheme">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI tool</span>
+      <span>Skill · skill-creator</span>
+    </div>
+    <h1>Explain it to Claude <em>once.</em></h1>
+    <div class="flow">
+      <div class="node">
+        <b>01</b>
+        <p>
+          Say what the skill does<small
+            >"turn my notes into the Monday update"</small
+          >
+        </p>
+        <span class="tag you">YOU</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node">
+        <b>02</b>
+        <p>Claude drafts it<small>plus a few test prompts</small></p>
+        <span class="tag ai">AI</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node">
+        <b>03</b>
+        <p>It runs the tests<small>and shows you the results</small></p>
+        <span class="tag ai">AI</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node" style="--on: 1">
+        <b>04</b>
+        <p>Your feedback<small>rewrites the skill</small></p>
+        <span class="tag you">YOU</span>
+      </div>
+    </div>
+    <p class="credit">Skill by Anthropic · Customize → Skills</p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>

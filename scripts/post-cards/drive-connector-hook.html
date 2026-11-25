@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+  Image in the LinkedIn post "Claude can find a Drive file even when you forgot its name" (1080x1350).
+  Text and sources: career-ops-main/output/linkedin/drafts/drive-connector.md. Animated: pnpm posts:gif drive-connector 3
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="scheme.css" />
+    <style>
+      .credit {
+        margin: 0;
+        font-family: 'Geist Mono', monospace;
+        font-size: 22px;
+        color: var(--text-muted);
+      }
+      .credit code {
+        display: block;
+        margin-top: 10px;
+        font-size: 22px;
+        color: var(--text-primary);
+      }
+      .flow .node p small q {
+        color: var(--text-primary);
+      }
+    </style>
+  </head>
+  <body class="post scheme n3">
+    <div class="glow"></div>
+    <div class="top">
+      <span><span class="dot"></span>AI tool</span>
+      <span>Connector · Google Drive</span>
+    </div>
+    <h1>Find the file <em>without its name.</em></h1>
+    <div class="flow">
+      <div class="node step" style="--i: 0">
+        <b>01</b>
+        <p>
+          Connect Google Drive<small>Customize → Connectors → Connect</small>
+        </p>
+        <span class="tag you">YOU</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node step" style="--i: 1">
+        <b>02</b>
+        <p>
+          Ask in plain words<small
+            ><q>the budget sheet we shared in spring</q></small
+          >
+        </p>
+        <span class="tag you">YOU</span>
+      </div>
+      <i class="wire"></i>
+      <div class="node step" style="--i: 2">
+        <b>03</b>
+        <p>
+          Claude finds and reads it<small>Docs, Sheets, Slides, PDFs</small>
+        </p>
+        <span class="tag ai">AI</span>
+      </div>
+    </div>
+    <p class="note">Claude asks before it shares, moves or trashes a file.</p>
+    <p class="credit">Connector by Google · available for all Claude users</p>
+    <div class="bottom">
+      <span>Aleksandr Chumak</span>
+      <span>Senior Full-Stack Engineer</span>
+    </div>
+    <script src="theme.js"></script>
+  </body>
+</html>
