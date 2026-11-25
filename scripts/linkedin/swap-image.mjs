@@ -33,9 +33,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const args = process.argv.slice(2)
-if (!args.length) throw new Error('usage: swap-image.mjs <slug> [image] | <slug> <slug> ...')
+if (!args.length)
+  throw new Error('usage: swap-image.mjs <slug> [image] | <slug> <slug> ...')
 const root = path.resolve(import.meta.dirname, '../..')
-const imageArg = args.length === 2 && /\.(gif|png|jpe?g)$/i.test(args[1]) ? args.pop() : null
+const imageArg =
+  args.length === 2 && /\.(gif|png|jpe?g)$/i.test(args[1]) ? args.pop() : null
 
 const item = (slug) => {
   const draft = fs.readFileSync(
@@ -54,11 +56,15 @@ const item = (slug) => {
   const dir = path.join(root, `public/posts/${slug}`)
   const image =
     imageArg ??
-    ['linkedin.gif', 'linkedin.png'].map((f) => path.join(dir, f)).find(fs.existsSync)
+    ['linkedin.gif', 'linkedin.png']
+      .map((f) => path.join(dir, f))
+      .find(fs.existsSync)
   if (!image || !fs.existsSync(image)) throw new Error(`No image for ${slug}`)
   const upload = path.resolve(`${slug}${path.extname(image)}`)
   fs.copyFileSync(image, upload)
-  console.log(`${slug}: ${upload} (${(fs.statSync(upload).size / 1024).toFixed(0)} KB)`)
+  console.log(
+    `${slug}: ${upload} (${(fs.statSync(upload).size / 1024).toFixed(0)} KB)`,
+  )
   console.log(`  first: ${lines[0]}\n  last:  ${lines.at(-1)}`)
   return { slug, first: lines[0], last: lines.at(-1), alt }
 }
@@ -129,7 +135,8 @@ setTimeout(()=>location.assign('/feed/?shareActive=true'),300);
 return r+(q.i<q.items.length?' → next '+q.items[q.i].slug:' → DONE');`
 
 const J = JSON.stringify
-const run = 'await new (Object.getPrototypeOf(async()=>{}).constructor)(sessionStorage.__swapLib)()'
+const run =
+  'await new (Object.getPrototypeOf(async()=>{}).constructor)(sessionStorage.__swapLib)()'
 
 if (args.length === 1) {
   const it = item(args[0])
