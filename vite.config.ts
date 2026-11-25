@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -19,10 +19,11 @@ const postPages = Object.fromEntries(
 )
 
 // Posts dated after this day (Madrid) do not reach the build at all: their
-// meta.json entries are dropped and their article files become empty stubs,
-// so neither text nor titles are on the server before the date. Same rule as
-// scripts/build-post-pages.mjs. Article file = slug in PascalCase
-// (pptx-skill → articles/PptxSkill.tsx exporting PptxSkillEn, PptxSkillRu).
+// meta.json entries are dropped and their articles are never imported, so no
+// text, title or slug is on the server before the date. Same rule as
+// scripts/build-post-pages.mjs. The article map `virtual:post-bodies` is built
+// here; article file = slug in PascalCase (pptx-skill → articles/PptxSkill.tsx
+// exporting PptxSkillEn, PptxSkillRu).
 const postsUntil =
   process.env.POSTS_UNTIL ||
   new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })
@@ -30,20 +31,31 @@ const metaFile = resolve(root, 'src/posts/meta.json')
 const meta: { slug: string; date: string }[] = JSON.parse(
   readFileSync(metaFile, 'utf8'),
 )
-const later = new Set(
-  meta
-    .filter((p) => p.date > postsUntil)
-    .map((p) => p.slug.replace(/(^|-)(\w)/g, (_, _d, c) => c.toUpperCase())),
-)
+const published = meta.filter((p) => p.date <= postsUntil)
+const BODIES = '\0virtual:post-bodies'
 const hideLaterPosts: Plugin = {
   name: 'hide-later-posts',
   enforce: 'pre',
+  resolveId: (id) => (id === 'virtual:post-bodies' ? BODIES : undefined),
   load(id) {
-    if (id === metaFile)
-      return JSON.stringify(meta.filter((p) => p.date <= postsUntil))
-    const name = id.match(/\/src\/posts\/articles\/(\w+)\.tsx$/)?.[1]
-    if (name && later.has(name))
-      return `export const ${name}En = () => null\nexport const ${name}Ru = () => null\n`
+    if (id === metaFile) return JSON.stringify(published)
+    if (id !== BODIES) return
+    const lines = published.map(({ slug }, i) => {
+      const name = slug.replace(/(^|-)(\w)/g, (_, _d, c) => c.toUpperCase())
+      const file = `src/posts/articles/${name}.tsx`
+      if (!existsSync(resolve(root, file)))
+        throw new Error(`${slug}: no ${file}`)
+      return [
+        `import * as a${i} from '/${file}'`,
+        `b[${JSON.stringify(slug)}] = { en: a${i}.${name}En, ru: a${i}.${name}Ru }`,
+      ]
+    })
+    return [
+      'const b = {}',
+      ...lines.map((l) => l[0]),
+      ...lines.map((l) => l[1]),
+      'export default b',
+    ].join('\n')
   },
 }
 

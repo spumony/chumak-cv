@@ -1,70 +1,15 @@
 import type { ComponentType } from 'react'
 import type { Language } from '../i18n'
 import meta from './meta.json'
-import {
-  ClaudeMdVsHooksEn,
-  ClaudeMdVsHooksRu,
-} from './articles/ClaudeMdVsHooks'
-import { WriteTheReasonEn, WriteTheReasonRu } from './articles/WriteTheReason'
-import { GrillMeEn, GrillMeRu } from './articles/GrillMe'
-import { PasteAnExampleEn, PasteAnExampleRu } from './articles/PasteAnExample'
-import {
-  PhoneTranscriptEn,
-  PhoneTranscriptRu,
-} from './articles/PhoneTranscript'
-import { ThreeChecksEn, ThreeChecksRu } from './articles/ThreeChecks'
-import { SameContextEn, SameContextRu } from './articles/SameContext'
-import {
-  AiFluencyCourseEn,
-  AiFluencyCourseRu,
-} from './articles/AiFluencyCourse'
-import { HumanizerEn, HumanizerRu } from './articles/Humanizer'
-import { XlsxSkillEn, XlsxSkillRu } from './articles/XlsxSkill'
-import {
-  GoogleOrChatgptEn,
-  GoogleOrChatgptRu,
-} from './articles/GoogleOrChatgpt'
-import { GmailDraftsEn, GmailDraftsRu } from './articles/GmailDrafts'
-import { RoleInOneLineEn, RoleInOneLineRu } from './articles/RoleInOneLine'
-import { PromptMasterEn, PromptMasterRu } from './articles/PromptMaster'
-import {
-  GooglePromptingGuideEn,
-  GooglePromptingGuideRu,
-} from './articles/GooglePromptingGuide'
-import { HookifyEn, HookifyRu } from './articles/Hookify'
-import { BossGetsMoreEn, BossGetsMoreRu } from './articles/BossGetsMore'
-import { PptxSkillEn, PptxSkillRu } from './articles/PptxSkill'
+import bodies from 'virtual:post-bodies'
 
 // Titles and descriptions live in meta.json: the page generator reads them too.
-const bodies: Record<string, Record<Language, ComponentType>> = {
-  'phone-transcript': { en: PhoneTranscriptEn, ru: PhoneTranscriptRu },
-  'three-checks': { en: ThreeChecksEn, ru: ThreeChecksRu },
-  'same-context': { en: SameContextEn, ru: SameContextRu },
-  'ai-fluency-course': { en: AiFluencyCourseEn, ru: AiFluencyCourseRu },
-  humanizer: { en: HumanizerEn, ru: HumanizerRu },
-  'xlsx-skill': { en: XlsxSkillEn, ru: XlsxSkillRu },
-  'google-or-chatgpt': { en: GoogleOrChatgptEn, ru: GoogleOrChatgptRu },
-  'gmail-drafts': { en: GmailDraftsEn, ru: GmailDraftsRu },
-  'role-in-one-line': { en: RoleInOneLineEn, ru: RoleInOneLineRu },
-  'prompt-master': { en: PromptMasterEn, ru: PromptMasterRu },
-  'google-prompting-guide': {
-    en: GooglePromptingGuideEn,
-    ru: GooglePromptingGuideRu,
-  },
-  hookify: { en: HookifyEn, ru: HookifyRu },
-  'boss-gets-more': { en: BossGetsMoreEn, ru: BossGetsMoreRu },
-  'pptx-skill': { en: PptxSkillEn, ru: PptxSkillRu },
-  'paste-an-example': { en: PasteAnExampleEn, ru: PasteAnExampleRu },
-  'grill-me': { en: GrillMeEn, ru: GrillMeRu },
-  'claude-md-vs-hooks': { en: ClaudeMdVsHooksEn, ru: ClaudeMdVsHooksRu },
-  'write-the-reason': { en: WriteTheReasonEn, ru: WriteTheReasonRu },
-}
-
+// meta.json and the article map (articles/<SlugInPascalCase>.tsx) arrive
+// without posts dated after the build day: see vite.config.ts.
 export type Note = (typeof meta)[number] & {
   Body: Record<Language, ComponentType>
 }
 
-// meta.json arrives without posts dated after the build day (vite.config.ts).
 export const notes: Note[] = meta.map((m) => ({ ...m, Body: bodies[m.slug] }))
 
 export const postPath = (lang: Language, slug?: string) =>
