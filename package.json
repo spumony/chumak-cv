@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "prepare": "git config core.hooksPath .githooks",
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "node scripts/build-post-pages.mjs && vite",
+    "build": "node scripts/build-post-pages.mjs && tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

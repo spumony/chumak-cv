@@ -1,6 +1,7 @@
 // Writes posts/**/index.html from src/posts/meta.json.
 //
-// Usage: pnpm posts:pages   (after adding a post or editing a title)
+// Runs on `pnpm dev` and `pnpm build`; alone: pnpm posts:pages. posts/ is
+// not in git.
 //
 // Each page needs its own static <head> so LinkedIn and Telegram previews show
 // the post, not the CV. The body is the same React entry for all of them.
@@ -10,9 +11,14 @@ import { join } from 'node:path'
 
 const SITE = 'https://chumak.is-a.dev'
 const root = join(import.meta.dirname, '..')
-const posts = JSON.parse(
-  readFileSync(join(root, 'src/posts/meta.json'), 'utf8'),
-)
+// A post goes live on its date (Madrid): later ones get no page. The deploy
+// runs every night, so a post appears without a push. Preview a future post:
+// POSTS_UNTIL=2099-01-01 pnpm dev. Same rule as `define` in vite.config.ts.
+const until =
+  process.env.POSTS_UNTIL ||
+  new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })
+const all = JSON.parse(readFileSync(join(root, 'src/posts/meta.json'), 'utf8'))
+const posts = all.filter((p) => p.date <= until)
 
 const INDEX = {
   en: {
@@ -114,4 +120,6 @@ for (const lang of ['en', 'ru']) {
   }
 }
 
-console.log(`posts/: ${posts.length} posts × 2 languages + 2 index pages`)
+console.log(
+  `posts/: ${posts.length} posts × 2 languages + 2 index pages (until ${until}, ${all.length - posts.length} later)`,
+)

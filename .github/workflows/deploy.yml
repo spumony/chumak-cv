@@ -9,6 +9,10 @@ on:
       - '.github/**'
       - '.vscode/**'
   workflow_dispatch:
+  # Posts go live on their date (scripts/build-post-pages.mjs), so rebuild
+  # every night: 23:05 UTC is 00:05 in Madrid in winter, 01:05 in summer.
+  schedule:
+    - cron: '5 23 * * *'
 
 concurrency:
   group: deploy

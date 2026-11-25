@@ -64,7 +64,13 @@ export type Note = (typeof meta)[number] & {
   Body: Record<Language, ComponentType>
 }
 
-export const notes: Note[] = meta.map((m) => ({ ...m, Body: bodies[m.slug] }))
+// Set by vite.config.ts: the build day in Madrid. Later posts are not listed.
+// ponytail: their text still ships in the bundle; lazy-load bodies if that matters.
+declare const __POSTS_UNTIL__: string
+
+export const notes: Note[] = meta
+  .filter((m) => m.date <= __POSTS_UNTIL__)
+  .map((m) => ({ ...m, Body: bodies[m.slug] }))
 
 export const postPath = (lang: Language, slug?: string) =>
   `/posts/${slug ? `${slug}/` : ''}${lang === 'ru' ? 'ru/' : ''}`

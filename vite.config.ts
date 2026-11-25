@@ -18,9 +18,16 @@ const postPages = Object.fromEntries(
     ]),
 )
 
+// Posts dated after this day stay out of the list (src/posts/notes.ts); same
+// rule as scripts/build-post-pages.mjs.
+const postsUntil =
+  process.env.POSTS_UNTIL ||
+  new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' })
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  define: { __POSTS_UNTIL__: JSON.stringify(postsUntil) },
   build: {
     rollupOptions: {
       input: {
